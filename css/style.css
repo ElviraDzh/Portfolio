@@ -92,7 +92,7 @@ h2 {
   height: 9px;
   width: 9px;
   border-radius: 50%;
-  background-color: #ff5251;
+  /* background-color: #ff5251; */
 }
 .logo-link {
   font-family: "Satisfy", cursive;
