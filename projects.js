@@ -61,23 +61,41 @@ function randomPositionBricks() {
 }
 randomPositionBricks();
 
+const step = 0.4;
+let prevX = 0;
+
 wrapperOuter.addEventListener("scroll", (e) => {
     //console.log(e);
+    //console.log("counterGorizRight: " + counterX);
     //logScroll();
-
     console.log(wrapper.getBoundingClientRect().x);
+    
+    nextX = wrapper.getBoundingClientRect().x;
 
-    // console.log("counterGorizRight: " + counterX);
+    if (nextX < prevX)
+	walkRight();
+    else 
+	walkLeft();
 
-  if (counterX < 96) {
+    prevX = wrapper.getBoundingClientRect().x;
+});
+
+
+function walkRight() {
     animation.style.backgroundPosition = "-440px -359px";
-    counterX += 0.1;
+    counterX += step;
     wrapperChar.style.left = counterX + "%";
     animation.classList.add("animation");
     animation.style.animationName = "walkRight";
     changeImgToColor(56, 64, imgLampTetris, tetrisImg);
-  }
-});
+}
+
+
+function walkLeft() {
+    counterX -= step;
+    wrapperChar.style.left = counterX + "%";
+    animation.style.animationName = "walkLeft";
+}
 
 function logScroll(source) {
    console.log("\n--- " + source + " ---");
