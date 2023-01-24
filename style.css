@@ -1,0 +1,370 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 16px;
+  background-color: #fff;
+}
+
+.slide {
+  width: 100vw;
+  height: 100vh;
+}
+
+.wrapper {
+  position: relative;
+  display: flex;
+  width: 400vw;
+  transform: rotate(90deg) translateY(-100vh);
+  transform-origin: top left;
+}
+.outer-wrapper {
+  position: absolute;
+  width: 100vh;
+  /*  we will need to rotate this wrapper the trick is to set 100% of the viewport height and height to 100% of the viewport width*/
+  height: 100vw;
+  transform: rotate(-90deg) translateX(-100vh);
+  transform-origin: top left;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+/*chrome, safari */
+::-webkit-scrollbar {
+  display: none;
+}
+
+.wrapper-character {
+  position: absolute;
+  width: 10em;
+  bottom: 6%;
+  left: 0%;
+  min-height: 24em;
+  overflow: hidden;
+  transition: transform 1s ease;
+}
+.character {
+  position: absolute;
+  left: 3%;
+  top: 10%;
+  width: 122%;
+  height: 100%;
+  background: url(img/last-3.png);
+  background-repeat: no-repeat;
+  background-position: -440px -359px;
+  transform: scale(1.2);
+  z-index: 9000;
+}
+
+.animation {
+  animation-name: walkLeft;
+  animation-duration: 1s;
+  animation-timing-function: steps(9);
+  animation-iteration-count: infinite;
+}
+
+@keyframes walkLeft {
+  0% {
+    background-position: 0px 0px;
+  }
+  100% {
+    background-position: -1344px 0px;
+  }
+}
+
+@keyframes walkRight {
+  0% {
+    background-position: 0px -359px;
+  }
+  100% {
+    background-position: -1344px -359px;
+  }
+}
+
+.block-picture,
+.block-picture-1,
+.block-picture-2,
+.block-picture-3 {
+  position: absolute;
+  min-width: 14em;
+  max-width: 16em;
+  top: 37%;
+  left: 56%;
+  transform: translate(-50%, -50%);
+  min-height: 23em;
+  margin: 0 auto;
+}
+.block-picture {
+  left: 63%;
+}
+.block-picture-1 {
+  top: 29%;
+  left: 88%;
+}
+.block-picture-2 {
+  top: 29%;
+  left: 38%;
+}
+
+.block-picture-3 {
+  left: 14%;
+}
+
+.img-lamp {
+  width: 70%;
+  height: 3%;
+  margin: 0 auto;
+  display: block;
+}
+
+#tetrisImg-Tetris,
+#gifTetris,
+#abstract2Img,
+#abstract1Img,
+#womanImg {
+  position: absolute;
+  top: 11%;
+  left: 0%;
+  width: 96%;
+  min-width: 95%;
+  max-height: 21em;
+  min-height: 14em;
+  object-fit: cover;
+}
+
+#gifTetris {
+  display: none;
+  top: 19%;
+  left: 12%;
+  max-height: 14.5em;
+  min-height: 14em;
+  object-fit: cover;
+  min-width: 60%;
+  width: 72%;
+}
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 400vw;
+  height: 400vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 10000;
+  opacity: 0;
+  pointer-events: none;
+}
+.modal-content {
+  min-height: 100vh;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  left: 59%;
+}
+
+.modalImgTetris {
+  position: relative;
+  min-width: 80%;
+  display: none;
+  text-align: center;
+}
+.modalImgTetris.current {
+  display: block;
+}
+.modal.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.close,
+.btn-prev,
+.btn-next {
+  position: absolute;
+  background-color: transparent;
+  border: none;
+  font-size: 1.7em;
+  color: #000;
+  font-weight: bold;
+  z-index: 10000;
+}
+
+.close {
+  top: 8%;
+  right: 9%;
+  font-size: 1.4em;
+  background-color: transparent;
+  color: #000;
+}
+
+.btn-next {
+  top: 48%;
+  right: 9%;
+}
+.btn-prev {
+  left: 9%;
+  top: 48%;
+}
+
+.modal.show .modal-content {
+  animation: zoom 0.3s linear;
+}
+@keyframes zoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.decor-items,
+.decor-items-1,
+.decor-items-2,
+.decor-items-3 {
+  position: absolute;
+  bottom: 6%;
+  width: 25%;
+  border-top: 3px solid #d9d9d9;
+}
+
+.decor-items-1 {
+  position: absolute;
+  bottom: 6%;
+  width: 25%;
+  border-top: 3px solid #d9d9d9;
+}
+.plants {
+  position: absolute;
+  z-index: 4000;
+  bottom: 0;
+  width: 9em;
+}
+.plant-1 {
+  left: -22%;
+  width: 8em;
+}
+.plant-2 {
+  width: 10em;
+  left: -21%;
+}
+
+.plant-3 {
+  right: 33%;
+}
+
+.bench {
+  position: absolute;
+  bottom: 0;
+  width: 14em;
+  z-index: 4000;
+  left: 37%;
+}
+.bench-1 {
+  right: 10%;
+}
+.sculpture-woman {
+  position: absolute;
+  width: 12em;
+  left: 0%;
+  bottom: -1%;
+  z-index: 5000;
+}
+
+.decor-items-3 .sculpture-woman {
+  left: 78%;
+}
+
+.vase1 {
+  position: absolute;
+  width: 7em;
+  bottom: 2%;
+  z-index: 5000;
+  right: 0%;
+}
+
+.vase2 {
+  position: absolute;
+  width: 7em;
+  bottom: 2%;
+  z-index: 5000;
+  left: 7%;
+}
+.lampOn {
+  height: 12%;
+  width: 77%;
+}
+
+.link-tetris {
+  position: absolute;
+  bottom: 7%;
+  font-size: 1em;
+  color: #fff;
+  padding: 0.4em 1em;
+  background-color: #1e1e1e;
+  text-decoration: none;
+  border-radius: 0.3em;
+}
+.link-demo {
+  right: 52%;
+}
+.link-github {
+  left: 54%;
+}
+
+.brick {
+  position: absolute;
+  /* background: url(../img/brick1.png) no-repeat; */
+  width: 5em;
+  height: 3em;
+  /* top: 20%;
+  right: 30%; */
+}
+
+.title-picture {
+  position: absolute;
+  width: 4em;
+  height: 1em;
+  bottom: 4%;
+  left: 32%;
+  background-color: #d9d9d9;
+}
+.title-picture::before,
+.title-picture::after {
+  content: "";
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 2em;
+  height: 1px;
+  background-color: #bfbbbb;
+}
+.title-picture::after {
+  top: 65%;
+  width: 3em;
+}
+
+.exit {
+  margin: 2em 2em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.exit-left,
+.exit-right {
+  background: url(../img/exit-sprite2.png) no-repeat;
+  display: inline-block;
+  background-position: -7px -53px;
+  width: 4em;
+  height: 2em;
+}
+
+.exit-right {
+  background-position: -81px -53px;
+}
