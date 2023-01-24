@@ -62,8 +62,13 @@ function randomPositionBricks() {
 randomPositionBricks();
 
 wrapperOuter.addEventListener("scroll", (e) => {
-  console.log(e);
-  // console.log("counterGorizRight: " + counterX);
+    //console.log(e);
+    //logScroll();
+
+    console.log(wrapper.getBoundingClientRect().x);
+
+    // console.log("counterGorizRight: " + counterX);
+
   if (counterX < 96) {
     animation.style.backgroundPosition = "-440px -359px";
     counterX += 0.1;
@@ -73,6 +78,47 @@ wrapperOuter.addEventListener("scroll", (e) => {
     changeImgToColor(56, 64, imgLampTetris, tetrisImg);
   }
 });
+
+function logScroll(source) {
+   console.log("\n--- " + source + " ---");
+
+   console.log("window.pageXOffset: " + window.pageXOffset);
+   console.log("window.pageYOffset: " + window.pageYOffset);
+
+   console.log("window.scrollX: " + window.scrollX);
+   console.log("window.scrollY: " + window.scrollY);
+    
+   console.log("document.body.scrollTop: " + document.body.scrollTop);
+   console.log("document.body.scrollLeft: " + document.body.scrollLeft);
+
+   console.log("document.documentElement.scrollTop: " + document.documentElement.scrollTop);
+   console.log("document.documentElement.scrollLeft: " + document.documentElement.scrollLeft);
+
+   console.log("wrapper.offsetTop: " + wrapper.offsetTop);
+   console.log("wrapper.offsetLeft: " + wrapper.offsetLeft);
+   console.log("wrapper.scrollTop: " + wrapper.scrollTop);
+   console.log("wrapper.scrollLeft: " + wrapper.scrollLeft);
+
+   console.log("wrapper rect: ");
+   console.log(wrapper.getBoundingClientRect());
+
+   console.log("wrapper outer rect: ");
+   console.log(wrapperOuter.getBoundingClientRect());
+    /*
+   console.log("slideOne rect: ");
+   console.log(slideOne.getBoundingClientRect());
+
+    console.log("scrollOffset(): ");
+    console.log(scrollOffset());
+
+    console.log("startY: " + startY);
+    console.log("startX: " + startX);
+    console.log("endY: " + endY);
+    console.log("endX: " + endX);
+    console.log("touch diff Y: " + (endY - startY));
+    console.log("touch diff X: " + (endX - startX));
+    */
+}
 
 // document.body.addEventListener("keyup", function keyUp() {
 //   animation.classList.remove("animation");
@@ -110,7 +156,7 @@ function changeImgToColor(min, max, lamp, img) {
       });
     });
   } else {
-    console.log(img);
+    //console.log(img);
     img.src = "img/tetrisCol-modified.png";
     lamp.src = "img/light.png";
     lamp.classList.remove("lampOn");
