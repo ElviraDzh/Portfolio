@@ -61,10 +61,75 @@ function randomPositionBricks() {
 }
 randomPositionBricks();
 
+function log(s) {
+    console.log(s);
+}
+
+let prevX = 0;
+let step = 0;
+let count = 0;
+
+function onInterval() {
+    let x = wrapper.getBoundingClientRect().x;
+
+    if (x === prevX) {
+	// No scrolling yet
+	stopWalk();
+	return;
+    }
+
+    handleScrollDiff(x);
+
+    prevX = x;
+}
+
+setInterval(onInterval, 500);
+
+
+function handleScrollDiff(x) {
+    const diff = prevX - x;
+    count = Math.abs(Math.ceil(diff / 10));
+
+    log("---");
+    log("x: " + x);
+    log("character x: " + wrapperChar.getBoundingClientRect().x);
+    log("diff: " + diff);
+    log("count: " + count);
+
+    step = Math.min(count / 10, 0.4);
+
+    if (diff < 0) {
+	step *= -1;
+    }
+
+    log("step: " + step);
+
+    walk();
+}
+
+function walk() {
+    if (count <= 0) return;
+
+  counterX += step;
+  wrapperChar.style.left = counterX + "%";
+  animation.classList.add("animation");
+  animation.style.animationName = step > 0 ? "walkRight" : "walkLeft";
+
+    count--;
+    setTimeout(walk, 10);
+}
+
+function stopWalk() {
+  animation.classList.remove("animation");
+}
+
+/*
 const step = 0.2;
 let prevX = 0;
 
-wrapperOuter.addEventListener("scroll", () => {
+wrapperOuter.addEventListener("scroll", (e) => {
+  console.log("---");
+  console.log(e.timeStamp);
   console.log(wrapper.getBoundingClientRect().x);
 
   nextX = wrapper.getBoundingClientRect().x;
@@ -90,6 +155,7 @@ function walkLeft() {
   animation.style.animationName = "walkLeft";
   changeImgToColor(58, 64, imgLampTetris, tetrisImg);
 }
+*/
 
 function logScroll(source) {
   console.log("\n--- " + source + " ---");
