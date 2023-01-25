@@ -9,7 +9,7 @@ body {
   background-color: #fff;
 }
 
-.slide {
+.section {
   width: 100vw;
   height: 100vh;
 }
@@ -54,7 +54,7 @@ body {
   top: 10%;
   width: 122%;
   height: 100%;
-  background: url(img/last-3.png);
+  background: url(../img/last-3.png);
   background-repeat: no-repeat;
   background-position: -440px -359px;
   transform: scale(1.2);
@@ -86,10 +86,7 @@ body {
   }
 }
 
-.block-picture,
-.block-picture-1,
-.block-picture-2,
-.block-picture-3 {
+.block-picture {
   position: absolute;
   min-width: 14em;
   max-width: 16em;
@@ -99,19 +96,19 @@ body {
   min-height: 23em;
   margin: 0 auto;
 }
-.block-picture {
+.section-three .block-picture {
   left: 63%;
 }
-.block-picture-1 {
+.section-four .block-picture {
   top: 29%;
   left: 88%;
 }
-.block-picture-2 {
+.section-two .block-picture {
   top: 29%;
   left: 38%;
 }
 
-.block-picture-3 {
+.section-one .block-picture {
   left: 14%;
 }
 
@@ -222,39 +219,27 @@ body {
   }
 }
 
-.decor-items,
-.decor-items-1,
-.decor-items-2,
-.decor-items-3 {
+.decor-items {
   position: absolute;
   bottom: 6%;
   width: 25%;
   border-top: 3px solid #d9d9d9;
 }
 
-.decor-items-1 {
-  position: absolute;
-  bottom: 6%;
-  width: 25%;
-  border-top: 3px solid #d9d9d9;
-}
 .plants {
   position: absolute;
   z-index: 4000;
   bottom: 0;
   width: 9em;
 }
-.plant-1 {
+.section-four .plant,
+.section-two .plant {
   left: -22%;
   width: 8em;
 }
-.plant-2 {
+.section-three .plant {
   width: 10em;
   left: -21%;
-}
-
-.plant-3 {
-  right: 33%;
 }
 
 .bench {
@@ -264,9 +249,7 @@ body {
   z-index: 4000;
   left: 37%;
 }
-.bench-1 {
-  right: 10%;
-}
+
 .sculpture-woman {
   position: absolute;
   width: 12em;
@@ -275,19 +258,11 @@ body {
   z-index: 5000;
 }
 
-.decor-items-3 .sculpture-woman {
+.section-four .sculpture-woman {
   left: 78%;
 }
 
-.vase1 {
-  position: absolute;
-  width: 7em;
-  bottom: 2%;
-  z-index: 5000;
-  right: 0%;
-}
-
-.vase2 {
+.vase {
   position: absolute;
   width: 7em;
   bottom: 2%;
@@ -318,11 +293,8 @@ body {
 
 .brick {
   position: absolute;
-  /* background: url(../img/brick1.png) no-repeat; */
   width: 5em;
   height: 3em;
-  /* top: 20%;
-  right: 30%; */
 }
 
 .title-picture {

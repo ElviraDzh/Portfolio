@@ -61,68 +61,67 @@ function randomPositionBricks() {
 }
 randomPositionBricks();
 
-const step = 0.4;
+const step = 0.2;
 let prevX = 0;
 
-wrapperOuter.addEventListener("scroll", (e) => {
-    //console.log(e);
-    //console.log("counterGorizRight: " + counterX);
-    //logScroll();
-    console.log(wrapper.getBoundingClientRect().x);
-    
-    nextX = wrapper.getBoundingClientRect().x;
+wrapperOuter.addEventListener("scroll", () => {
+  console.log(wrapper.getBoundingClientRect().x);
 
-    if (nextX < prevX)
-	walkRight();
-    else 
-	walkLeft();
+  nextX = wrapper.getBoundingClientRect().x;
 
-    prevX = wrapper.getBoundingClientRect().x;
+  if (nextX < prevX) walkRight();
+  else walkLeft();
+
+  prevX = wrapper.getBoundingClientRect().x;
 });
 
-
 function walkRight() {
-    animation.style.backgroundPosition = "-440px -359px";
-    counterX += step;
-    wrapperChar.style.left = counterX + "%";
-    animation.classList.add("animation");
-    animation.style.animationName = "walkRight";
-    changeImgToColor(56, 64, imgLampTetris, tetrisImg);
+  animation.style.backgroundPosition = "-440px -359px";
+  counterX += step;
+  wrapperChar.style.left = counterX + "%";
+  animation.classList.add("animation");
+  animation.style.animationName = "walkRight";
+  changeImgToColor(58, 64, imgLampTetris, tetrisImg);
 }
 
-
 function walkLeft() {
-    counterX -= step;
-    wrapperChar.style.left = counterX + "%";
-    animation.style.animationName = "walkLeft";
+  counterX -= step;
+  wrapperChar.style.left = counterX + "%";
+  animation.style.animationName = "walkLeft";
+  changeImgToColor(58, 64, imgLampTetris, tetrisImg);
 }
 
 function logScroll(source) {
-   console.log("\n--- " + source + " ---");
+  console.log("\n--- " + source + " ---");
 
-   console.log("window.pageXOffset: " + window.pageXOffset);
-   console.log("window.pageYOffset: " + window.pageYOffset);
+  console.log("window.pageXOffset: " + window.pageXOffset);
+  console.log("window.pageYOffset: " + window.pageYOffset);
 
-   console.log("window.scrollX: " + window.scrollX);
-   console.log("window.scrollY: " + window.scrollY);
-    
-   console.log("document.body.scrollTop: " + document.body.scrollTop);
-   console.log("document.body.scrollLeft: " + document.body.scrollLeft);
+  console.log("window.scrollX: " + window.scrollX);
+  console.log("window.scrollY: " + window.scrollY);
 
-   console.log("document.documentElement.scrollTop: " + document.documentElement.scrollTop);
-   console.log("document.documentElement.scrollLeft: " + document.documentElement.scrollLeft);
+  console.log("document.body.scrollTop: " + document.body.scrollTop);
+  console.log("document.body.scrollLeft: " + document.body.scrollLeft);
 
-   console.log("wrapper.offsetTop: " + wrapper.offsetTop);
-   console.log("wrapper.offsetLeft: " + wrapper.offsetLeft);
-   console.log("wrapper.scrollTop: " + wrapper.scrollTop);
-   console.log("wrapper.scrollLeft: " + wrapper.scrollLeft);
+  console.log(
+    "document.documentElement.scrollTop: " + document.documentElement.scrollTop
+  );
+  console.log(
+    "document.documentElement.scrollLeft: " +
+      document.documentElement.scrollLeft
+  );
 
-   console.log("wrapper rect: ");
-   console.log(wrapper.getBoundingClientRect());
+  console.log("wrapper.offsetTop: " + wrapper.offsetTop);
+  console.log("wrapper.offsetLeft: " + wrapper.offsetLeft);
+  console.log("wrapper.scrollTop: " + wrapper.scrollTop);
+  console.log("wrapper.scrollLeft: " + wrapper.scrollLeft);
 
-   console.log("wrapper outer rect: ");
-   console.log(wrapperOuter.getBoundingClientRect());
-    /*
+  console.log("wrapper rect: ");
+  console.log(wrapper.getBoundingClientRect());
+
+  console.log("wrapper outer rect: ");
+  console.log(wrapperOuter.getBoundingClientRect());
+  /*
    console.log("slideOne rect: ");
    console.log(slideOne.getBoundingClientRect());
 
@@ -137,10 +136,6 @@ function logScroll(source) {
     console.log("touch diff X: " + (endX - startX));
     */
 }
-
-// document.body.addEventListener("keyup", function keyUp() {
-//   animation.classList.remove("animation");
-// });
 
 function changeImgToColor(min, max, lamp, img) {
   if (counterX > min && counterX < max) {
@@ -174,7 +169,6 @@ function changeImgToColor(min, max, lamp, img) {
       });
     });
   } else {
-    //console.log(img);
     img.src = "img/tetrisCol-modified.png";
     lamp.src = "img/light.png";
     lamp.classList.remove("lampOn");

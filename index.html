@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Horizontal scrolling</title>
+    <title>My Gallery of projects</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
@@ -12,7 +12,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/media.css" />
   </head>
   <body>
     <div class="outer-wrapper" id="outer-wrapper">
@@ -99,28 +100,28 @@
           <div class="character" id="animation"></div>
         </div>
         <div class="bricks"></div>
-        <div class="slide one">
+        <section class="section section-one">
           <div class="decor-items">
-            <img src="img/banch.png" alt="bench" class="bench bench-2" />
-            <img src="img/vase2.png" alt="" class="vase2" />
+            <img src="img/banch.png" alt="bench" class="bench" />
+            <img src="img/vase2.png" alt="" class="vase" />
           </div>
-          <div class="block-picture-3">
+          <div class="block-picture">
             <img src="img/light.png" alt="lamp" class="img-lamp" id="imgLamp" />
             <img src="img/woman-modified.png" alt="woman" id="womanImg" />
             <span class="title-picture"></span>
           </div>
-        </div>
-        <div class="slide two">
-          <div class="decor-items-1">
-            <img src="img/banch.png" alt="bench" class="bench bench-2" />
+        </section>
+        <section class="section section-two">
+          <div class="decor-items">
+            <img src="img/banch.png" alt="bench" class="bench" />
             <img src="img/statueHalf.png" alt="" class="sculpture-woman" />
             <img
               src="img/plant-2 (1).png"
               alt="plant-flower"
-              class="plants plant-1"
+              class="plants plant"
             />
           </div>
-          <div class="block-picture-2">
+          <div class="block-picture">
             <img src="img/light.png" alt="lamp" class="img-lamp" id="imgLamp" />
             <img
               src="img/abstract1-modified.png"
@@ -129,16 +130,12 @@
             />
             <span class="title-picture"></span>
           </div>
-        </div>
-        <div class="slide three">
-          <div class="decor-items-2">
-            <img src="img/banch.png" alt="bench" class="bench bench-2" />
-            <img src="img/vase1.png" alt="" class="vase2" />
-            <img
-              src="img/plant4.png"
-              alt="plant-flower"
-              class="plants plant-2"
-            />
+        </section>
+        <section class="section section-three">
+          <div class="decor-items">
+            <img src="img/banch.png" alt="bench" class="bench" />
+            <img src="img/vase1.png" alt="" class="vase" />
+            <img src="img/plant4.png" alt="plant-flower" class="plants plant" />
           </div>
           <div class="block-picture" id="tetrisBlock">
             <img
@@ -156,98 +153,20 @@
             <div class="title-picture">
               <span></span>
             </div>
-            <!-- <div class="modal">
-              <div class="modal-content">
-                <div class="slides">
-                  <div class="modalImgTetris current">
-                    <img src="img/aboutTetris (2).png" alt="aboutTetrisGame" />
-                    <a
-                      href="https://tetris.elvira.ie/"
-                      target="_blank"
-                      class="link-tetris link-demo"
-                      >Demo</a
-                    >
-                    <a
-                      href="https://github.com/ElviraDzh/Tetris"
-                      target="_blank"
-                      class="link-tetris link-github"
-                      >Github</a
-                    >
-                    <span class="close" id="close"
-                      ><i class="fa-regular fa-circle-xmark"></i
-                    ></span>
-                    <button class="btn-prev">
-                      <i class="fa-solid fa-angle-left"></i>
-                    </button>
-                    <button class="btn-next">
-                      <i class="fa-solid fa-angle-right"></i>
-                    </button>
-                  </div>
-                  <div class="modalImgTetris">
-                    <img src="img/tetrisSlide.png" alt="aboutTetrisGame" />
-                    <a
-                      href="https://tetris.elvira.ie/"
-                      target="_blank"
-                      class="link-tetris link-demo"
-                      >Demo</a
-                    >
-                    <a
-                      href="https://github.com/ElviraDzh/Tetris"
-                      target="_blank"
-                      class="link-tetris link-github"
-                      >Github</a
-                    >
-                    <span class="close" id="close"
-                      ><i class="fa-regular fa-circle-xmark"></i
-                    ></span>
-                    <button class="btn-prev">
-                      <i class="fa-solid fa-angle-left"></i>
-                    </button>
-                    <button class="btn-next">
-                      <i class="fa-solid fa-angle-right"></i>
-                    </button>
-                  </div>
-                  <div class="modalImgTetris">
-                    <img src="img/tetrisTablet.png" alt="tetrisWebPage" />
-                    <a
-                      href="https://tetris.elvira.ie/"
-                      target="_blank"
-                      class="link-tetris link-demo"
-                      >Demo</a
-                    >
-                    <a
-                      href="https://github.com/ElviraDzh/Tetris"
-                      target="_blank"
-                      class="link-tetris link-github"
-                      >Github</a
-                    >
-                    <span class="close" id="close"
-                      ><i class="fa-regular fa-circle-xmark"></i
-                    ></span>
-                    <button class="btn-prev">
-                      <i class="fa-solid fa-angle-left"></i>
-                    </button>
-                    <button class="btn-next">
-                      <i class="fa-solid fa-angle-right"></i>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div> -->
           </div>
-        </div>
-        <div class="slide four">
-          <div class="decor-items-3">
+        </section>
+        <section class="section section-four">
+          <div class="decor-items">
             <img src="img/banch.png" alt="bench" class="bench bench-2" />
-            <img src="img/vase2.png" alt="" class="vase2" />
+            <img src="img/vase2.png" alt="" class="vase" />
             <img src="img/statueHalf.png" alt="" class="sculpture-woman" />
             <img
               src="img/plant-1.png"
               alt="plant-flower"
-              class="plants plant-1"
+              class="plants plant"
             />
           </div>
-          <div class="block-picture-1">
+          <div class="block-picture">
             <img src="img/light.png" alt="lamp" class="img-lamp" id="imgLamp" />
             <img
               src="img/abstract2-modified.png"
@@ -256,7 +175,7 @@
             />
             <span class="title-picture"></span>
           </div>
-        </div>
+        </section>
       </div>
     </div>
     <script src="projects.js"></script>
