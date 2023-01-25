@@ -1,0 +1,29 @@
+@media screen and (max-width: 600px) {
+  .section-two .sculpture-woman,
+  .section-three .plant,
+  .section-four .vase {
+    display: none;
+  }
+  .section-two .plant,
+  .section-four .plant {
+    left: -5%;
+  }
+  .section-three .vase {
+    left: -6%;
+  }
+}
+@media screen and (max-width: 450px) {
+  .section-one .bench,
+  .section-four .bench {
+    display: none;
+  }
+  .section-two .plant {
+    left: -38%;
+  }
+  .section-two .bench {
+    left: 25%;
+  }
+  .section-four .plant {
+    left: 21%;
+  }
+}
