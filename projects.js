@@ -64,143 +64,88 @@ randomPositionBricks();
 function log(s) {
     console.log(s);
 }
-
 let prevX = 0;
-let step = 0;
-let count = 0;
+let targetLeft = 0;
+
+// Start near the first frame
+wrapperChar.style.left = "3%";
+
+/*
+// Will be usefull to calc the targetLeft value with different screens
+document.addEventListener('keydown', function(e) {
+    const key = event.key; // "ArrowRight", "ArrowLeft", "ArrowUp", or "ArrowDown"
+
+    switch (event.key) {
+    case "ArrowLeft":
+	move(-0.2);
+        break;
+    case "ArrowRight":
+	move(0.2);
+        break;
+    case "ArrowUp":
+        break;
+    case "ArrowDown":
+        break;
+    }
+
+    log("left: " + wrapperChar.style.left);
+});
+
+function move(k) {
+    counterX += k;
+    wrapperChar.style.left = counterX + "%";
+}
+*/
 
 function onInterval() {
     let x = wrapper.getBoundingClientRect().x;
 
     if (x === prevX) {
-	// No scrolling yet
-	stopWalk();
+	// No scrolling 
 	return;
     }
 
-    handleScrollDiff(x);
+    handleScroll(x);
 
     prevX = x;
 }
 
 setInterval(onInterval, 500);
 
+function handleScroll(x) {
+    // The final position where the girl should be.
+    // The value -14 will be different for different screen sizes.
+    targetLeft = x / -14; 
 
-function handleScrollDiff(x) {
-    const diff = prevX - x;
-    count = Math.abs(Math.ceil(diff / 10));
-
-    log("---");
     log("x: " + x);
-    log("character x: " + wrapperChar.getBoundingClientRect().x);
-    log("diff: " + diff);
-    log("count: " + count);
+    log("targetLeft: " + targetLeft);
 
-    step = Math.min(count / 10, 0.4);
-
-    if (diff < 0) {
-	step *= -1;
-    }
-
-    log("step: " + step);
-
+    animation.classList.add("animation");
+    animation.style.animationName = "walkRight"; 
+    
     walk();
 }
 
 function walk() {
-    if (count <= 0) return;
+    const leftFull = wrapperChar.style.left; // Example: "0.8%"
+    const leftStr = leftFull.substring(0, leftFull.indexOf('%')); // Example: "0.8"
+    const left = parseFloat(leftStr);
 
-  counterX += step;
-  wrapperChar.style.left = counterX + "%";
-  animation.classList.add("animation");
-  animation.style.animationName = step > 0 ? "walkRight" : "walkLeft";
+    log("left: " + left);
 
-    count--;
-    setTimeout(walk, 10);
+    if (left > targetLeft) {
+	// The girl reached the target position
+	stopWalk();
+	return;
+    }
+
+    wrapperChar.style.left = (left + 0.2) + "%";
+
+    setTimeout(walk, 20);
 }
 
 function stopWalk() {
   animation.classList.remove("animation");
-}
-
-/*
-const step = 0.2;
-let prevX = 0;
-
-wrapperOuter.addEventListener("scroll", (e) => {
-  console.log("---");
-  console.log(e.timeStamp);
-  console.log(wrapper.getBoundingClientRect().x);
-
-  nextX = wrapper.getBoundingClientRect().x;
-
-  if (nextX < prevX) walkRight();
-  else walkLeft();
-
-  prevX = wrapper.getBoundingClientRect().x;
-});
-
-function walkRight() {
-  animation.style.backgroundPosition = "-440px -359px";
-  counterX += step;
-  wrapperChar.style.left = counterX + "%";
-  animation.classList.add("animation");
-  animation.style.animationName = "walkRight";
-  changeImgToColor(58, 64, imgLampTetris, tetrisImg);
-}
-
-function walkLeft() {
-  counterX -= step;
-  wrapperChar.style.left = counterX + "%";
-  animation.style.animationName = "walkLeft";
-  changeImgToColor(58, 64, imgLampTetris, tetrisImg);
-}
-*/
-
-function logScroll(source) {
-  console.log("\n--- " + source + " ---");
-
-  console.log("window.pageXOffset: " + window.pageXOffset);
-  console.log("window.pageYOffset: " + window.pageYOffset);
-
-  console.log("window.scrollX: " + window.scrollX);
-  console.log("window.scrollY: " + window.scrollY);
-
-  console.log("document.body.scrollTop: " + document.body.scrollTop);
-  console.log("document.body.scrollLeft: " + document.body.scrollLeft);
-
-  console.log(
-    "document.documentElement.scrollTop: " + document.documentElement.scrollTop
-  );
-  console.log(
-    "document.documentElement.scrollLeft: " +
-      document.documentElement.scrollLeft
-  );
-
-  console.log("wrapper.offsetTop: " + wrapper.offsetTop);
-  console.log("wrapper.offsetLeft: " + wrapper.offsetLeft);
-  console.log("wrapper.scrollTop: " + wrapper.scrollTop);
-  console.log("wrapper.scrollLeft: " + wrapper.scrollLeft);
-
-  console.log("wrapper rect: ");
-  console.log(wrapper.getBoundingClientRect());
-
-  console.log("wrapper outer rect: ");
-  console.log(wrapperOuter.getBoundingClientRect());
-  /*
-   console.log("slideOne rect: ");
-   console.log(slideOne.getBoundingClientRect());
-
-    console.log("scrollOffset(): ");
-    console.log(scrollOffset());
-
-    console.log("startY: " + startY);
-    console.log("startX: " + startX);
-    console.log("endY: " + endY);
-    console.log("endX: " + endX);
-    console.log("touch diff Y: " + (endY - startY));
-    console.log("touch diff X: " + (endX - startX));
-    */
 }
 
 function changeImgToColor(min, max, lamp, img) {
