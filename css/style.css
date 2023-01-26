@@ -119,17 +119,12 @@ body {
   display: block;
 }
 
-#tetrisImg-Tetris,
-#gifTetris,
-#abstract2Img,
-#abstract1Img,
-#womanImg {
+.block-picture-img {
   position: absolute;
   top: 11%;
   left: 0%;
   width: 96%;
   min-width: 95%;
-  max-height: 21em;
   min-height: 14em;
   object-fit: cover;
 }

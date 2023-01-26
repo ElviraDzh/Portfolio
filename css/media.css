@@ -27,3 +27,132 @@
     left: 21%;
   }
 }
+
+@media screen and (max-height: 1400px) {
+  .block-picture {
+    min-height: 29em;
+  }
+  .block-picture-img {
+    min-width: 120%;
+    left: -11%;
+  }
+  .img-lamp {
+    width: 88%;
+  }
+  .section-one .block-picture,
+  .section-three .block-picture {
+    top: 42%;
+  }
+  .section-two .block-picture,
+  .section-four .block-picture {
+    top: 37%;
+  }
+}
+@media screen and (max-height: 1150px) {
+  .section-one .block-picture,
+  .section-three .block-picture {
+    top: 37%;
+  }
+  .section-two .block-picture,
+  .section-four .block-picture {
+    top: 32%;
+  }
+}
+
+@media screen and (max-height: 1025px) {
+  body {
+    font-size: 14px;
+  }
+  .block-picture {
+    min-height: 28em;
+  }
+  .block-picture-img {
+    min-width: 115%;
+  }
+  .img-lamp {
+    width: 81%;
+  }
+  .wrapper-character {
+    min-height: 25em;
+  }
+  .character {
+    transform: scale(1.1);
+    top: 5%;
+  }
+}
+
+@media screen and (max-height: 800px) {
+  .block-picture-img {
+    min-width: 105%;
+    left: -4%;
+  }
+  .img-lamp {
+    width: 75%;
+  }
+
+  .character {
+    transform: scale(1);
+    top: 9%;
+  }
+}
+
+@media screen and (max-height: 745px) {
+  body {
+    font-size: 12px;
+  }
+  .section-one .block-picture {
+    left: 17%;
+  }
+  .section-two .block-picture {
+    left: 43%;
+  }
+
+  .section-three .block-picture {
+    left: 68%;
+  }
+  .section-four .block-picture {
+    left: 90%;
+  }
+  .section-one .block-picture,
+  .section-three .block-picture {
+    top: 36%;
+  }
+  .section-two .block-picture,
+  .section-four .block-picture {
+    top: 30%;
+  }
+  .block-picture-img {
+    min-width: 96%;
+    left: 1%;
+    min-height: 23%;
+  }
+  .img-lamp {
+    width: 65%;
+  }
+  .wrapper-character {
+    min-height: 22em;
+  }
+  .character {
+    transform: scale(0.8);
+    top: -9%;
+    height: 122%;
+    left: -11%;
+  }
+}
+
+@media screen and (max-height: 568px) {
+  body {
+    font-size: 10px;
+  }
+
+  .wrapper-character {
+    min-height: 23em;
+  }
+  .character {
+    transform: scale(0.7);
+    top: -20%;
+    height: 146%;
+    left: -16%;
+    width: 134%;
+  }
+}
