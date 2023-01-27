@@ -29,7 +29,7 @@ function randomPositionBrick() {
   brick.style.background = `url(${bricksArrSrc[randomNum]}) no-repeat`;
 
   let randomPositionTop = Math.round(Math.random() * 89);
-  let randomPositionLeft = Math.round(Math.random() * 99);
+  let randomPositionLeft = Math.round(Math.random() * 97);
   brick.style.top = randomPositionTop + "%";
   brick.style.left = randomPositionLeft + "%";
 
@@ -62,7 +62,7 @@ function randomPositionBricks() {
 randomPositionBricks();
 
 function log(s) {
-    console.log(s);
+  console.log(s);
 }
 let prevX = 0;
 let targetLeft = 0;
@@ -70,78 +70,109 @@ let targetLeft = 0;
 // Start near the first frame
 wrapperChar.style.left = "3%";
 
-/*
-// Will be usefull to calc the targetLeft value with different screens
-document.addEventListener('keydown', function(e) {
-    const key = event.key; // "ArrowRight", "ArrowLeft", "ArrowUp", or "ArrowDown"
+//Will be usefull to calc the targetLeft value with different screens
+document.addEventListener("keydown", function (e) {
+  const key = event.key; // "ArrowRight", "ArrowLeft", "ArrowUp", or "ArrowDown"
 
-    switch (event.key) {
+  switch (event.key) {
     case "ArrowLeft":
-	move(-0.2);
-        break;
+      move(-0.2);
+      break;
     case "ArrowRight":
-	move(0.2);
-        break;
+      move(0.2);
+      break;
     case "ArrowUp":
-        break;
+      break;
     case "ArrowDown":
-        break;
-    }
+      break;
+  }
 
-    log("left: " + wrapperChar.style.left);
+  log("left: " + wrapperChar.style.left);
 });
 
 function move(k) {
-    counterX += k;
-    wrapperChar.style.left = counterX + "%";
+  counterX += k;
+  wrapperChar.style.left = counterX + "%";
 }
-*/
 
 function onInterval() {
-    let x = wrapper.getBoundingClientRect().x;
+  let x = wrapper.getBoundingClientRect().x;
+  log("scrollX: " + x);
+  if (x === prevX) {
+    // No scrolling
+    return;
+  }
 
-    if (x === prevX) {
-	// No scrolling 
-	return;
-    }
+  //wrapperChar.style.left = -x / 46 + "%";
+  handleScroll(x);
 
-    handleScroll(x);
-
-    prevX = x;
+  prevX = x;
+  log("prevX: " + prevX);
 }
-
-setInterval(onInterval, 500);
+log("screen: " + window.innerWidth);
+setInterval(onInterval, 500); //checking to know when scroll stops.
 
 function handleScroll(x) {
-    // The final position where the girl should be.
-    // The value -14 will be different for different screen sizes.
-    targetLeft = x / -14; 
+  // The final position where the girl should be.
+  // The value -14 will be different for different screen sizes.
+  targetLeft = x / getScrollStep();
 
-    log("x: " + x);
-    log("targetLeft: " + targetLeft);
+  log("x: " + x);
+  log("targetLeft: " + targetLeft);
 
-    animation.classList.add("animation");
-    animation.style.animationName = "walkRight"; 
-    
-    walk();
+  animation.classList.add("animation");
+  animation.style.animationName = "walkRight";
+
+  walk();
+}
+// log("getScrollStep: " + getScrollStep());
+
+// function getScrollStep() {
+//   let screenSize = window.innerWidth;
+//   if (screenSize <= 414) {
+//     return -15;
+//   } else if (screenSize <= 540) {
+//     return -18;
+//   } else if (screenSize <= 712) {
+//     return -23;
+//   } else if (screenSize <= 768) {
+//     return -27;
+//   } else if (screenSize <= 844) {
+//     return -28;
+//   } else if (screenSize <= 916) {
+//     return -32;
+//   } else if (screenSize <= 1024) {
+//     return -36;
+//   } else if (screenSize <= 1180) {
+//     return -41;
+//   } else if (screenSize <= 1280) {
+//     return -46;
+//   } else if (screenSize <= 2150) {
+//     return -70;
+//   }
+// }
+
+function getScrollStep() {
+  let screenSize = window.innerWidth;
+  return -Math.round(screenSize / 28.5);
 }
 
 function walk() {
-    const leftFull = wrapperChar.style.left; // Example: "0.8%"
-    const leftStr = leftFull.substring(0, leftFull.indexOf('%')); // Example: "0.8"
-    const left = parseFloat(leftStr);
+  const leftFull = wrapperChar.style.left; // Example: "0.8%"
+  const leftStr = leftFull.substring(0, leftFull.indexOf("%")); // Example: "0.8"
+  const left = parseFloat(leftStr);
 
-    log("left: " + left);
+  log("left: " + left);
 
-    if (left > targetLeft) {
-	// The girl reached the target position
-	stopWalk();
-	return;
-    }
+  if (left > targetLeft) {
+    // The girl reached the target position
+    stopWalk();
+    return;
+  }
 
-    wrapperChar.style.left = (left + 0.2) + "%";
+  wrapperChar.style.left = left + 0.2 + "%";
 
-    setTimeout(walk, 20);
+  setTimeout(walk, 20);
 }
 
 function stopWalk() {
