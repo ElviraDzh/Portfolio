@@ -27,6 +27,7 @@ function randomPositionBrick() {
   const bricksArrSrc = ["../img/brick2.png", "../img/brick1.png"];
   let randomNum = Math.round(Math.random());
   brick.style.background = `url(${bricksArrSrc[randomNum]}) no-repeat`;
+  brick.style.backgroundSize = "contain";
 
   let randomPositionTop = Math.round(Math.random() * 89);
   let randomPositionLeft = Math.round(Math.random() * 97);
