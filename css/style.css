@@ -25,7 +25,7 @@ body {
   position: absolute;
   width: 100vh;
   /*  we will need to rotate this wrapper the trick is to set 100% of the viewport height and height to 100% of the viewport width*/
-  height: 100vw;
+  height: 95vw;
   transform: rotate(-90deg) translateX(-100vh);
   transform-origin: top left;
   overflow-y: scroll;
@@ -214,11 +214,27 @@ body {
   }
 }
 
+/*  DECOR ITEMS */
+
 .decor-items {
   position: absolute;
   bottom: 6%;
   width: 25%;
   border-top: 3px solid #d9d9d9;
+}
+.section-one .exit,
+.section-four .exit {
+  margin: 0;
+  width: 4em;
+  height: 2em;
+  position: absolute;
+  top: 13%;
+}
+.section-one .exit {
+  left: 2%;
+}
+.section-four .exit {
+  right: 0%;
 }
 
 .plants {
@@ -288,7 +304,8 @@ body {
 
 .brick {
   position: absolute;
-  width: 5em;
+  /* background-size: 6em 3em; */
+  width: 6em;
   height: 3em;
 }
 
@@ -314,24 +331,4 @@ body {
 .title-picture::after {
   top: 65%;
   width: 3em;
-}
-
-.exit {
-  margin: 2em 2em;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.exit-left,
-.exit-right {
-  background: url(../img/exit-sprite2.png) no-repeat;
-  display: inline-block;
-  background-position: -7px -53px;
-  width: 4em;
-  height: 2em;
-}
-
-.exit-right {
-  background-position: -81px -53px;
 }
