@@ -110,6 +110,7 @@
 
 @media screen and (max-height: 845px) {
   body {
+    overflow-y: hidden;
     font-size: 13px;
   }
   .section .block-picture {
