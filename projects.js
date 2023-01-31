@@ -18,7 +18,7 @@ const exitRight = document.querySelector(".exit-right");
 const wrapperOuter = document.getElementById("outer-wrapper");
 const bricks = document.querySelector(".bricks");
 
-let counterX = 0;
+let left;
 
 function randomPositionBrick() {
   const brick = document.createElement("span");
@@ -89,10 +89,10 @@ document.addEventListener("keydown", function (e) {
   // log("left: " + wrapperChar.style.left);
 });
 
-function move(k) {
-  counterX += k;
-  wrapperChar.style.left = counterX + "%";
-}
+// function move(k) {
+//   counterX += k;
+//   wrapperChar.style.left = counterX + "%";
+// }
 
 function onInterval() {
   let x = wrapper.getBoundingClientRect().x;
@@ -103,6 +103,11 @@ function onInterval() {
   }
   // The final position where the girl should be.
   targetLeft = x / getScrollStep();
+  // if (x > prevX) {
+  //   walk("walkLeft", "-432px 0px", left < targetLeft, left - 0.2 + "%");
+  // } else {
+  //   walk("walkRight", "-440px -359px", left > targetLeft, left + 0.2 + "%");
+  // }
   if (x > prevX) {
     walkLeft();
   } else {
@@ -146,8 +151,8 @@ function getScrollStep() {
 
 function walkLeft() {
   const leftFull = wrapperChar.style.left; // Example: "0.8%"
-  const left = parseFloat(leftFull); //parses a value as a string and returns the first number.
-
+  left = parseFloat(leftFull); //parses a value as a string and returns the first number.
+  changeImgToColor(61, 68, imgLampTetris, tetrisImg);
   animation.classList.add("animation");
   animation.style.animationName = "walkLeft";
   animation.style.backgroundPosition = "-432px 0px";
@@ -164,7 +169,7 @@ function walkLeft() {
 
 function walkRight() {
   const leftFull = wrapperChar.style.left; // Example: "0.8%"
-  const left = parseFloat(leftFull); //parses a value as a string and returns the first number.
+  left = parseFloat(leftFull); //parses a value as a string and returns the first number.
 
   animation.classList.add("animation");
   animation.style.animationName = "walkRight";
@@ -176,42 +181,40 @@ function walkRight() {
   }
 
   wrapperChar.style.left = left + 0.2 + "%";
+  console.log(left);
+  changeImgToColor(61, 68, imgLampTetris, tetrisImg);
   // console.log(wrapperChar.style.left);
   setTimeout(walkRight, 20);
 }
 
-// function walk(
-//   leftPosition,
-//   animationName,
-//   bgdPosition,
-//   condition,
-//   moveAbsPosition
-// ) {
-//   const leftFullStr = wrapperChar.style.left; // Example: "0.8%"
-//   leftPosition = parseFloat(leftFullStr); //parses a value as a string and returns the first number.
+function walk(animationName, bgdPosition, condition, moveAbsPosition) {
+  const leftFullStr = wrapperChar.style.left; // Example: "0.8%"
+  left = parseFloat(leftFullStr); //parses a value as a string and returns the first number.
 
-//   animation.classList.add("animation");
-//   animation.style.animationName = animationName;
-//   // animation.style.backgroundPosition = "-440px -359px";
-//   animation.style.backgroundPosition = bgdPosition;
-//   if (condition) {
-//     // The girl reached the target position
-//     stopWalk();
-//     return;
-//   }
+  animation.classList.add("animation");
+  animation.style.animationName = animationName;
+  // animation.style.backgroundPosition = "-440px -359px";
+  animation.style.backgroundPosition = bgdPosition;
+  if (condition) {
+    // The girl reached the target position
+    stopWalk();
+    return;
+  }
 
-//   // wrapperChar.style.left = left + 0.2 + "%";
-//   wrapperChar.style.left = moveAbsPosition;
-//   console.log(wrapperChar.style.left);
-//   setTimeout(walk, 20);
-// }
+  // wrapperChar.style.left = left + 0.2 + "%";
+  wrapperChar.style.left = moveAbsPosition;
+  console.log(wrapperChar.style.left);
+  changeImgToColor(61, 68, imgLampTetris, tetrisImg);
+  setTimeout(walk, 20);
+}
 
 function stopWalk() {
   animation.classList.remove("animation");
 }
 
 function changeImgToColor(min, max, lamp, img) {
-  if (counterX > min && counterX < max) {
+  console.log("left: " + left);
+  if (left > min && left < max) {
     lamp.src = "img/onlight.png";
     lamp.classList.add("lampOn");
     img.src = "img/frameCol.png";

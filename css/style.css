@@ -25,7 +25,7 @@ body {
   position: absolute;
   width: 100vh;
   /*  we will need to rotate this wrapper the trick is to set 100% of the viewport height and height to 100% of the viewport width*/
-  height: 95vw;
+  height: 100vw;
   transform: rotate(-90deg) translateX(-100vh);
   transform-origin: top left;
   overflow-y: scroll;
@@ -94,7 +94,7 @@ body {
   left: 56%;
   transform: translate(-50%, -50%);
   min-height: 23em;
-  margin: 0 auto;
+  /* border: 1px solid blue; */
 }
 .section-three .block-picture {
   left: 63%;
@@ -124,20 +124,22 @@ body {
   top: 11%;
   left: 0%;
   width: 96%;
-  min-width: 95%;
   min-height: 14em;
   object-fit: cover;
+  /* border: 1px solid red; */
 }
-
+/* #tetrisImg-Tetris {
+  max-width: 100%;
+} */
 #gifTetris {
+  position: absolute;
   display: none;
-  top: 19%;
-  left: 12%;
-  max-height: 14.5em;
-  min-height: 14em;
+  top: 25%;
+  left: 10%;
+  min-height: 15.5em;
   object-fit: cover;
-  min-width: 60%;
-  width: 72%;
+  max-width: 78%;
+  width: 100%;
 }
 
 .modal {
@@ -156,14 +158,13 @@ body {
   position: absolute;
   display: flex;
   align-items: center;
-  left: 59%;
+  left: 63%;
 }
 
 .modalImgTetris {
   position: relative;
-  min-width: 80%;
   display: none;
-  text-align: center;
+  /* min-width: 20em; */
 }
 .modalImgTetris.current {
   display: block;
