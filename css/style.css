@@ -146,8 +146,8 @@ body {
   position: fixed;
   left: 0;
   top: 0;
-  width: 400vw;
-  height: 400vh;
+  width: 100vw;
+  height: 100vh;
   background-color: rgba(0, 0, 0, 0.6);
   z-index: 10000;
   opacity: 0;
@@ -155,16 +155,14 @@ body {
 }
 .modal-content {
   min-height: 100vh;
-  position: absolute;
   display: flex;
   align-items: center;
-  left: 63%;
-  width: 31em;
-  height: 46em;
+  justify-content: center;
 }
 
 .modalImgTetris img {
-  max-width: 100%;
+  width: 100%;
+  max-width: 35em;
   height: auto;
 }
 

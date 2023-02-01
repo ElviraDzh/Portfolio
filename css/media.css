@@ -1,8 +1,9 @@
-@media screen and (max-width: 1200px) {
+/* @media screen and (max-width: 1200px) {
   .modal-content {
-    left: 59%;
+    left: 57%;
   }
-}
+}  */
+/*
 @media screen and (max-width: 1100px) {
   .modal-content {
     left: 62%;
@@ -19,7 +20,7 @@
   .modal-content {
     left: 59%;
   }
-}
+} */
 @media screen and (max-width: 600px) {
   .section-two .sculpture-woman,
   .section-three .plant,
@@ -36,16 +37,16 @@
   .wrapper {
     width: 380vw;
   }
-  .modal-content {
+  /* .modal-content {
     left: 51%;
-  }
+  } */
 }
 
-@media screen and (max-width: 520px) {
+/* @media screen and (max-width: 520px) {
   .modal-content {
     left: 52%;
   }
-}
+} */
 
 @media screen and (max-width: 450px) {
   .section-one .bench,
@@ -61,9 +62,9 @@
   .section-four .plant {
     left: 21%;
   }
-  .modal-content {
+  /* .modal-content {
     left: 50%;
-  }
+  } */
 }
 /* @media screen and (max-width: 415px) {
   .modal-content {

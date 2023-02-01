@@ -182,7 +182,7 @@ function walkRight() {
 
   wrapperChar.style.left = left + 0.2 + "%";
   console.log(left);
-  changeImgToColor(61, 68, imgLampTetris, tetrisImg);
+  changeImgToColor(59, 64, imgLampTetris, tetrisImg);
   // console.log(wrapperChar.style.left);
   setTimeout(walkRight, 20);
 }
@@ -204,7 +204,7 @@ function walk(animationName, bgdPosition, condition, moveAbsPosition) {
   // wrapperChar.style.left = left + 0.2 + "%";
   wrapperChar.style.left = moveAbsPosition;
   console.log(wrapperChar.style.left);
-  changeImgToColor(61, 68, imgLampTetris, tetrisImg);
+  changeImgToColor(59, 64, imgLampTetris, tetrisImg);
   setTimeout(walk, 20);
 }
 
