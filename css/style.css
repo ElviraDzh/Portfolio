@@ -159,19 +159,22 @@ body {
   display: flex;
   align-items: center;
   left: 63%;
+  width: 31em;
+  height: 46em;
+}
+
+.modalImgTetris img {
+  max-width: 100%;
+  height: auto;
 }
 
 .modalImgTetris {
   position: relative;
   display: none;
-  /* min-width: 20em; */
 }
+
 .modalImgTetris.current {
   display: block;
-}
-.modal.show {
-  opacity: 1;
-  pointer-events: auto;
 }
 
 .close,
@@ -204,7 +207,7 @@ body {
 }
 
 .modal.show .modal-content {
-  animation: zoom 0.3s linear;
+  animation: zoom 0.5s ease-in-out;
 }
 @keyframes zoom {
   from {
@@ -213,6 +216,11 @@ body {
   to {
     transform: scale(1);
   }
+}
+
+.modal.show {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 /*  DECOR ITEMS */
