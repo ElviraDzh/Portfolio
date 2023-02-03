@@ -158,7 +158,7 @@ function getPositionImg() {
 function walkLeft() {
   const leftFull = wrapperChar.style.left; // Example: "0.8%"
   left = parseFloat(leftFull); //parses a value as a string and returns the first number.
-  changeImgToColor(61, 68, imgLampTetris, tetrisImg);
+  changeImgToColor(50.4, 64.2, imgLampTetris, tetrisImg);
   animation.classList.add("animation");
   animation.style.animationName = "walkLeft";
   animation.style.backgroundPosition = "-432px 0px";
@@ -167,9 +167,9 @@ function walkLeft() {
     stopWalk();
     return;
   }
-  getPositionImg();
+
   wrapperChar.style.left = left - 0.2 + "%";
-  // console.log(wrapperChar.style.left);
+  console.log("Left: " + wrapperChar.style.left);
   setTimeout(walkLeft, 20);
 }
 
@@ -185,11 +185,11 @@ function walkRight() {
     stopWalk();
     return;
   }
-  getPositionImg();
+
   wrapperChar.style.left = left + 0.2 + "%";
   console.log("Left: " + left);
-  changeImgToColor(59, 64, imgLampTetris, tetrisImg);
-  // console.log(wrapperChar.style.left);
+  changeImgToColor(50.4, 64.2, imgLampTetris, tetrisImg);
+  console.log("Left: " + wrapperChar.style.left);
   setTimeout(walkRight, 20);
 }
 
