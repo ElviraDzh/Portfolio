@@ -67,7 +67,7 @@ let targetLeft = 0;
 let backStep = 0;
 
 // Start near the first frame
-wrapperChar.style.left = "0%";
+wrapperChar.style.left = "9%";
 
 //Will be usefull to calc the targetLeft value with different screens
 document.addEventListener("keydown", function (e) {
@@ -95,8 +95,7 @@ document.addEventListener("keydown", function (e) {
 // }
 
 function onInterval() {
-  let x = wrapper.getBoundingClientRect().x;
-
+  let x = wrapper.getBoundingClientRect().x; // find containers left position  relative to viewport
   if (x === prevX) {
     // No scrolling
     return;
@@ -148,6 +147,13 @@ function getScrollStep() {
   let screenSize = window.innerWidth;
   return -Math.round(screenSize / 28.5);
 }
+function getPositionImg() {
+  const tetrisRect = tetrisImg.getBoundingClientRect();
+
+  console.log("tetrisX:" + tetrisRect.x);
+  console.log("tetrisWidth:" + tetrisImg.width);
+  console.log("tetrisX:" + tetrisRect.x);
+}
 
 function walkLeft() {
   const leftFull = wrapperChar.style.left; // Example: "0.8%"
@@ -161,7 +167,7 @@ function walkLeft() {
     stopWalk();
     return;
   }
-
+  getPositionImg();
   wrapperChar.style.left = left - 0.2 + "%";
   // console.log(wrapperChar.style.left);
   setTimeout(walkLeft, 20);
@@ -179,41 +185,40 @@ function walkRight() {
     stopWalk();
     return;
   }
-
+  getPositionImg();
   wrapperChar.style.left = left + 0.2 + "%";
-  console.log(left);
+  console.log("Left: " + left);
   changeImgToColor(59, 64, imgLampTetris, tetrisImg);
   // console.log(wrapperChar.style.left);
   setTimeout(walkRight, 20);
 }
 
-function walk(animationName, bgdPosition, condition, moveAbsPosition) {
-  const leftFullStr = wrapperChar.style.left; // Example: "0.8%"
-  left = parseFloat(leftFullStr); //parses a value as a string and returns the first number.
+// function walk(animationName, bgdPosition, condition, moveAbsPosition) {
+//   const leftFullStr = wrapperChar.style.left; // Example: "0.8%"
+//   left = parseFloat(leftFullStr); //parses a value as a string and returns the first number.
 
-  animation.classList.add("animation");
-  animation.style.animationName = animationName;
-  // animation.style.backgroundPosition = "-440px -359px";
-  animation.style.backgroundPosition = bgdPosition;
-  if (condition) {
-    // The girl reached the target position
-    stopWalk();
-    return;
-  }
+//   animation.classList.add("animation");
+//   animation.style.animationName = animationName;
+//   // animation.style.backgroundPosition = "-440px -359px";
+//   animation.style.backgroundPosition = bgdPosition;
+//   if (condition) {
+//     // The girl reached the target position
+//     stopWalk();
+//     return;
+//   }
 
-  // wrapperChar.style.left = left + 0.2 + "%";
-  wrapperChar.style.left = moveAbsPosition;
-  console.log(wrapperChar.style.left);
-  changeImgToColor(59, 64, imgLampTetris, tetrisImg);
-  setTimeout(walk, 20);
-}
+//   // wrapperChar.style.left = left + 0.2 + "%";
+//   wrapperChar.style.left = moveAbsPosition;
+//   console.log(wrapperChar.style.left);
+//   changeImgToColor(59, 64, imgLampTetris, tetrisImg);
+//   setTimeout(walk, 20);
+// }
 
 function stopWalk() {
   animation.classList.remove("animation");
 }
 
 function changeImgToColor(min, max, lamp, img) {
-  console.log("left: " + left);
   if (left > min && left < max) {
     lamp.src = "img/onlight.png";
     lamp.classList.add("lampOn");

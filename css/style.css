@@ -10,8 +10,10 @@ body {
 }
 
 .section {
+  position: relative;
   width: 100vw;
   height: 100vh;
+  border: 1px solid red;
 }
 
 .wrapper {
@@ -86,30 +88,22 @@ body {
   }
 }
 
-.block-picture {
+.section .block-picture {
   position: absolute;
   min-width: 14em;
   max-width: 16em;
-  top: 37%;
-  left: 56%;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
   min-height: 23em;
   /* border: 1px solid blue; */
 }
-.section-three .block-picture {
-  left: 63%;
-}
+
 .section-four .block-picture {
   top: 29%;
-  left: 88%;
 }
 .section-two .block-picture {
   top: 29%;
-  left: 38%;
-}
-
-.section-one .block-picture {
-  left: 14%;
 }
 
 .img-lamp {
@@ -122,19 +116,16 @@ body {
 .block-picture-img {
   position: absolute;
   top: 11%;
-  left: 0%;
+  left: 2%;
   width: 96%;
   min-height: 14em;
   object-fit: cover;
-  /* border: 1px solid red; */
 }
-/* #tetrisImg-Tetris {
-  max-width: 100%;
-} */
+
 #gifTetris {
   position: absolute;
   display: none;
-  top: 25%;
+  top: 23%;
   left: 10%;
   min-height: 15.5em;
   object-fit: cover;
@@ -185,23 +176,24 @@ body {
   color: #000;
   font-weight: bold;
   z-index: 10000;
+  padding: 0.5em;
 }
 
 .close {
-  top: 8%;
-  right: 9%;
+  top: 5%;
+  right: 7%;
   font-size: 1.4em;
   background-color: transparent;
   color: #000;
 }
 
 .btn-next {
-  top: 48%;
-  right: 9%;
+  top: 42%;
+  right: 6%;
 }
 .btn-prev {
-  left: 9%;
-  top: 48%;
+  left: 6%;
+  top: 42%;
 }
 
 .modal.show .modal-content {
@@ -226,7 +218,7 @@ body {
 .decor-items {
   position: absolute;
   bottom: 6%;
-  width: 25%;
+  width: 100%;
   border-top: 3px solid #d9d9d9;
 }
 .section-one .exit,
