@@ -1,4 +1,4 @@
-const animation = document.getElementById("animation");
+const character = document.getElementById("character");
 const wrapper = document.getElementById("wrapper");
 const wrapperChar = document.querySelector(".wrapper-character");
 const tetrisImg = document.getElementById("tetrisImg-Tetris");
@@ -70,24 +70,24 @@ let backStep = 0;
 wrapperChar.style.left = "9%";
 
 //Will be usefull to calc the targetLeft value with different screens
-document.addEventListener("keydown", function (e) {
-  const key = event.key; // "ArrowRight", "ArrowLeft", "ArrowUp", or "ArrowDown"
+// document.addEventListener("keydown", function (e) {
+//   const key = event.key; // "ArrowRight", "ArrowLeft", "ArrowUp", or "ArrowDown"
 
-  switch (event.key) {
-    case "ArrowLeft":
-      move(-0.2);
-      break;
-    case "ArrowRight":
-      move(0.2);
-      break;
-    case "ArrowUp":
-      break;
-    case "ArrowDown":
-      break;
-  }
+//   switch (event.key) {
+//     case "ArrowLeft":
+//       move(-0.2);
+//       break;
+//     case "ArrowRight":
+//       move(0.2);
+//       break;
+//     case "ArrowUp":
+//       break;
+//     case "ArrowDown":
+//       break;
+//   }
 
-  // log("left: " + wrapperChar.style.left);
-});
+//   // log("left: " + wrapperChar.style.left);
+// });
 
 // function move(k) {
 //   counterX += k;
@@ -102,11 +102,7 @@ function onInterval() {
   }
   // The final position where the girl should be.
   targetLeft = x / getScrollStep();
-  // if (x > prevX) {
-  //   walk("walkLeft", "-432px 0px", left < targetLeft, left - 0.2 + "%");
-  // } else {
-  //   walk("walkRight", "-440px -359px", left > targetLeft, left + 0.2 + "%");
-  // }
+
   if (x > prevX) {
     walkLeft();
   } else {
@@ -116,7 +112,37 @@ function onInterval() {
   prevX = x;
 }
 
-setInterval(onInterval, 500); //check to know when scroll stops.
+if (window.innerWidth > 900) {
+  setInterval(onInterval, 500); //check to know when scroll stops.
+} else {
+  document.addEventListener("touchstart", (e) => {
+    [...e.changedTouches].forEach((touch) => {
+      console.log("start");
+      // wrapperChar.style.left = `${touch.pageX}px`;
+      character.classList.add("animation");
+      character.style.animationName = "walkRight";
+      wrapperChar.style.left = `${touch.pageX - 100}px`;
+    });
+  });
+
+  document.addEventListener("touchmove", (e) => {
+    console.log(e.changedTouches);
+    [...e.changedTouches].forEach((touch) => {
+      wrapperChar.style.left = `${touch.pageX - 100}px`;
+      console.log(touch.pageX);
+    });
+    console.log("move");
+  });
+
+  document.addEventListener("touchend", (e) => {
+    [...e.changedTouches].forEach((touch) => {
+      const dot = document.getElementById(touch.identifier);
+      dot.remove();
+      character.classList.remove("animation");
+    });
+    console.log("end");
+  });
+}
 
 // function getScrollStep() {
 //   let screenSize = window.innerWidth;
@@ -158,10 +184,11 @@ function getPositionImg() {
 function walkLeft() {
   const leftFull = wrapperChar.style.left; // Example: "0.8%"
   left = parseFloat(leftFull); //parses a value as a string and returns the first number.
-  animation.classList.add("animation");
-  animation.style.animationName = "walkLeft";
-  animation.style.backgroundPosition = "-432px 0px";
+  character.classList.add("animation");
+  character.style.characterName = "walkLeft";
+  character.style.backgroundPosition = "-432px 0px";
   if (left < targetLeft) {
+    console.log("targetLeft: " + targetLeft);
     // The girl reached the target position
     stopWalk();
     return;
@@ -183,9 +210,9 @@ function walkRight() {
   const leftFull = wrapperChar.style.left; // Example: "0.8%"
   left = parseFloat(leftFull); //parses a value as a string and returns the first number.
 
-  animation.classList.add("animation");
-  animation.style.animationName = "walkRight";
-  animation.style.backgroundPosition = "-440px -359px";
+  character.classList.add("animation");
+  character.style.characterName = "walkRight";
+  character.style.backgroundPosition = "-440px -359px";
   if (left > targetLeft) {
     // The girl reached the target position
     stopWalk();
@@ -206,29 +233,8 @@ function walkRight() {
   setTimeout(walkRight, 20);
 }
 
-// function walk(animationName, bgdPosition, condition, moveAbsPosition) {
-//   const leftFullStr = wrapperChar.style.left; // Example: "0.8%"
-//   left = parseFloat(leftFullStr); //parses a value as a string and returns the first number.
-
-//   animation.classList.add("animation");
-//   animation.style.animationName = animationName;
-//   // animation.style.backgroundPosition = "-440px -359px";
-//   animation.style.backgroundPosition = bgdPosition;
-//   if (condition) {
-//     // The girl reached the target position
-//     stopWalk();
-//     return;
-//   }
-
-//   // wrapperChar.style.left = left + 0.2 + "%";
-//   wrapperChar.style.left = moveAbsPosition;
-//   console.log(wrapperChar.style.left);
-//   changeImgToColor(59, 64, imgLampTetris, tetrisImg);
-//   setTimeout(walk, 20);
-// }
-
 function stopWalk() {
-  animation.classList.remove("animation");
+  character.classList.remove("animation");
 }
 
 function changeImgToColor(min, max, lamp, img) {
