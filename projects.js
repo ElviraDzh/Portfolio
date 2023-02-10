@@ -115,31 +115,23 @@ function onInterval() {
 if (window.innerWidth > 900) {
   setInterval(onInterval, 500); //check to know when scroll stops.
 } else {
-  document.addEventListener("touchstart", (e) => {
-    [...e.changedTouches].forEach((touch) => {
-      console.log("start");
-      // wrapperChar.style.left = `${touch.pageX}px`;
-      character.classList.add("animation");
-      character.style.animationName = "walkRight";
-      wrapperChar.style.left = `${touch.pageX - 100}px`;
-    });
+  document.addEventListener("touchstart", () => {
+    console.log("start");
+    character.classList.add("animation");
+    character.style.animationName = "walkRight";
   });
 
   document.addEventListener("touchmove", (e) => {
     console.log(e.changedTouches);
     [...e.changedTouches].forEach((touch) => {
-      wrapperChar.style.left = `${touch.pageX - 100}px`;
+      wrapperChar.style.left = `${touch.pageX - 150}px`;
       console.log(touch.pageX);
     });
     console.log("move");
   });
 
-  document.addEventListener("touchend", (e) => {
-    [...e.changedTouches].forEach((touch) => {
-      const dot = document.getElementById(touch.identifier);
-      dot.remove();
-      character.classList.remove("animation");
-    });
+  document.addEventListener("touchend", () => {
+    character.classList.remove("animation");
     console.log("end");
   });
 }
