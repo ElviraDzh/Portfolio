@@ -95,7 +95,7 @@ wrapperChar.style.left = "9%";
 // }
 
 function onInterval() {
-  let x = wrapper.getBoundingClientRect().x; // find containers left position  relative to viewport
+  let x = wrapper.getBoundingClientRect().x; // find wrappers x position  relative to viewport
   if (x === prevX) {
     // No scrolling
     return;
@@ -112,29 +112,27 @@ function onInterval() {
   prevX = x;
 }
 
-if (window.innerWidth > 900) {
-  setInterval(onInterval, 500); //check to know when scroll stops.
-} else {
-  document.addEventListener("touchstart", () => {
-    console.log("start");
-    character.classList.add("animation");
-    character.style.animationName = "walkRight";
-  });
+setInterval(onInterval, 500); //check to know when scroll stops.
+document.addEventListener("touchstart", () => {
+  console.log("start");
+  // console.log(e.changedTouches[0].pageX);
+  // wrapperChar.style.left = `${e.changedTouches[0].pageX}px`;
+  character.classList.add("animation");
+  character.style.animationName = "walkRight";
+});
 
-  document.addEventListener("touchmove", (e) => {
-    console.log(e.changedTouches);
-    [...e.changedTouches].forEach((touch) => {
-      wrapperChar.style.left = `${touch.pageX - 150}px`;
-      console.log(touch.pageX);
-    });
-    console.log("move");
+document.addEventListener("touchmove", (e) => {
+  [...e.changedTouches].forEach((touch) => {
+    wrapperChar.style.left = `${touch.pageX - 150}px`;
+    console.log(touch.pageX);
   });
+  console.log("move");
+});
 
-  document.addEventListener("touchend", () => {
-    character.classList.remove("animation");
-    console.log("end");
-  });
-}
+document.addEventListener("touchend", () => {
+  character.classList.remove("animation");
+  console.log("end");
+});
 
 // function getScrollStep() {
 //   let screenSize = window.innerWidth;
@@ -165,19 +163,12 @@ function getScrollStep() {
   let screenSize = window.innerWidth;
   return -Math.round(screenSize / 28.5);
 }
-function getPositionImg() {
-  const tetrisRect = tetrisImg.getBoundingClientRect();
-
-  console.log("tetrisX:" + tetrisRect.x);
-  console.log("tetrisWidth:" + tetrisImg.width);
-  console.log("tetrisX:" + tetrisRect.x);
-}
 
 function walkLeft() {
   const leftFull = wrapperChar.style.left; // Example: "0.8%"
   left = parseFloat(leftFull); //parses a value as a string and returns the first number.
   character.classList.add("animation");
-  character.style.characterName = "walkLeft";
+  character.style.animationName = "walkLeft";
   character.style.backgroundPosition = "-432px 0px";
   if (left < targetLeft) {
     console.log("targetLeft: " + targetLeft);
@@ -203,7 +194,7 @@ function walkRight() {
   left = parseFloat(leftFull); //parses a value as a string and returns the first number.
 
   character.classList.add("animation");
-  character.style.characterName = "walkRight";
+  character.style.animationName = "walkRight";
   character.style.backgroundPosition = "-440px -359px";
   if (left > targetLeft) {
     // The girl reached the target position

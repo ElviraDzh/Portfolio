@@ -23,18 +23,18 @@ body {
   /* transform: rotate(90deg) translateY(-100vh);
   transform-origin: top left; */
 }
-/* .outer-wrapper {
+.outer-wrapper {
   position: absolute;
-  width: 100vh; */
-/*  we will need to rotate this wrapper the trick is to set 100% of the viewport height and height to 100% of the viewport width*/
-/* height: 100vw;
+  width: 100vh;
+  /* we will need to rotate this wrapper the trick is to set 100% of the viewport height and height to 100% of the viewport width */
+  height: 100vw;
   transform: rotate(-90deg) translateX(-100vh);
   transform-origin: top left;
   overflow-y: scroll;
   overflow-x: hidden;
   scrollbar-width: none;
   -ms-overflow-style: none;
-} */
+}
 
 /*chrome, safari */
 ::-webkit-scrollbar {
@@ -78,15 +78,6 @@ body {
     background-position: -1344px 0px;
   }
 }
-
-/* @keyframes walkRight {
-  0% {
-    background-position: 0px 0px;
-  }
-  100% {
-    background-position: -1344px 0px;
-  }
-} */
 
 @keyframes walkRight {
   0% {
