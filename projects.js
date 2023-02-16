@@ -1,36 +1,38 @@
-const character = document.getElementById("character");
-const wrapper = document.getElementById("wrapper");
-const wrapperChar = document.querySelector(".wrapper-character");
-const tetrisImg = document.getElementById("tetrisImg-Tetris");
-const closesModalWindow = document.querySelectorAll(".close");
-const btnsPrev = document.querySelectorAll(".btn-prev");
-const btnsNext = document.querySelectorAll(".btn-next");
-const imgLampTetris = document.getElementById("imgLamp-Tetris");
-const imgLamp1 = document.getElementById("imgLamp-1");
-const tetrisBlock = document.getElementById("tetrisBlock");
-const modalBlock = document.querySelector(".modal");
-const slides = document.querySelectorAll(".modalImgTetris");
-const parentSlide = document.querySelector(".slides");
-const gifTetris = document.getElementById("gifTetris");
-const titlesPicture = document.querySelectorAll(".title-picture");
-const exitLeft = document.querySelector(".exit-left");
-const exitRight = document.querySelector(".exit-right");
-const wrapperOuter = document.getElementById("outer-wrapper");
-const bricks = document.querySelector(".bricks");
+var character = document.getElementById("character");
+var wrapper = document.getElementById("wrapper");
+var wrapperChar = document.querySelector(".wrapper-character");
+var tetrisImg = document.getElementById("tetrisImg-Tetris");
+var closesModalWindow = document.querySelectorAll(".close");
+var btnsPrev = document.querySelectorAll(".btn-prev");
+var btnsNext = document.querySelectorAll(".btn-next");
+var imgLampTetris = document.getElementById("imgLamp-Tetris");
+var imgLamp1 = document.getElementById("imgLamp-1");
+var tetrisBlock = document.getElementById("tetrisBlock");
+var modalBlock = document.querySelector(".modal");
+var slides = document.querySelectorAll(".modalImgTetris");
+var parentSlide = document.querySelector(".slides");
+var gifTetris = document.getElementById("gifTetris");
+var titlesPicture = document.querySelectorAll(".title-picture");
+var exitLeft = document.querySelector(".exit-left");
+var exitRight = document.querySelector(".exit-right");
+var wrapperOuter = document.getElementById("outer-wrapper");
+var bricks = document.querySelector(".bricks");
 
-let left;
+var left;
 
 function randomPositionBrick() {
-  const brick = document.createElement("span");
+  var brick = document.createElement("span");
   brick.classList.add("brick");
 
-  const bricksArrSrc = ["../img/brick2.png", "../img/brick1.png"];
-  let randomNum = Math.round(Math.random());
+  var bricksArrSrc = ["../img/brick2.png", "../img/brick1.png"];
+
+  var randomNum = Math.round(Math.random());
   brick.style.background = `url(${bricksArrSrc[randomNum]}) no-repeat`;
   brick.style.backgroundSize = "contain";
 
-  let randomPositionTop = Math.round(Math.random() * 89);
-  let randomPositionLeft = Math.round(Math.random() * 97);
+  var randomPositionTop = Math.round(Math.random() * 89);
+
+  var randomPositionLeft = Math.round(Math.random() * 97);
   brick.style.top = randomPositionTop + "%";
   brick.style.left = randomPositionLeft + "%";
 
@@ -62,16 +64,16 @@ function randomPositionBricks() {
 }
 randomPositionBricks();
 
-let prevX = 0;
-let targetLeft = 0;
-let backStep = 0;
+var prevX = 0;
+var targetLeft = 0;
+var backStep = 0;
 
 // Start near the first frame
 wrapperChar.style.left = "9%";
 
 //Will be usefull to calc the targetLeft value with different screens
 // document.addEventListener("keydown", function (e) {
-//   const key = event.key; // "ArrowRight", "ArrowLeft", "ArrowUp", or "ArrowDown"
+//   var key = event.key; // "ArrowRight", "ArrowLeft", "ArrowUp", or "ArrowDown"
 
 //   switch (event.key) {
 //     case "ArrowLeft":
@@ -95,7 +97,7 @@ wrapperChar.style.left = "9%";
 // }
 
 function onInterval() {
-  let x = wrapper.getBoundingClientRect().x; // find wrappers x position  relative to viewport
+  var x = wrapper.getBoundingClientRect().x; // find wrappers x position  relative to viewport
   if (x === prevX) {
     // No scrolling
     return;
@@ -113,29 +115,30 @@ function onInterval() {
 }
 
 setInterval(onInterval, 500); //check to know when scroll stops.
-document.addEventListener("touchstart", () => {
-  console.log("start");
-  // console.log(e.changedTouches[0].pageX);
-  // wrapperChar.style.left = `${e.changedTouches[0].pageX}px`;
-  character.classList.add("animation");
-  character.style.animationName = "walkRight";
-});
+// document.addEventListener("touchstart", () => {
+//   console.log("start");
+//   // console.log(e.changedTouches[0].pageX);
+//   // wrapperChar.style.left = `${e.changedTouches[0].pageX}px`;
+//   character.classList.add("animation");
+//   character.style.animationName = "walkRight";
+// });
 
-document.addEventListener("touchmove", (e) => {
-  [...e.changedTouches].forEach((touch) => {
-    wrapperChar.style.left = `${touch.pageX - 150}px`;
-    console.log(touch.pageX);
-  });
-  console.log("move");
-});
+// document.addEventListener("touchmove", (e) => {
+//   [...e.changedTouches].forEach((touch) => {
+//     wrapperChar.style.left = `${touch.pageX - 150}px`;
+//     console.log(touch.pageX);
+//   });
+//   console.log("move");
+// });
 
-document.addEventListener("touchend", () => {
-  character.classList.remove("animation");
-  console.log("end");
-});
+// document.addEventListener("touchend", () => {
+//   character.classList.remove("animation");
+//   console.log("end");
+// });
 
 // function getScrollStep() {
-//   let screenSize = window.innerWidth;
+//
+var screenSize = window.innerWidth;
 //   if (screenSize <= 414) {
 //     return -15;
 //   } else if (screenSize <= 540) {
@@ -160,12 +163,12 @@ document.addEventListener("touchend", () => {
 // }
 
 function getScrollStep() {
-  let screenSize = window.innerWidth;
+  var screenSize = window.innerWidth;
   return -Math.round(screenSize / 28.5);
 }
 
 function walkLeft() {
-  const leftFull = wrapperChar.style.left; // Example: "0.8%"
+  var leftFull = wrapperChar.style.left; // Example: "0.8%"
   left = parseFloat(leftFull); //parses a value as a string and returns the first number.
   character.classList.add("animation");
   character.style.animationName = "walkLeft";
@@ -190,7 +193,7 @@ function walkLeft() {
 }
 
 function walkRight() {
-  const leftFull = wrapperChar.style.left; // Example: "0.8%"
+  var leftFull = wrapperChar.style.left; // Example: "0.8%"
   left = parseFloat(leftFull); //parses a value as a string and returns the first number.
 
   character.classList.add("animation");
@@ -241,7 +244,7 @@ function changeImgToColor(min, max, lamp, img) {
 
     btnsPrev.forEach((btn) => {
       btn.addEventListener("click", () => {
-        let currentSlide = document.querySelector(".current");
+        var currentSlide = document.querySelector(".current");
         currentSlide.classList.remove("current");
         console.log(currentSlide.previousElementSibling);
         if (currentSlide.previousElementSibling) {
@@ -262,7 +265,7 @@ function changeImgToColor(min, max, lamp, img) {
 closesModalWindow.forEach((close) => {
   close.addEventListener("click", () => {
     modalBlock.classList.remove("show");
-    const currentSlide = document.querySelector(".current");
+    var currentSlide = document.querySelector(".current");
     console.log(currentSlide);
     currentSlide.classList.remove("current");
     console.log(parentSlide.firstElementChild);
@@ -271,7 +274,7 @@ closesModalWindow.forEach((close) => {
 });
 
 function nextSlide() {
-  const currentSlide = document.querySelector(".current");
+  var currentSlide = document.querySelector(".current");
   currentSlide.classList.remove("current");
   if (currentSlide.nextElementSibling) {
     currentSlide.nextElementSibling.classList.add("current");
