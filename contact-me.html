@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="css/normalize.css">
+   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/media.css">
+   <title>contact-me</title>
+</head>
+
+<body>
+   <section id="contact-me">
+      <div id="contact-me__img">
+         <p class="contact-me__text"></p>
+      </div>
+      <div id="pop-up">
+         <form action="#" id="contact-me__form">
+            <h2 class="contact-me__form__header">Contact me</h2>
+            <p class="contact-me__form__notes">*Please fill out the form to see the animation</p>
+            <div class="contact-me__form__user-info">
+               <label for="name"> Name:</label>
+               <p><input type="text" id="name" required></p>
+            </div>
+            <div class="contact-me__form__user-info">
+               <label for="email"> Email:</label>
+               <p><input type="email" id="email" required></p>
+
+            </div>
+            <div class="contact-me__form__user-info">
+               <label for="message"> Message:</label>
+               <p><textarea name="message" id="message"></textarea></p>
+            </div>
+            <button type="button" id="send-button">Send message</button>
+         </form>
+      </div>
+   </section>
+   <section class="post-box">
+      <img id="post-box__delivered" src="images/envelop.png" alt="envelop">
+      <div class="character">
+         <div id="character__moving"></div>
+      </div>
+      <div id="character__message">
+         <p class="character__message__text">Thank you for contacting me! I will be in touch with you shortly.</p>
+      </div>
+   </section>
+
+   <script src="contact-me.js"></script>
+</body>
+
+</html>

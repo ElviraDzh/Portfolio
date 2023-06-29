@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+    <meta
+      name="viewport"
+      content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <title>My Gallery of projects</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/media.css" />
+  </head>
+  <body>
+    <!-- <div class="outer-wrapper" id="outer-wrapper"> -->
+    <div class="wrapper" id="wrapper">
+      <div class="wrapper-character">
+        <div class="character" id="character"></div>
+      </div>
+      <div class="bricks"></div>
+      <section class="section section-one">
+        <span class="brick"></span>
+        <img src="img/exit-left.png" alt="exit-left" class="exit" />
+        <div class="decor-items">
+          <img src="img/banch.png" alt="bench" class="bench" />
+          <img src="img/vase2.png" alt="" class="vase" />
+        </div>
+        <div class="block-picture">
+          <img src="img/light.png" alt="lamp" class="img-lamp" id="imgLamp" />
+          <img
+            src="img/woman-modified.png"
+            alt="woman"
+            id="womanImg"
+            class="block-picture-img"
+          />
+          <span class="title-picture"></span>
+        </div>
+      </section>
+      <section class="section section-two">
+        <div class="decor-items">
+          <img src="img/banch.png" alt="bench" class="bench" />
+          <img src="img/statueHalf.png" alt="" class="sculpture-woman" />
+          <img
+            src="img/plant-2 (1).png"
+            alt="plant-flower"
+            class="plants plant"
+          />
+        </div>
+        <div class="block-picture">
+          <img src="img/light.png" alt="lamp" class="img-lamp" id="imgLamp" />
+          <img
+            src="img/abstract1-modified.png"
+            alt="abstract"
+            id="abstract1Img"
+            class="block-picture-img"
+          />
+          <span class="title-picture"></span>
+        </div>
+      </section>
+      <section class="section section-three">
+        <div class="decor-items">
+          <img src="img/banch.png" alt="bench" class="bench" />
+          <img src="img/vase1.png" alt="" class="vase" />
+          <img src="img/plant4.png" alt="plant-flower" class="plants plant" />
+        </div>
+        <div class="block-picture" id="tetrisBlock">
+          <img
+            src="img/light.png"
+            alt="lamp"
+            class="img-lamp"
+            id="imgLamp-Tetris"
+          />
+          <img
+            src="img/tetrisCol-modified.png"
+            alt="tetris"
+            id="tetrisImg-Tetris"
+            class="block-picture-img"
+          />
+          <img src="img/1DDX.gif" alt="" id="gifTetris" />
+
+          <div class="title-picture">
+            <span></span>
+          </div>
+        </div>
+      </section>
+      <section class="section section-four">
+        <img src="img/exit-right.png" alt="exit-left" class="exit" />
+        <div class="decor-items">
+          <img src="img/banch.png" alt="bench" class="bench bench-2" />
+          <img src="img/vase2.png" alt="" class="vase" />
+          <img src="img/statueHalf.png" alt="" class="sculpture-woman" />
+          <img src="img/plant-1.png" alt="plant-flower" class="plants plant" />
+        </div>
+        <div class="block-picture">
+          <img src="img/light.png" alt="lamp" class="img-lamp" id="imgLamp" />
+          <img
+            src="img/abstract2-modified.png"
+            alt="abstract"
+            id="abstract1Img"
+            class="block-picture-img"
+          />
+          <span class="title-picture"></span>
+        </div>
+      </section>
+    </div>
+    <!-- </div> -->
+    <div class="modal">
+      <div class="modal-content">
+        <div class="slides">
+          <div class="modalImgTetris current">
+            <img src="img/aboutTetris (2).png" alt="" />
+            <a
+              href="https://tetris.elvira.ie/"
+              target="_blank"
+              class="link-tetris link-demo"
+              >Demo</a
+            >
+            <a
+              href="https://github.com/ElviraDzh/Tetris"
+              target="_blank"
+              class="link-tetris link-github"
+              >Github</a
+            >
+            <span class="close" id="close"
+              ><i class="fa-regular fa-circle-xmark"></i
+            ></span>
+            <button class="btn-prev">
+              <i class="fa-solid fa-angle-left"></i>
+            </button>
+            <button class="btn-next">
+              <i class="fa-solid fa-angle-right"></i>
+            </button>
+          </div>
+          <div class="modalImgTetris">
+            <img src="img/tetrisSlide.png" alt="aboutTetrisGame" />
+            <a
+              href="https://tetris.elvira.ie/"
+              target="_blank"
+              class="link-tetris link-demo"
+              >Demo</a
+            >
+            <a
+              href="https://github.com/ElviraDzh/Tetris"
+              target="_blank"
+              class="link-tetris link-github"
+              >Github</a
+            >
+            <span class="close" id="close"
+              ><i class="fa-regular fa-circle-xmark"></i
+            ></span>
+            <button class="btn-prev">
+              <i class="fa-solid fa-angle-left"></i>
+            </button>
+            <button class="btn-next">
+              <i class="fa-solid fa-angle-right"></i>
+            </button>
+          </div>
+          <div class="modalImgTetris">
+            <img src="img/tetrisTablet.png" alt="tetrisWebPage" />
+            <a
+              href="https://tetris.elvira.ie/"
+              target="_blank"
+              class="link-tetris link-demo"
+              >Demo</a
+            >
+            <a
+              href="https://github.com/ElviraDzh/Tetris"
+              target="_blank"
+              class="link-tetris link-github"
+              >Github</a
+            >
+            <span class="close" id="close"
+              ><i class="fa-regular fa-circle-xmark"></i
+            ></span>
+            <button class="btn-prev">
+              <i class="fa-solid fa-angle-left"></i>
+            </button>
+            <button class="btn-next">
+              <i class="fa-solid fa-angle-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="projects.js"></script>
+  </body>
+</html>

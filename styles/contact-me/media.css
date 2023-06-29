@@ -1,0 +1,284 @@
+@media only screen and (max-width: 1440px) {
+   :root{
+      --character__message-top: 14%;
+      --character__message-right: 29%;
+    }
+   
+    #character__moving {
+      width: 11em;
+      height: 25em;
+   }
+
+   .post-box {
+      position: absolute;
+      top: 35%;
+      right: 5%;}
+}
+
+@media only screen and (max-width: 1200px) {
+   :root{
+      --envelop-width:36em;
+      --envelop-height:27em;
+      --form-header-margin-top: 3em;
+      --form-notes-margin-bottom: 0.6em;
+      --form-width:16em;
+      --form-padding:0.2em;
+      --form-size:1em;
+      --form-btn-margin-top: 0.3em;
+      --form-btn-padding: 0.3em;
+   }
+
+   .contact-me__text {
+      min-width: 18%
+   }
+   
+   .contact-me__form__header {
+      font-size: 1.1em;
+  }
+
+  .contact-me__form__notes {
+   font-size: 0.5em;
+}
+
+   textarea {
+   min-height: 4em;
+ }
+}
+
+@media only screen and (max-width: 1024px) {
+   :root{
+      --send-translate-y: -93%;
+      --send-translate-x: -2%;
+      --envelop-width:35em;
+      --envelop-height:24em;
+   }
+   #contact-me__img.remove-blur {
+      background-position: 90% 0%;
+      }
+      .contact-me__text {
+         min-width: 20%;
+     }
+
+}
+
+@media only screen and (max-width:820px) {
+   :root{
+      --send-translate-x: -21%;
+      --send-translate-y: -129%;
+      --form-header-margin-top:2em;
+      --envelop-height:25em;
+      --character__message-top: 21%;
+      --character__message-right: 47%;
+   }
+   .contact-me__text {
+      min-width: 25%;
+      left:42%
+   }
+
+   #pop-up{
+      font-size: 0.9em;
+   }
+
+   #post-box {
+      animation: postBox 2.5s ease-in forwards, imgMove 4s linear 3s forwards;
+     }
+
+   @keyframes imgMove {
+      from {
+         background-position: 0%;
+      }
+    
+      to {
+      background-position: 82%;
+      }
+     }
+
+     #character__moving {
+      width: 21em;
+      height: 34em;
+  }
+
+  .character {
+   animation: walk 5s forwards;
+}
+
+@keyframes walk {
+   from {
+     left: 0%;
+   }
+   to {
+     left: 48%;
+   }
+ }
+}
+
+@media only screen and (max-width:810px)  {
+   :root {
+      --form-header-margin-top: 1.5em;
+   }
+}
+
+@media only screen and (max-height:710px)  {
+   }
+
+@media only screen and (max-height:610px)  {
+   }
+
+ @media only screen and (max-width:540px) {
+   :root{
+      --form-notes-margin-bottom: 0.3em;
+      --form-width:15em;
+      --form-padding:0.2em;
+      --form-size:0.7em;
+      --form-btn-margin-top: 0.3em;
+      --form-btn-padding: 0.2em;  
+      --envelop-width:25em;
+      --envelop-height:21em;    
+   }
+
+   .contact-me__text {
+      min-width: 43%;
+      left: 36%;
+  }
+
+  #contact-me__form {
+   font-size: 0.9em;
+  }
+}
+
+@media only screen and (max-width:420px) {
+   :root{
+      --envelop-width:23em;
+      --envelop-height:16em; 
+      --send-translate-x:  -24%;
+      --send-translate-y: -152%;
+   }
+
+
+ #contact-me__img{
+   background-size: auto 100%;
+   background-position: 53% 0%;
+  }
+
+  .contact-me__text {
+   left: 32%;
+   top: 39%;
+   width: 35%;
+   height: 12%;
+  }
+
+  #contact-me__img.remove-blur {
+  background-position: 84%;
+  }
+
+  #send-button {
+   box-shadow:none;
+  }
+
+  #post-box {
+   /* top: 14%;
+   right: -1%; */
+   animation: postBox 2.5s ease-in forwards, imgMove 4s linear 3s forwards;
+  }
+
+  #character__moving {
+   width: 12em;
+   height: 29em
+}
+
+
+ #post-box__delivered {
+   top: 32%;
+   right: 22%;
+   transform: rotate(32deg);
+}
+
+#character__message {
+   top: 24%;
+   right: 43%;
+} 
+
+}
+
+@media only screen and (max-width:375px) {
+   :root{
+      --contact-me__font-size: 1.1em;
+   }
+   
+   #character__moving {
+      width: 9em;
+      height: 23em;
+   }
+
+}
+
+@media only screen and (max-height:420px)  {
+   :root{
+      --send-translate-y: -95%;
+      --send-translate-x: 24%;
+      --envelop-width: 26em;
+      --envelop-height: 18em;  
+      --contact-me__font-size: 0.6em;
+      --form-notes-margin-bottom: 0.2em;
+      --form-width:15em;
+      --form-padding:0.2em;
+      --form-size:0.7em;
+      --form-btn-margin-top: 0.3em;
+      --form-btn-padding: 0.2em;  
+      --form-header-margin-top: 1em;
+   }
+
+   #pop-up {
+      font-size: 0.8em;
+   }
+
+   #contact-me__img.remove-blur {
+      background-position: 50% 0%;
+      }
+
+      #character__moving {
+         width: 7em;
+         height: 14em;
+     }
+
+     #character__message {
+      width: 7em;
+    height: 7em;
+     }
+
+     .character__message__text {
+      font-size: 10px;
+      line-height: 1;
+      letter-spacing: 0px;
+     }
+
+     #post-box__delivered {
+      width: 2em;
+      height: 1em;
+   }
+
+   /* #post-box {
+      background-position: 50% 50%;
+   } */
+}
+@media only screen and (max-height:375px)  {
+   :root{
+      --envelop-width:25em;
+      --envelop-height:17em;    
+   }
+
+   #character__moving {
+      width: 6em;
+      height: 13em;
+  }
+
+  #character__message {
+   width: 6em;
+   height: 6em;
+}
+.character__message__text {
+   font-size: 8px;
+}
+}
+
+  
