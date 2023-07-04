@@ -8,10 +8,17 @@ class KeyHandler {
     document.addEventListener('keydown', this.onKeyDown.bind(this));
   }
 
-  // ArrowDown ArrowLeft ArrowRight
+  // TODO ArrowDown ArrowLeft 
   onKeyDown(event) {
+    // Ignore if the skater is performing another action.
+    if (this.#skater.isChanging()) return;
+
     if (event.code === "ArrowUp") {
         this.#skater.jump();
-    } 
+    } else if (event.code === "ArrowRight") {
+      this.#skater.rollRight();
+    } else if (event.code === "ArrowDown") {
+      this.#skater.stop();
+    }
   }
 }
