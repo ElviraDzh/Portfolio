@@ -1,11 +1,15 @@
 // ----------------------------------------------------------------------------
-// Contains global variables, constants and functions.
+// Contains global variables and functions.
 // ----------------------------------------------------------------------------
 
 function log(s) {
     console.log(s);
 }
 
-function byId(id) {
+function getById(id) {
     return document.getElementById(id);
 }
+
+// function getByClass(clazz) {
+//     return document.getElementsByClassName(clazz);
+// }
