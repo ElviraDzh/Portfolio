@@ -1,11 +1,18 @@
+const timer = new Timer();
+timer.start();
+
+const scene = new ProjectScene();
+timer.setScene(scene);
+
+const skater = new Skater(scene);
+const keyHandler = new KeyHandler(skater);
 //const skater = new Skater();
 //const keyHandler = new KeyHandler(skater);
 
 function moveLayer(layerId, step) {
   const layer = getById(layerId);
   const currentPosition = parseInt(getComputedStyle(layer).backgroundPositionX);
-  layer.style.backgroundPositionX = (currentPosition - step) + "px";
-
+  layer.style.backgroundPositionX = currentPosition - step + "px";
 }
 
 function onInterval() {

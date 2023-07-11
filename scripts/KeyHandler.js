@@ -13,7 +13,7 @@ class KeyHandler {
     if (this.#skater.isChanging()) return;
 
     if (event.code === "ArrowUp") {
-        this.#skater.jump();
+      this.#skater.jump();
     } else if (event.code === "ArrowRight") {
       this.#skater.rollRight();
     } else if (event.code === "ArrowLeft") {
