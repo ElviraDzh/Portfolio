@@ -2,21 +2,29 @@
 <html>
   <head>
     <title>Gamefolio</title>
-
-    <style>
-        .flip-image {
-            transform: rotateY(180deg)
-        }
-    </style>
+    <link rel="stylesheet" href="./styles/globals.css"/>
+    <link rel="stylesheet" href="./styles/projects.css"/>
+    <link rel="stylesheet" href="./styles/main.css"/>
   </head>
   <body>
-    <div id="gif">
-      <img id="skater" src="./images/skater/idle.gif">
+    <div id="projects-scene" class="scene-container">
+      <div id="layer-0"></div>
+      <div id="layer-1"></div>
+      <div id="layer-2"></div>
+      <div id="layer-3"></div>
+      <div id="layer-4"></div>
+      <div id="layer-5"></div>
+      <div id="layer-6"></div>
+      <div id="layer-8"></div>
+      <div id="layer-9"></div>
     </div>
+    <img id="skater" src="./images/skater/idle.gif">
 
     <script src="./scripts/globals.js"></script>
     <script src="./scripts/Skater.js"></script>
     <script src="./scripts/KeyHandler.js"></script>
+    <script src="./scripts/Timer.js"></script>
+    <script src="./scripts/ProjectScene.js"></script>
     <script src="./scripts/main.js"></script>
   </body>
 </html>
