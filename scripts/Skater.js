@@ -1,9 +1,15 @@
 class Skater {
   // List states the skater can be.
   #States = {
+
     IDLE: "idle",
     ROLLING_RIGHT: "rolling-right",
     ROLLING_LEFT: "rolling-left",
+
+    IDLE: "IDLE",
+    ROLLING_RIGHT: "ROLLING_RIGHT",
+    ROLLING_LEFT: "ROLLING_LEFT",
+
   }
 
   #StateImages = {
@@ -38,8 +44,11 @@ class Skater {
   }
 
   #image = getById("skater")
+
   #state = this.#States.IDLE;
   #scene;
+  #currentState = this.#States.IDLE;
+>>>>>>> main
 
   // List of states when changing from one state to another.
   #changeStateImages = [];
@@ -55,8 +64,13 @@ class Skater {
         this.#StateImages.IDLE,
         this.#StateImages.JUMPING
       ];
+
     } else if (this.#state === this.#States.ROLLING_RIGHT 
         || this.#state === this.#States.ROLLING_LEFT) {
+
+    } else if (this.#currentState === this.#States.ROLLING_RIGHT 
+        || this.#currentState === this.#States.ROLLING_LEFT) {
+
       this.#changeStateImages = [
         this.#StateImages.ROLLING,
         this.#StateImages.JUMPING
@@ -71,6 +85,15 @@ class Skater {
     if (this.#state === this.#States.ROLLING_RIGHT) return;
 
     if (this.#state === this.#States.ROLLING_LEFT) {
+      this.rollReverse();
+      return;
+    }
+
+    // If the previous rolling side was left, remove flipping. 
+    // Otherwise the skater moves left instead of right.
+    this.#image.classList.remove("flip-image");
+
+    if (this.#currentState === this.#States.ROLLING_LEFT) {
       this.rollReverse();
       return;
     }
@@ -125,6 +148,40 @@ class Skater {
     this.#scene.moveLeft();
   }
 
+  rollReverse() {
+    this.#changeStateImages = [
+      this.#StateImages.ROLLING,
+      this.#StateImages.REVERSING,
+      this.#StateImages.STOPPING,
+    ];
+  
+    this.#handleStateChange();
+
+    this.#currentState = this.#currentState === this.#States.ROLLING_RIGHT
+      ? this.#States.ROLLING_LEFT : this.#States.ROLLING_RIGHT;
+  }
+  
+  rollLeft() {
+    if (this.#currentState === this.#States.ROLLING_LEFT) return;
+
+    if (this.#currentState === this.#States.ROLLING_RIGHT) {
+      this.rollReverse();
+      return;
+    }
+
+    // Flip the image to make the skater rolling left.
+    this.#image.classList.add("flip-image");
+
+    this.#changeStateImages = [
+      this.#StateImages.ROLLING,
+      this.#StateImages.START_ROLLING
+    ];
+   
+    this.#handleStateChange();
+
+    this.#currentState = this.#States.ROLLING_LEFT;
+  }
+
   stop() {
     this.#changeStateImages = [
       this.#StateImages.IDLE,
@@ -144,7 +201,22 @@ class Skater {
    
     this.#handleStateChange();
 
+
     this.#state = this.#States.IDLE;
+
+    this.#currentState = this.#States.IDLE
+  }
+  
+  fall() {
+    this.#changeStateImages = [
+      this.#StateImages.IDLE,
+      this.#StateImages.FALLING
+    ];
+   
+    this.#handleStateChange();
+
+    this.#currentState = this.#States.IDLE;
+
   }
 
   isChanging() {
