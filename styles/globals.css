@@ -11,15 +11,9 @@
     transform: rotateY(180deg);
 }
 
-.scene-container {
-    height: 500px;
-    width: 800px;
-    position: relative;
-}
-
 #skater {
-    width: 150px;
-    left: 300px;
-    bottom: 385px;
+    width: 155px;
     position: absolute;
+    bottom: 3%;
+    left: 45%
 }
