@@ -3,88 +3,96 @@
     padding: 0;
 }
 
+.flip-image {
+    transform: rotateY(180deg)
+}
+
 .scene-container {
-    height: 100vh;
-    width: 100%;
+    height: 500px;
+    width: 800px;
+    border: 1px solid silver;
     position: relative;
+    /* overflow-x: hidden; */
 }
 
 #layer-0 {
     height: 100%;
     width: 100%;
-    background: url(../images/projects/scene/layer-0.png) center/cover;
+    border: 1px solid red;
+    background-image: url(../images/projects/scene/layer-0.png);
+    background-size: cover;
+    background-position: center;
+    /* z-index: -1; */
 }
 
 #layer-1 {
     height: 162px;
     width: 100%;
-    background: url(../images/projects/scene/layer-1.png) repeat-x;
-    background-size: contain;
+    background-image: url(../images/projects/scene/layer-1.png);
     position: absolute;
     bottom: 2%;
+    background-repeat: repeat-x;
+    background-size: contain;
 }
 
 #layer-2 {
     height: 100px;
     width: 100%;
-    background: url(../images/projects/scene/layer-2.png) repeat-x;
-    background-size: contain;
+    background-image: url(../images/projects/scene/layer-2.png);
     position: absolute;
-    bottom: 8%;
+    bottom: 21%;
+    background-repeat: repeat-x;
+    background-size: contain;
 }
 
 #layer-3 {
     height: 145px;
     width: 100%;
-    background: url(../images/projects/scene/layer-3.png) repeat-x;
-    background-size: contain;
+    background-image: url(../images/projects/scene/layer-3.png);
     position: absolute;
-    bottom: 8%;
+    bottom: 21%;
+    background-repeat: repeat-x;
+    background-size: contain;
 }
 
 #layer-4 {
     height: 145px;
     width: 100%;
-    background: url(../images/projects/scene/layer-4.png) repeat-x;
-    background-size: contain;
+    background-image: url(../images/projects/scene/layer-4.png);
     position: absolute;
     bottom: 3%;
+    background-repeat: repeat-x;
+    background-size: contain;
 }
 
 #layer-5 {
-    height: 234px;
+    height: 206px;
     width: 100%;
-    background: url(../images/projects/scene/layer-5.png) repeat-x;
-    background-size: contain;
+    background-image: url(../images/projects/scene/layer-5.png);
     position: absolute;
-    bottom: 5%;
+    bottom: 14%;
+    background-repeat: repeat-x;
+    background-size: contain;
 }
 
 #layer-6 {
     height: 240px;
     width: 100%;
-    background: url(../images/projects/scene/layer-6.png) repeat-x;
-    background-size: contain;
+    background-image: url(../images/projects/scene/layer-6.png);
     position: absolute;
     bottom: 0%;
+    background-repeat: repeat-x;
+    background-size: contain;
 }
 
 #layer-8 {
     height: 50px;
     width: 100%;
-    background: url(../images/projects/scene/layer-8.png) repeat-x;
-    background-size: contain;
+    background-image: url(../images/projects/scene/layer-8.png);
     position: absolute;
     bottom: 0%;
-}
-
-#layer-9 {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: url(../images/projects/scene/layer-9.png);
+    background-repeat: repeat-x;
+    background-size: contain;
 }
 
 .main-container {

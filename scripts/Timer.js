@@ -3,22 +3,14 @@
 // movement.
 // ----------------------------------------------------------------------------
 class Timer {
-  #fps = 60; // Frames per second.
-  #scene; // The current scene, i.e. Projects.
-
-  setScene(scene) {
-    this.#scene = scene;
-  }
+  #interval = 1000 / 60; // Frames per second.
 
   start() {
-    const oneSecond = 1000;
-    const interval = oneSecond / this.#fps;
-    setInterval(this.#onInterval.bind(this), interval);
+    setTimeout(this.#onInterval.bind(this), this.#interval);
   }
 
   #onInterval() {
-    if (this.#scene) {
-      this.#scene.onInterval();
-    }
+    SCENE_WRAPPER.onInterval();
+    setTimeout(this.#onInterval.bind(this), this.#interval);
   }
 }

@@ -70,15 +70,18 @@
 #layer-8 {
     height: 50px;
     width: 100%;
-    background: url(../images/projects/scene/layer-8.png) repeat-x contain;
+    background-image: url(../images/projects/scene/layer-8.png);
     position: absolute;
     bottom: 0%;
+    background-repeat: repeat-x;
+    background-size: contain;
 }
 
 #layer-9 {
     height: 100%;
     width: 100%;
     position: absolute;
-    z-index: 11;
-    background: url(../images/projects/scene/layer-9.png) center/cover;
+    background-image: url(../images/projects/scene/layer-9.png);
+    background-size: cover;
+    background-position: center;
 }

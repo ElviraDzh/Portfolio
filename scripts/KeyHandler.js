@@ -1,27 +1,21 @@
 class KeyHandler {
-  #skater;
-
-  constructor(skater) {
-    this.#skater = skater;
-
+  constructor() {
     // Without *.bind(this), "this" is referencing to the DOM element, not the class itself.
     document.addEventListener('keydown', this.onKeyDown.bind(this));
   }
 
   onKeyDown(event) {
-    // Ignore if the skater is performing another action.
-    if (this.#skater.isChanging()) return;
+    // To avoid concurrency handling of events.
+    if (SCENE_WRAPPER.ignoreKeys()) return;
 
     if (event.code === "ArrowUp") {
-      this.#skater.jump();
+      SCENE_WRAPPER.up();
     } else if (event.code === "ArrowRight") {
-      this.#skater.rollRight();
+      SCENE_WRAPPER.moveRight();
     } else if (event.code === "ArrowLeft") {
-      this.#skater.rollLeft();
+      SCENE_WRAPPER.moveLeft();
     } else if (event.code === "ArrowDown") {
-      this.#skater.stop();
-    } else if (event.code === "Space") {
-      this.#skater.fall()
+      SCENE_WRAPPER.down();
     }
   }
 }
