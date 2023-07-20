@@ -1,9 +1,8 @@
-const SCREEN = new Screen();
-const KEY_HANDLER = new KeyHandler();
+const timer = new Timer();
+timer.start();
 
-const SKATER = new Skater();
-const CURRENT_SCENE = new ProjectScene();
-const SCENE_WRAPPER = new SceneWrapper();
+const scene = new ProjectScene();
+timer.setScene(scene);
 
-const TIMER = new Timer();
-TIMER.start();
+const skater = new Skater(scene);
+const keyHandler = new KeyHandler(skater);

@@ -1,20 +1,7 @@
 class ProjectScene {
-  #center = SCREEN.centerX;
-  #speed = 3;
-  #stopIndex = null;
-
-  #start = SCREEN.centerX;
-  #end = 1500;
-  #stops = [
-    {
-      start: 2000,
-      end: 2100,
-    },
-    // {
-    //     start: 2000,
-    //     end: 2100,
-    // },
-  ];
+  #state = "stopped";   // moving, stopped, stopping.
+  #direction = 1;       // 1 - right, -1 - left.
+  #smoothness = [];     // To make moving and stopping smooth. 
 
   #layers = [
     this.#initLayer("layer-1", 1),
@@ -24,7 +11,7 @@ class ProjectScene {
     this.#initLayer("layer-5", 2),
     this.#initLayer("layer-6", 3),
     this.#initLayer("layer-8", 5),
-  ];
+  ]
 
   #initLayer(id, step) {
     return {
@@ -34,67 +21,73 @@ class ProjectScene {
     };
   }
 
-  // Returns true if the scene can move in a given direction.
-  canMove(direction) {
-    if (
-      (direction === 1 && this.#center > this.#end) ||
-      (direction === -1 && this.#center < this.#start)
-    ) {
-      // Reached the end or the start of the scene.
-      return false;
-    }
-
-    return true;
+  #moveLayer(layer, smoothFactor) {
+    layer.left -= this.#direction * layer.step * smoothFactor;
+    layer.layer.style.backgroundPositionX = layer.left + "px";
   }
+  
+  onInterval() {  
+    if (this.#state === "stopped") return;
 
-  // Returns true if the scene can move in a given direciton. Otherwise, false. 
-  // For example, reaching the end of scene. 
-  move(direction, smoothFactor) {
-    if (!this.canMove(direction) || !this.#handleStops(direction)) return false;
+    const smoothFactor = this.#smoothness.length > 0 ? this.#smoothness.shift() : 1;
 
-    this.#center += direction * this.#speed;
-
-    // Move layers.
     for (const layer of this.#layers) {
-        layer.left -= direction * layer.step * smoothFactor;
-        layer.layer.style.backgroundPositionX = layer.left + "px";
+      this.#moveLayer(layer, smoothFactor);
     }
 
-    return true;
+    if (this.#state === "stopping" && this.#smoothness.length === 0) {
+      this.#state = "stopped";
+    }
   }
 
-  #handleStops(direction) {
-    if (this.#stopIndex !== null) {
-      // There is the current stop. "Unmark" the current stop when the scene goes out of the current stop,
-      // so the scene can properly stop again when comes back.
-      const stop = this.#stops[this.#stopIndex];
-      if (
-        (direction === 1 && stop.end < this.#center) ||
-        (direction === -1 && stop.start > this.#center)
-      ) {
-        this.#stopIndex = null;
-      }
-    } else {
-      // No current stop. Stop the scene if get within any of stops.
-      const index = this.#getStopIndex();
-      if (index !== null) {
-        this.#stopIndex = index;
-        return false;
-      }
-    }
-
-    return true;
+  moveRight() {
+    this.#state = "moving";
+    this.#direction = 1;
+    this.#smoothness = this.#getMovingSmoothness();
   }
 
-  #getStopIndex() {
-    for (let i = 0; i < this.#stops.length; i++) {
-      const stop = this.#stops[i];
-      if (this.#center >= stop.start && this.#center <= stop.end) {
-        return i;
-      }
-    }
+  moveLeft() {
+    this.#state = "moving";
+    this.#direction = -1;
+    this.#smoothness = this.#getMovingSmoothness();
+  }
 
-    // Not within any of stops.
-    return null;
+  stop() {
+    this.#state = "stopping";
+    this.#smoothness = this.#getStoppingSmoothness();
+  }
+
+  moveReverse() {
+    this.#direction *= -1;
+    this.#smoothness = this.#getReverseSmoothness();
+  }
+
+  #getReverseSmoothness() {
+    return [
+      new Array(10).fill(0.6),
+      new Array(10).fill(0.3),
+      new Array(10).fill(0.1),
+      new Array(10).fill(0.3),
+      new Array(10).fill(0.6),
+      new Array(10).fill(0.8),
+    ].flat();
+  }
+
+  #getStoppingSmoothness() {
+    return [
+      new Array(10).fill(0.6),
+      new Array(10).fill(0.3),
+    ].flat();
+  }
+
+  #getMovingSmoothness() {
+    return [
+      new Array(20).fill(0),
+      new Array(20).fill(0.1),
+      new Array(20).fill(0.2),
+      new Array(20).fill(0.4),
+      new Array(20).fill(0.6),
+      new Array(20).fill(0.8),
+    ].flat();
   }
 }
