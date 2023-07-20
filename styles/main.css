@@ -1,195 +1,140 @@
-* {
+*,
+::after,
+::before{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-.flip-image {
-    transform: rotateY(180deg)
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    border: 1px solid red;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    
 }
 
 .scene-container {
-    height: 500px;
-    width: 800px;
-    border: 1px solid silver;
+    width: 100%;
+    height: 100%;
+    max-height: 35em;
+    max-width: 47em;
     position: relative;
-    /* overflow-x: hidden; */
+    border: 1px solid red;
 }
+@media screen and (max-width: 400px) {
+    .scene-container {
+        min-width: 21em;
+    }
+  }
 
 #layer-0 {
     height: 100%;
     width: 100%;
-    border: 1px solid red;
-    background-image: url(../images/projects/scene/layer-0.png);
-    background-size: cover;
-    background-position: center;
-    /* z-index: -1; */
+    background: url(../images/projects/scene/layer-0.png) center/cover;
 }
 
 #layer-1 {
-    height: 162px;
     width: 100%;
-    background-image: url(../images/projects/scene/layer-1.png);
+    height: 100%;
+    max-height: 25%;
+    background: url(../images/projects/scene/layer-1.png) repeat-x;
+    background-size: contain;
     position: absolute;
     bottom: 2%;
-    background-repeat: repeat-x;
-    background-size: contain;
 }
 
 #layer-2 {
-    height: 100px;
     width: 100%;
-    background-image: url(../images/projects/scene/layer-2.png);
-    position: absolute;
-    bottom: 21%;
-    background-repeat: repeat-x;
+    height: 100%;
+    max-height: 18%;
+    background: url(../images/projects/scene/layer-2.png) repeat-x;
     background-size: contain;
+    position: absolute;
+    bottom: 8%;
 }
 
 #layer-3 {
-    height: 145px;
     width: 100%;
-    background-image: url(../images/projects/scene/layer-3.png);
-    position: absolute;
-    bottom: 21%;
-    background-repeat: repeat-x;
+    height: 100%;
+    max-height: 22%;
+    background: url(../images/projects/scene/layer-3.png) repeat-x;
     background-size: contain;
+    position: absolute;
+    bottom: 8%;
 }
 
 #layer-4 {
-    height: 145px;
     width: 100%;
-    background-image: url(../images/projects/scene/layer-4.png);
+    height: 100%;
+    max-height: 22%;
+    background: url(../images/projects/scene/layer-4.png) repeat-x;
+    background-size: contain;
     position: absolute;
     bottom: 3%;
-    background-repeat: repeat-x;
-    background-size: contain;
 }
 
 #layer-5 {
-    height: 206px;
     width: 100%;
-    background-image: url(../images/projects/scene/layer-5.png);
-    position: absolute;
-    bottom: 14%;
-    background-repeat: repeat-x;
+    height: 100%;
+    max-height: 40%;
+    background: url(../images/projects/scene/layer-5.png) repeat-x;
     background-size: contain;
+    position: absolute;
+    bottom: 5%;
 }
 
 #layer-6 {
-    height: 240px;
     width: 100%;
-    background-image: url(../images/projects/scene/layer-6.png);
+    height: 100%;
+    max-height: 40%;
+    max-width: 100%;
+    background: url(../images/projects/scene/layer-6.png) repeat-x;
+    background-size: contain;
     position: absolute;
     bottom: 0%;
-    background-repeat: repeat-x;
-    background-size: contain;
 }
+
+/* @media screen and (max-width: 400px) {
+    #layer-6 {
+        min-height: 26%;
+    }
+  } */
 
 #layer-8 {
-    height: 50px;
     width: 100%;
-    background-image: url(../images/projects/scene/layer-8.png);
+    height: 100%;
+    max-height: 5%;
+    background: url(../images/projects/scene/layer-8.png) repeat-x;
+    background-size: contain;
     position: absolute;
     bottom: 0%;
-    background-repeat: repeat-x;
-    background-size: contain;
 }
 
-.main-container {
-    height: 80vh;
-    width: 70vw;
-    margin: 5rem auto;
-    background-image: url(../images/projects/scene/layer-0.png);
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    overflow-x: hidden;
-    box-shadow: 1px 2px 60px rgba(0, 0, 0, 0.4); 
-    z-index: -1;
-}
-
-.road {
-    height: 200px;
-    width: 500%;
-    display: block;
-    background-image: url(../images/projects/scene/road/road.png);
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 1;
-    /* animation-play-state: running; */
-    /* background-repeat: repeat-x; */
-    /* animation: road 5s linear infinite; */
-}
-
-/* .road-move {
-    animation: road-animation 5s linear infinite;
-} */
-
-/* @keyframes road-animation {
-    0% {
-        background-position-x: 0;
-    }    
-    100% {
-        background-position-x: -2995px;
-    }
-}
-*/
-
-.city {
-    height: 320px;
+#layer-9 {
     width: 100%;
-    background-image: url(../images/projects/scene/layer-2.png);
-    /* background-position: 0px 0px;  */
-    background-position: 0px -250px;
-    background-repeat: repeat-x;
+    height: 100%;
+    max-height: 100%;
     position: absolute;
-    bottom: 200px;
+    top: 0;
     left: 0;
-    right: 0;
-    display: block;
-    z-index: 1;
-    /* animation-play-state: running;
-    animation-timing-function: ease-in; */
-    /* background-repeat: repeat-x; */
-}
-
-/* .city-move {
-    animation: city-animation 20s linear 0s infinite normal;
-}
-
-@keyframes city-animation {
-    from {
-        transform: translateX(0px);
-    }    
-    to {
-        transform: translateX(-1102px);
-    }
-} */
-
-/* @keyframes city-animation {
-    0% {
-        background-position-x: 0;
-    }    
-    100% {
-        background-position-x: -1102px;
-    }
-} */
-
-.skater {
-    width: 400px;
-    left: 50%;
-    bottom: 100px;
-    transform: translateX(-50%);
-    position: absolute;
-    z-index: 2;
-}
-
-.skater img {
-    width: 100%;   
+    background: url(../images/projects/scene/layer-9.png);
 }
 
 .flip-image {
-    transform: rotateY(180deg)
+    transform: rotateY(180deg);
+}
+
+#skater {
+    width: 10em;
+    height: 9em;
+    position: absolute;
+    bottom: 3%;
+    left: 50%;
+    transform: translate(-50%, 0%);
 }

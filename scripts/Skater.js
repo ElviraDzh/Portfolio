@@ -1,5 +1,5 @@
 class Skater {
-  // List states the skater can have.
+  // List states the skater can be.
   #States = {
     IDLE: "idle",
     ROLLING_RIGHT: "rolling-right",
@@ -21,7 +21,7 @@ class Skater {
     },
     ROLLING: {
       image: "./images/skater/rolling.gif",
-      duration: 1000 
+      duration: 0
     },
     STOPPING: {
       image: "./images/skater/stopping.gif",
@@ -39,9 +39,14 @@ class Skater {
 
   #image = getById("skater")
   #state = this.#States.IDLE;
+  #scene;
 
   // List of states when changing from one state to another.
   #changeStateImages = [];
+
+  constructor(scene) {
+    this.#scene = scene;
+  }
 
   jump() {
     // Depending on the current state, we have to create a sequence of states.
@@ -62,7 +67,15 @@ class Skater {
   }
 
   rollRight() {
-    // If the previous rolling side was left, remove image flip. 
+    // Already rolling right. Ignore.
+    if (this.#state === this.#States.ROLLING_RIGHT) return;
+
+    if (this.#state === this.#States.ROLLING_LEFT) {
+      this.rollReverse();
+      return;
+    }
+
+    // If the previous rolling side was left, remove flipping. 
     // Otherwise the skater moves left instead of right.
     this.#image.classList.remove("flip-image");
 
@@ -73,6 +86,7 @@ class Skater {
    
     this.#handleStateChange();
     this.#state = this.#States.ROLLING_RIGHT;
+    this.#scene.moveRight();
   }
 
   rollReverse() {
@@ -86,9 +100,18 @@ class Skater {
 
     this.#state = this.#state === this.#States.ROLLING_RIGHT
       ? this.#States.ROLLING_LEFT : this.#States.ROLLING_RIGHT;
+
+    this.#scene.moveReverse();
   }
   
   rollLeft() {
+    if (this.#state === this.#States.ROLLING_LEFT) return;
+
+    if (this.#state === this.#States.ROLLING_RIGHT) {
+      this.rollReverse();
+      return;
+    }
+
     // Flip the image to make the skater rolling left.
     this.#image.classList.add("flip-image");
 
@@ -99,6 +122,7 @@ class Skater {
    
     this.#handleStateChange();
     this.#state = this.#States.ROLLING_LEFT;
+    this.#scene.moveLeft();
   }
 
   stop() {
@@ -109,6 +133,7 @@ class Skater {
    
     this.#handleStateChange();
     this.#state = this.#States.IDLE;
+    this.#scene.stop();
   }
   
   fall() {
@@ -118,6 +143,7 @@ class Skater {
     ];
    
     this.#handleStateChange();
+
     this.#state = this.#States.IDLE;
   }
 
