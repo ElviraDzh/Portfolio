@@ -24,7 +24,17 @@
   max-width: 47em;
   position: relative;
 }
+.layer {
+  width: 100%;
+  position: absolute;
+}
+.about-me {
+  display: block;
+}
 
+.projects {
+  display: none;
+}
 @media screen and (max-width: 400px) {
   .scene-container {
     min-width: 21em;
@@ -54,7 +64,12 @@
   #layer-5,
   #layer-6,
   #layer-7,
-  #layer-8 {
+  #layer-8,
+  #mountains,
+  #city-panorama,
+  #front-city,
+  #park,
+  #grass {
     background-size: contain;
   }
 }
