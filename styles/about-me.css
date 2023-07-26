@@ -1,0 +1,32 @@
+#mountains {
+  height: 83%;
+  background: url(../images/about-me/mountains.png) center/cover;
+}
+
+#city-panorama {
+  height: 61%;
+  background: url(../images/about-me/city-panorama.png) repeat-x;
+  background-size: 48em;
+  bottom: 12%;
+}
+
+#front-city {
+  height: 41%;
+  background: url(../images/about-me/front-city.png) repeat-x;
+  background-size: 48em;
+  bottom: 10%;
+}
+
+#park {
+  height: 55%;
+  background: url(../images/about-me/park.png) repeat-x;
+  background-size: 41em;
+  bottom: 0%;
+}
+
+#grass {
+  height: 8%;
+  background: url(../images/about-me/grass.png) repeat-x;
+  background-size: 37em;
+  bottom: 0%;
+}
