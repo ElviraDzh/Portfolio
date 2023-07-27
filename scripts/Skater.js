@@ -37,11 +37,15 @@ class Skater {
     },
   };
 
-  #image = getById("skater");
+  #image = null;
   #state = this.#States.IDLE;
 
   // List of states when changing from one state to another.
   #changeStateImages = [];
+
+  setImage(imageId) {
+    this.#image = getById(imageId);
+  }
 
   jump() {
     // Depending on the current state, we have to create a sequence of states.

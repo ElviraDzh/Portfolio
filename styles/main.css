@@ -28,11 +28,11 @@
   width: 100%;
   position: absolute;
 }
-.about-me {
+#about-scene {
   display: block;
 }
 
-.projects {
+#projects-scene {
   display: none;
 }
 @media screen and (max-width: 400px) {
@@ -41,7 +41,7 @@
   }
 }
 
-#skater {
+.skater {
   width: 10em;
   height: 9em;
   position: absolute;
@@ -52,7 +52,7 @@
   transform: translate(-50%, 0%);
 }
 
-#skater.flip-image {
+.skater.flip-image {
   transform: translate(-50%, 0%) rotateY(180deg);
 }
 
