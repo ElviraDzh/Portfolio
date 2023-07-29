@@ -1,6 +1,10 @@
+#projects-scene {
+  display: none;
+}
 #layer-0 {
   height: 100%;
   background: url(../images/projects/scene/layer-0.png) center/cover;
+    border-radius: 10px;
 }
 
 #layer-1 {
@@ -8,6 +12,7 @@
   background: url(../images/projects/scene/layer-1.png) repeat-x;
   background-size: 48em;
   bottom: 2%;
+  border-radius: 10px;
 }
 
 #layer-2 {
@@ -15,6 +20,7 @@
   background: url(../images/projects/scene/layer-2.png) repeat-x;
   background-size: 48em;
   bottom: 2%;
+  border-radius: 10px;
 }
 
 #layer-3 {
@@ -22,6 +28,7 @@
   background: url(../images/projects/scene/layer-3.png) repeat-x;
   background-size: 45em;
   bottom: 8%;
+  border-radius: 10px;
 }
 
 #layer-4 {
@@ -29,6 +36,7 @@
   background: url(../images/projects/scene/layer-4.png) repeat-x;
   background-size: 46em;
   bottom: 3%;
+  border-radius: 10px;
 }
 
 #layer-5 {
@@ -36,6 +44,7 @@
   background: url(../images/projects/scene/layer-5.png) repeat-x;
   background-size: 40em;
   bottom: 5%;
+  border-radius: 10px;
 }
 
 #layer-6 {
@@ -43,6 +52,7 @@
   background: url(../images/projects/scene/layer-6.png) repeat-x;
   background-size: 46em;
   bottom: 0%;
+  border-radius: 10px;
 }
 
 #layer-8 {
@@ -50,6 +60,7 @@
   background: url(../images/projects/scene/layer-8.png) repeat-x;
   background-size: 20em;
   bottom: 0%;
+  border-radius: 10px;
 }
 
 #layer-9 {
@@ -57,4 +68,5 @@
   top: 0;
   left: 0;
   background: url(../images/projects/scene/layer-9.png);
+  border-radius: 10px;
 }

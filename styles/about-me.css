@@ -1,3 +1,7 @@
+#about-scene {
+  display: block;
+}
+
 #mountains {
   height: 83%;
   background: url(../images/about-me/mountains.png) center/cover;
@@ -29,4 +33,81 @@
   background: url(../images/about-me/grass.png) repeat-x;
   background-size: 37em;
   bottom: 0%;
+}
+
+#about-billboards {
+  height: 100%;
+  bottom: 10%;
+  /* width: 2000px; */
+  /* border: 2px solid red; */
+}
+
+#about-billboard-1 {
+  height: 100%;
+  background: url(../images/about-me/billboard-1/billboard.png) no-repeat;
+  background-size: 27em;
+}
+
+#about-billboard-1-arrow {
+  position: absolute;
+  height: 52px;
+  bottom: 132px;
+  left: 116px;
+}
+
+#about-billboard-2 {
+  width: 135%;
+  height: 100%;
+  background: url(../images/about-me/billboard-2/billboard2Elvira.png) no-repeat;
+  background-size: 47em;
+  bottom: -127px;
+  right: -426px;
+  /* border: 1px solid yellow; */
+}
+
+#about-billboard-4 {
+  height: 100%;
+  background: url(../images/about-me/billboard-4/billboard.png) no-repeat;
+  background-size: 23em;
+  bottom: -80px;
+  right: -907px;
+  /* border: 1px solid blue; */
+}
+
+#about-billboard-4-balloon {
+  position: absolute;
+  height: 73px;
+  bottom: 215px;
+  left: 234px;
+}
+
+#about-billboard-5 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url(../images/about-me/billboard-5/billboard5WithGif.png)
+    no-repeat;
+  background-size: 14em;
+  bottom: -100px;
+  left: 1400px;
+  /* border: 2px solid green; */
+}
+
+#about-road {
+  height: 30%;
+  bottom: 2%;
+}
+
+#about-road-cones {
+  position: absolute;
+  height: 75px;
+  bottom: 0px;
+  left: 240px;
+}
+
+#about-road-closed {
+  position: absolute;
+  height: 150px;
+  bottom: 15px;
+  left: 1600px;
 }
