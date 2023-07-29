@@ -3,21 +3,24 @@ class AboutScene {
   #speed = 3;
 
   #start = SCREEN.centerX;
-  #end = 5000;
+  #end = 4000;
 
   #layers = [
-    this.#initLayer("mountains", 0.1),
-    this.#initLayer("city-panorama", 0.2),
-    this.#initLayer("front-city", 0.3),
-    this.#initLayer("park", 0.8),
-    this.#initLayer("grass", 2),
+    this.#initLayer("mountains", 0.1, true),
+    this.#initLayer("city-panorama", 0.2, true),
+    this.#initLayer("front-city", 0.3, true),
+    this.#initLayer("about-billboards", 0.8, false),
+    this.#initLayer("park", 0.8, true),
+    this.#initLayer("about-road", 1, false),
+    this.#initLayer("grass", 2, true),
   ];
 
-  #initLayer(id, step) {
+  #initLayer(id, step, moveBackground) {
     return {
       layer: getById(id),
       step: step, // px to move in parallax.
       left: 0, // Left position of the layer.
+      moveBackground: moveBackground,
     };
   }
 
@@ -44,7 +47,9 @@ class AboutScene {
     // Move layers.
     for (const layer of this.#layers) {
       layer.left -= direction * layer.step * smoothFactor;
-      layer.layer.style.backgroundPositionX = layer.left + "px";
+      if (layer.moveBackground)
+        layer.layer.style.backgroundPositionX = layer.left + "px";
+      else layer.layer.style.left = layer.left + "px";
     }
 
     return true;

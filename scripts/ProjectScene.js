@@ -29,8 +29,8 @@ class ProjectScene {
   #initLayer(id, step) {
     return {
       layer: getById(id),
-      step: step,   // px to move in parallax.
-      left: 0       // Left position of the layer.
+      step: step, // px to move in parallax.
+      left: 0, // Left position of the layer.
     };
   }
 
@@ -47,8 +47,8 @@ class ProjectScene {
     return true;
   }
 
-  // Returns true if the scene can move in a given direciton. Otherwise, false. 
-  // For example, reaching the end of scene. 
+  // Returns true if the scene can move in a given direciton. Otherwise, false.
+  // For example, reaching the end of scene.
   move(direction, smoothFactor) {
     if (!this.canMove(direction) || !this.#handleStops(direction)) return false;
 
@@ -56,8 +56,8 @@ class ProjectScene {
 
     // Move layers.
     for (const layer of this.#layers) {
-        layer.left -= direction * layer.step * smoothFactor;
-        layer.layer.style.backgroundPositionX = layer.left + "px";
+      layer.left -= direction * layer.step * smoothFactor;
+      layer.layer.style.backgroundPositionX = layer.left + "px";
     }
 
     return true;
