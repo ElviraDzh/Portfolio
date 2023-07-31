@@ -3,7 +3,7 @@ class AboutScene {
   #speed = 3;
 
   #start = SCREEN.centerX;
-  #end = 4000;
+  #end = 7200;
 
   #layers = [
     this.#initLayer("mountains", 0.1, true),
