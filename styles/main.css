@@ -12,10 +12,6 @@
 } */
 /*     background: url(../images/workPlaceEnvelop.svg) 52% 0% / auto 131% no-repeat; 1)img position/size/reapeat */
 
-/* #projects-scene {
-  display: none;
-} */
-
 .container {
   display: flex;
   flex-direction: column;

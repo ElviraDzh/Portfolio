@@ -3,7 +3,7 @@
 }
 
 #mountains {
-  height: 83%;
+  height: 85%;
   background: url(../images/about-me/mountains.png) center/cover;
 }
 
@@ -16,14 +16,14 @@
 
 #front-city {
   height: 47%;
-  background: url(../images/about-me/front-city.png) repeat-x;
+  background: url(../images/about-me/greenroadCity.png) repeat-x;  /* here could be frontcity.png also*/
   background-size: 48em;
   bottom: 10%;
 }
 
 #park {
   height: 61%;
-  background: url(../images/about-me/park.png) repeat-x;
+  background: url(../images/about-me/frontroad.png) repeat-x;
   background-size: 40em;
   bottom: 0%;
 }
@@ -49,7 +49,7 @@
 #about-billboard-1-arrow {
   position: absolute;
   height: 52px;
-  bottom: 132px;
+  bottom: 168px;
   left: 116px;
 }
 
@@ -57,9 +57,25 @@
   width: 135%;
   height: 100%;
   background: url(../images/about-me/billboard-2/billboard2Elvira.png) no-repeat;
-  background-size: 47em;
-  bottom: -127px;
+  background-size: 37em;
+  bottom: -146px;
   left: 526px;
+}
+#about-billboard-2-girl {
+  position: absolute;
+  width: 20%;
+  height: 38%;
+  left: 18px;
+  top: 46px;
+}
+
+#about-billboard-3 {
+  width: 135%;
+  height: 116%;
+  background: url(../images/about-me/billboard-3/night-billboard.png) no-repeat;
+  background-size: 23em;
+  bottom: -146px;
+  left: 1284px;
 }
 
 #about-billboard-4 {
@@ -67,15 +83,15 @@
   background: url(../images/about-me/billboard-4/billboard.png) no-repeat;
   background-size: 23em;
   bottom: -80px;
-  left: 1307px;
+  left: 1907px;
 }
 
-#about-billboard-4-balloon {
+/* #about-billboard-4-balloon {
   position: absolute;
   height: 73px;
   bottom: 215px;
   left: 234px;
-}
+} */
 
 #about-billboard-5 {
   position: absolute;
@@ -85,7 +101,7 @@
     no-repeat;
   background-size: 14em;
   bottom: -100px;
-  left: 1900px;
+  left: 2400px;
 }
 
 #about-road {
@@ -104,5 +120,5 @@
   position: absolute;
   height: 150px;
   bottom: 15px;
-  left: 2700px;
+  left: 3300px;
 }
