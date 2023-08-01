@@ -63,6 +63,7 @@ class ProjectScene {
     return true;
   }
 
+  // Returns true if there is no stop and can continue moving.
   #handleStops(direction) {
     if (this.#stopIndex !== null) {
       // There is the current stop. "Unmark" the current stop when the scene goes out of the current stop,
