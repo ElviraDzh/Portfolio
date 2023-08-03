@@ -7,24 +7,9 @@ class AboutScene {
   #end = 3430;
   #animations = [
     {
-      start: 390,
-      end: 500,
-      image: getById("about-billboard-1-arrow"),
-    },
-    {
       start: 700,
       end: 1120,
-      image: getById("about-billboard-2-girl"),
-    },
-    {
-      start: 1650,
-      end: 2350,
-      image: getById("about-billboard-2-girl"),
-    },
-    {
-      start: 2610,
-      end: 3230,
-      image: getById("about-billboard-4"),
+      image: getById("about-billboard-2-img"),
     },
   ];
 

@@ -9,38 +9,54 @@
     <link rel="stylesheet" href="./styles/about-me.css" />
     <link rel="stylesheet" href="./styles/project.css" />
     <link rel="stylesheet" href="./styles/normalize.css" />
+     <!-- fontawesome link -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
 
   <body>
+
     <div class="container">
+      <!-- Burger Menu -->
+      <div class="burger-menu">
+        <i class="fas fa-bars"></i>
+        <nav class="menu">
+          <ul>
+            <li><a href="#">About me</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Resume</a></li>
+          </ul>
+        </nav>
+      </div>
+
+<!-- about scene -->
       <div id="about-scene" class="scene-container">
         <div id="mountains" class="layer"></div>
         <div id="city-panorama" class="layer"></div>
         <div id="front-city" class="layer"></div>
         <div id="about-billboards" class="layer">
           <div id="about-billboard-1">
-            <img
+            <!-- <img
               id="about-billboard-1-arrow"
-              src="images/about-me/billboard-1/arrow.gif"
-            />
+              src="images/about-me/billboard-1/arrow-animated.gif"
+            /> -->
           </div>
           <div id="about-billboard-2" class="layer">
             <img
-              id="about-billboard-2-girl"
+              id="about-billboard-2-img"
               src="images/about-me/billboard-2/girl-programmer.png"
             />
           </div>
           <div id="about-billboard-3" class="layer">
-            <!--  <img
+            <!-- <img
               id="about-billboard-3-img"
               src="images/about-me/billboard-2/girl-programmer.png"
             /> -->
           </div>
           <div id="about-billboard-4" class="layer">
-            <img
+            <!-- <img
               id="about-billboard-4-balloon"
-              src="images/about-me/billboard-4/balloon.png"
-            />
+              src="images/about-me/billboard-4/balloon-animation.gif"
+            /> -->
           </div>
           <div id="about-billboard-5">
             <!-- <img
@@ -87,6 +103,7 @@
     <script src="./scripts/AboutScene.js"></script>
     <script src="./scripts/SceneWrapper.js"></script>
     <script src="./scripts/main.js"></script>
+    <script src="./scripts/burgerMenu.js"></script>
     <script>
       var w = window.innerWidth;
       var h = window.innerHeight;

@@ -3,7 +3,7 @@
 }
 
 #mountains {
-  height: 85%;
+  height: 83%;
   background: url(../images/about-me/mountains.png) center/cover;
 }
 
@@ -16,7 +16,7 @@
 
 #front-city {
   height: 47%;
-  background: url(../images/about-me/greenroadCity.png) repeat-x;  /* here could be frontcity.png also*/
+  background: url(../images/about-me/greenroadCity.png) repeat-x;
   background-size: 48em;
   bottom: 10%;
 }
@@ -49,7 +49,7 @@
 #about-billboard-1-arrow {
   position: absolute;
   height: 52px;
-  bottom: 168px;
+  bottom: 132px;
   left: 116px;
 }
 
@@ -61,7 +61,7 @@
   bottom: -146px;
   left: 526px;
 }
-#about-billboard-2-girl {
+#about-billboard-2-img {
   position: absolute;
   width: 20%;
   height: 38%;
@@ -72,7 +72,8 @@
 #about-billboard-3 {
   width: 135%;
   height: 116%;
-  background: url(../images/about-me/billboard-3/night-billboard.png) no-repeat;
+  background: url(../images/about-me/billboard-3/day-billboard-with-gif.png)
+    no-repeat;
   background-size: 23em;
   bottom: -146px;
   left: 1284px;
@@ -122,3 +123,52 @@
   bottom: 15px;
   left: 3300px;
 }
+
+
+
+/* Burger Menu Styles */
+
+.burger-menu {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 999;
+}
+
+.burger-menu i {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #f1f1f1;
+  padding: 10px;
+}
+.menu.open{
+  display: block;
+}
+
+.menu ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.menu li {
+  margin-bottom: 10px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #333;
+}
+
+
+
+
+
+
+
