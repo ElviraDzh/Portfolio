@@ -17,14 +17,19 @@ class AboutScene {
       image: getById("about-billboard-2-girl"),
     },
     {
-      start: 1650,
-      end: 2350,
-      image: getById("about-billboard-2-girl"),
+      start: 1660,
+      end: 2115,
+      image: getById("about-billboard-3-girl"),
     },
     {
-      start: 2610,
-      end: 3230,
-      image: getById("about-billboard-4"),
+      start: 2500,
+      end: 2890,
+      image: getById("about-billboard-4-balloon"),
+    },
+    {
+      start: 3100,
+      end: 3280,
+      image: getById("about-billboard-5-butterfly"),
     },
   ];
 
