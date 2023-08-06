@@ -1,98 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="./styles/main.css" />
-    <link rel="stylesheet" href="./styles/about-me.css" />
-    <link rel="stylesheet" href="./styles/project.css" />
-    <link rel="stylesheet" href="./styles/normalize.css" />
-  </head>
 
-  <body>
-    <div class="container">
-      <div id="about-scene" class="scene-container">
-        <div id="mountains" class="layer"></div>
-        <div id="city-panorama" class="layer"></div>
-        <div id="front-city" class="layer"></div>
-        <div id="about-billboards" class="layer">
-          <div id="about-billboard-1">
-            <img
-              id="about-billboard-1-arrow"
-              src="images/about-me/billboard-1/arrow.gif"
-            />
-          </div>
-          <div id="about-billboard-2" class="layer">
-            <img
-              id="about-billboard-2-girl"
-              src="images/about-me/billboard-2/girl-programmer.png"
-            />
-          </div>
-          <div id="about-billboard-3" class="layer">
-            <img
-              id="about-billboard-3-girl"
-              src="images/about-me/billboard-3/girl-working.png"
-            />
-          </div>
-          <div id="about-billboard-4" class="layer">
-            <img
-              id="about-billboard-4-balloon"
-              src="images/about-me/billboard-4/balloon.png"
-            />
-          </div>
-          <div id="about-billboard-5">
-            <img
-              id="about-billboard-5-butterfly"
-              class="layer"
-              src="images/about-me/billboard-5/butterfly.png"
-            />
-          </div>
-        </div>
-        <div id="park" class="layer"></div>
-        <div id="about-road" class="layer">
-          <img id="about-road-cones" src="images/common/cones.png" />
-          <img id="about-road-closed" src="images/common/road-closed.png" />
-        </div>
-        <div id="grass" class="layer"></div>
-        <img id="about-skater" class="skater" src="images/skater/idle.gif" />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="./styles/main.css" />
+  <link rel="stylesheet" href="./styles/about-me.css" />
+  <link rel="stylesheet" href="./styles/project.css" />
+  <link rel="stylesheet" href="./styles/normalize.css" />
+</head>
+
+<body>
+  <section id="about-scene" class="scene-container">
+    <div id="mountains" class="layer"></div>
+    <div id="city-panorama" class="layer"></div>
+    <div id="front-city" class="layer"></div>
+    <div id="about-billboards" class="layer">
+      <div id="about-billboard-1">
+        <img id="about-billboard-1-arrow" src="images/about-me/billboard-1/arrow.gif" />
       </div>
-      <div id="projects-scene" class="scene-container">
-        <div class="projects_layers">
-          <div id="layer-0" class="layer"></div>
-          <div id="layer-1" class="layer"></div>
-          <div id="layer-2" class="layer"></div>
-          <div id="layer-3" class="layer"></div>
-          <div id="layer-4" class="layer"></div>
-          <div id="layer-5" class="layer"></div>
-          <div id="layer-6" class="layer"></div>
-          <div id="layer-8" class="layer"></div>
-          <div id="layer-9" class="layer"></div>
-          <img
-            id="projects-skater"
-            class="skater"
-            src="images/skater/idle.gif"
-          />
-        </div>
+      <div id="about-billboard-2" class="layer">
+        <img id="about-billboard-2-girl" src="images/about-me/billboard-2/girl-programmer.png" />
+      </div>
+      <div id="about-billboard-3" class="layer">
+        <img id="about-billboard-3-girl" src="images/about-me/billboard-3/girl-working.png" />
+      </div>
+      <div id="about-billboard-4" class="layer">
+        <img id="about-billboard-4-balloon" src="images/about-me/billboard-4/balloon.png" />
+      </div>
+      <div id="about-billboard-5">
+        <img id="about-billboard-5-butterfly" class="layer" src="images/about-me/billboard-5/butterfly.png" />
       </div>
     </div>
+    <div id="park" class="layer"></div>
+    <div id="about-road" class="layer">
+      <img id="about-road-cones" src="images/common/cones.png" />
+      <img id="about-road-closed" src="images/common/road-closed.png" />
+    </div>
+    <div id="grass" class="layer"></div>
+    <img id="about-skater" class="skater" src="images/skater/idle.gif" />
+  </section>
+  <section id="projects-scene" class="scene-container">
+    <div class="projects_layers">
+      <div id="layer-0" class="layer"></div>
+      <div id="layer-1" class="layer"></div>
+      <div id="layer-2" class="layer"></div>
+      <div id="layer-3" class="layer"></div>
+      <div id="layer-4" class="layer"></div>
+      <div id="layer-5" class="layer"></div>
+      <div id="layer-6" class="layer"></div>
+      <div id="layer-8" class="layer"></div>
+      <div id="layer-9" class="layer"></div>
+      <img id="projects-skater" class="skater" src="images/skater/idle.gif" />
+    </div>
+  </section>
+  <div class="tv-set"></div>
 
-    <script src="./scripts/globals.js"></script>
-    <script src="./scripts/Screen.js"></script>
-    <script src="./scripts/Skater.js"></script>
-    <script src="./scripts/KeyHandler.js"></script>
-    <script src="./scripts/Timer.js"></script>
-    <script src="./scripts/ProjectScene.js"></script>
-    <script src="./scripts/AboutScene.js"></script>
-    <script src="./scripts/SceneWrapper.js"></script>
-    <script src="./scripts/main.js"></script>
-    <script>
-      var w = window.innerWidth;
-      var h = window.innerHeight;
+  <script src="./scripts/globals.js"></script>
+  <script src="./scripts/Screen.js"></script>
+  <script src="./scripts/Skater.js"></script>
+  <script src="./scripts/KeyHandler.js"></script>
+  <script src="./scripts/Timer.js"></script>
+  <script src="./scripts/ProjectScene.js"></script>
+  <script src="./scripts/AboutScene.js"></script>
+  <script src="./scripts/SceneWrapper.js"></script>
+  <script src="./scripts/main.js"></script>
+  <script>
+    var w = window.innerWidth;
+    var h = window.innerHeight;
 
-      console.log("w" + w);
-      console.log("h" + h);
-    </script>
-  </body>
+    console.log("w" + w);
+    console.log("h" + h);
+  </script>
+</body>
+
 </html>
