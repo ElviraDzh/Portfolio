@@ -3,40 +3,40 @@
 }
 
 #mountains {
-  height: 85%;
+  height: 97%;
   background: url(../images/about-me/mountains.png) center/cover;
 }
 
 #city-panorama {
-  height: 61%;
+  height: 48%;
   background: url(../images/about-me/city-panorama.png) repeat-x;
-  background-size: 48em;
+  background-size: 56em;
   bottom: 12%;
 }
 
 #front-city {
-  height: 47%;
-  background: url(../images/about-me/greenroadCity.png) repeat-x; /* here could be frontcity.png also*/
-  background-size: 48em;
-  bottom: 10%;
+  height: 29%;
+  background: url(../images/about-me/greenroadCity.png) repeat-x;
+  background-size: 52em;
+  bottom: 12%;
 }
 
 #park {
-  height: 61%;
+  height: 42%;
   background: url(../images/about-me/frontroad.png) repeat-x;
-  background-size: 40em;
+  background-size: 42em;
   bottom: 0%;
 }
 
 #grass {
-  height: 8%;
+  height: 10%;
   background: url(../images/about-me/grass.png) repeat-x;
-  background-size: 37em;
+  background-size: 40em;
   bottom: 0%;
 }
 
 #about-billboards {
-  height: 89%;
+  height: 51%;
   bottom: 10%;
 }
 
@@ -48,9 +48,9 @@
 
 #about-billboard-1-arrow {
   position: absolute;
-  height: 52px;
-  bottom: 168px;
-  left: 116px;
+  height: 13%;
+  bottom: 40%;
+  left: 10%;
 }
 
 #about-billboard-2 {
@@ -61,42 +61,44 @@
   bottom: -146px;
   left: 526px;
 }
+
 #about-billboard-2-girl {
   position: absolute;
-  width: 20%;
-  height: 38%;
-  left: 18px;
-  top: 46px;
+  width: 10%;
+  height: 36%;
+  left: 2%;
+  top: 10%;
+  object-fit: contain;
 }
 
 #about-billboard-3 {
   width: 135%;
   height: 116%;
   background: url(../images/about-me/billboard-3/billboard.png) no-repeat;
-  background-size: 23em;
-  bottom: -146px;
-  left: 1284px;
+  background-size: 27em;
+  bottom: -17%;
+  left: 127%;
 }
 #about-billboard-3-girl {
   position: absolute;
-  height: 90px;
-  bottom: 239px;
-  left: 239px;
+  height: 21%;
+  bottom: 39%;
+  left: 20%;
 }
 
 #about-billboard-4 {
   height: 100%;
   background: url(../images/about-me/billboard-4/billboard.png) no-repeat;
-  background-size: 23em;
-  bottom: -80px;
-  left: 1907px;
+  background-size: 26em;
+  bottom: -4%;
+  left: 185%;
 }
 
 #about-billboard-4-balloon {
   position: absolute;
-  height: 67px;
-  bottom: 276px;
-  left: 199px;
+  height: 18%;
+  bottom: 60%;
+  left: 22%;
 }
 
 #about-billboard-5 {
@@ -104,17 +106,17 @@
   width: 100%;
   height: 100%;
   background: url(../images/about-me/billboard-5/billboard5.png) no-repeat;
-  background-size: 14em;
-  bottom: -100px;
-  left: 2400px;
+  background-size: 18em;
+  bottom: 0%;
+  left: 240%;
 }
 
 #about-billboard-5-butterfly {
   position: absolute;
-  width: 50px;
-  height: 50px;
-  bottom: 286px;
-  left: 164px;
+  width: 9%;
+  height: 22%;
+  bottom: 67%;
+  left: 19%;
 }
 
 #about-road {
@@ -124,14 +126,14 @@
 
 #about-road-cones {
   position: absolute;
-  height: 75px;
-  bottom: 0px;
-  left: 240px;
+  height: 36%;
+  bottom: 12%;
+  left: 28%;
 }
 
 #about-road-closed {
   position: absolute;
-  height: 150px;
-  bottom: 15px;
-  left: 3300px;
+  height: 68%;
+  bottom: 22%;
+  left: 337%;
 }
