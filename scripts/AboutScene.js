@@ -1,10 +1,11 @@
 class AboutScene {
+  #sceneSection = getById("about-scene");
   #center = SCREEN.centerX;
   #speed = 1;
   #animation = null;
 
   #start = SCREEN.centerX;
-  #end = 3430;
+  #end = 3340;
   #animations = [
     {
       start: 390,
@@ -12,23 +13,23 @@ class AboutScene {
       image: getById("about-billboard-1-arrow"),
     },
     {
-      start: 700,
-      end: 1120,
+      start: 660,
+      end: 930,
       image: getById("about-billboard-2-girl"),
     },
     {
-      start: 1660,
-      end: 2115,
+      start: 1826,
+      end: 2065,
       image: getById("about-billboard-3-girl"),
     },
     {
-      start: 2500,
-      end: 2890,
+      start: 2600,
+      end: 2840,
       image: getById("about-billboard-4-balloon"),
     },
     {
-      start: 3100,
-      end: 3280,
+      start: 3133,
+      end: 3278,
       image: getById("about-billboard-5-butterfly"),
     },
   ];
@@ -52,6 +53,10 @@ class AboutScene {
     };
   }
 
+  show(visible) {
+    this.#sceneSection.style.display = visible ? "block" : "none";
+  }
+
   // Returns true if the scene can move in a given direction.
   canMove(direction) {
     if (
@@ -71,15 +76,17 @@ class AboutScene {
   move(direction, smoothFactor) {
     if (!this.canMove(direction)) return false;
 
-    this.#center += direction * this.#speed;
+    this.#center += direction * this.#speed * smoothFactor;
     this.#handleAnimations(direction);
 
     // Move layers.
     for (const layer of this.#layers) {
       layer.left -= direction * layer.step * smoothFactor;
-      if (layer.moveBackground)
+      if (layer.moveBackground) {
         layer.layer.style.backgroundPositionX = layer.left + "px";
-      else layer.layer.style.left = layer.left + "px";
+      } else {
+        layer.layer.style.left = layer.left + "px";
+      }
     }
 
     return true;

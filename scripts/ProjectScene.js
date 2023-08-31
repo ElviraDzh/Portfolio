@@ -1,4 +1,5 @@
 class ProjectScene {
+  #sceneSection = getById("projects-scene");
   #center = SCREEN.centerX;
   #speed = 3;
   #stopIndex = null;
@@ -32,6 +33,10 @@ class ProjectScene {
       step: step, // px to move in parallax.
       left: 0, // Left position of the layer.
     };
+  }
+
+  show(visible) {
+    this.#sceneSection.style.display = visible ? "block" : "none";
   }
 
   // Returns true if the scene can move in a given direction.
