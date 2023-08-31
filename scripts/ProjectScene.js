@@ -1,4 +1,4 @@
-class ProjectScene {
+class ProjectsScene {
   #sceneSection = getById("projects-scene");
   #center = SCREEN.centerX;
   #speed = 3;
