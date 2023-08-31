@@ -1,0 +1,196 @@
+/* @media screen and (max-height: 950px) {
+   .scene-container{
+      max-height: 53em;
+      top: 7%;
+      left: 17%;
+   }
+ } */
+
+/* @media screen and (max-height: 830px) {
+   .scene-container{
+     max-height: 43em;
+     left: 14%;
+   }
+
+   #city-panorama {
+      bottom: 15%;
+  }
+
+   #front-city {
+      height: 36%;
+      bottom: 11%;
+  }
+
+   #about-billboards {
+      height: 65%;
+      bottom: 6%;
+  }
+
+   #park {
+      height: 45%;
+      bottom: 3%;
+  }
+
+
+  #about-road-cones {
+   bottom: 7%;
+  }
+
+  #about-road-closed {
+   bottom: 13%;
+}
+
+   #grass {
+      height: 9%;
+ }
+
+ .skater {
+   bottom: 6%;
+ }
+} */
+
+/* @media screen and (max-height: 740px) {
+   .scene-container {
+      max-height: 40em;
+   }
+
+   #front-city {
+      height: 41%;
+      bottom: 6%;
+   }
+
+   #about-billboard-1-arrow {
+      bottom: 38%;
+      left: 11%;
+   }
+
+  #about-road-cones {
+   bottom: 0%;
+  }
+
+   .skater {
+      bottom: 2%;
+   }
+} */
+
+/* @media screen and (max-height: 705px) {
+   .scene-container {
+      max-height: 38em;
+      max-width: 62.8em;
+      left: 15%;
+  }
+
+   #city-panorama {
+      bottom: 15%;
+  }
+
+  #front-city {
+   height: 41%;
+   bottom: 10%;
+}
+
+  #about-billboards {
+   height: 78%;
+   bottom: 1%;
+}
+
+#about-billboard-1-arrow {
+   bottom: 44%;
+   left: 7%;
+}
+
+#about-billboard-3-girl {
+   height: 20%;
+   bottom: 42%;
+}
+
+#about-billboard-4-balloon {
+   bottom: 62%;
+}
+
+#park {
+   height: 50%;
+   bottom: 2%;
+}
+
+.skater {
+   bottom: 4%;
+}
+} */
+/* 
+ @media screen and (max-height: 750px) {
+   .scene-container{
+     max-height: 40em;
+     left: 15%;
+   }
+   
+   #about-billboard-1 {
+      height: 114%;
+      background-size: 23em;
+  }
+
+   #city-panorama {
+      height: 67%;
+   }
+
+   #front-city {
+      height: 42%;
+   }
+
+   #park {
+      height: 55%;
+   }
+
+   #about-billboards {
+      height: 66%;
+      bottom: 13%;
+  }
+
+  #grass {
+   height: 13%; 
+}
+
+#about-billboard-1-arrow {
+   bottom: 38%;
+   left: 12%;
+}
+
+#about-billboard-3-girl {
+   bottom: 35%;
+   left: 23%;
+}
+
+#about-billboard-4-balloon {
+   left: 25%;
+}
+
+#about-billboard-5-butterfly {
+   left: 22%;
+}
+ } */
+
+/* for mobile */
+@media screen and (min-width: 1500px) {
+
+ .tv-set {
+      background-size: 100% 100%; 
+   }
+
+}
+
+@media screen and (max-width: 1200px) {
+   .tv-set {
+      background-size: 100% 100%; 
+   }
+}
+
+ @media (min-width: 280px) and (max-width: 480px) {
+   .container {
+      padding: 0 15px;
+    }
+
+    .scene-container {
+      top: 0%;
+      left: 0%;
+    }
+ }

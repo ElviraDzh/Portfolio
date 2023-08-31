@@ -5,33 +5,32 @@ class ProjectsScene {
   #stopIndex = null;
 
   #start = SCREEN.centerX;
-  #end = 1500;
+  #end = 5800;
   #stops = [
-    {
-      start: 2000,
-      end: 2100,
-    },
     // {
-    //     start: 2000,
-    //     end: 2100,
+    //   start: 1116,
+    //   end: 1226,
     // },
   ];
 
   #layers = [
-    this.#initLayer("layer-1", 1),
-    this.#initLayer("layer-2", 1.1),
-    this.#initLayer("layer-3", 1.25),
-    this.#initLayer("layer-4", 1.5),
-    this.#initLayer("layer-5", 2),
-    this.#initLayer("layer-6", 3),
-    this.#initLayer("layer-8", 5),
+    this.#initLayer("projects-mountains", 1, true),
+    this.#initLayer("projects-trees-far", 1.1, true),
+    this.#initLayer("projects-trees-middle", 1.25, true),
+    this.#initLayer("projects-bushes", 1.5, true),
+    this.#initLayer("projects-cable-lines", 2, true),
+    this.#initLayer("projects-trees-near", 3, true),
+    this.#initLayer("projects-road", 3, false),
+    this.#initLayer("projects-billboards", 3, false),
+    this.#initLayer("projects-grasses", 5, true),
   ];
 
-  #initLayer(id, step) {
+  #initLayer(id, step, moveBackground) {
     return {
       layer: getById(id),
       step: step, // px to move in parallax.
       left: 0, // Left position of the layer.
+      moveBackground: moveBackground,
     };
   }
 
@@ -56,13 +55,17 @@ class ProjectsScene {
   // For example, reaching the end of scene.
   move(direction, smoothFactor) {
     if (!this.canMove(direction) || !this.#handleStops(direction)) return false;
-
     this.#center += direction * this.#speed;
 
     // Move layers.
-    for (const layer of this.#layers) {
-      layer.left -= direction * layer.step * smoothFactor;
-      layer.layer.style.backgroundPositionX = layer.left + "px";
+    for (const layerObj of this.#layers) {
+      layerObj.left -= direction * layerObj.step * smoothFactor;
+      if (layerObj.moveBackground) {
+        // moveBackground property defines layer(div) has background-image or not. If it has, layer's background-position changes, if it has not layer move itself with position.
+        layerObj.layer.style.backgroundPositionX = layerObj.left + "px";
+      } else {
+        layerObj.layer.style.left = layerObj.left + "px";
+      }
     }
 
     return true;
