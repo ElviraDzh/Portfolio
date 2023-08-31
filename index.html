@@ -42,7 +42,6 @@
     <img id="about-skater" class="skater" src="images/skater/idle.gif" />
   </section>
   <section id="projects-scene" class="scene-container">
-    <div class="projects_layers">
       <div id="layer-0" class="layer"></div>
       <div id="layer-1" class="layer"></div>
       <div id="layer-2" class="layer"></div>
@@ -53,9 +52,13 @@
       <div id="layer-8" class="layer"></div>
       <div id="layer-9" class="layer"></div>
       <img id="projects-skater" class="skater" src="images/skater/idle.gif" />
-    </div>
   </section>
-  <div class="tv-set"></div>
+  <div class="tv-set">
+    <div class="switch-btns">
+       <button class="btn-about btn-scene" id="btn-about">About me</button>
+       <button class="btn-projects btn-scene" id="btn-projects">Projects</button>
+    </div>
+  </div>
 
   <script src="./scripts/globals.js"></script>
   <script src="./scripts/Screen.js"></script>
@@ -65,6 +68,7 @@
   <script src="./scripts/ProjectScene.js"></script>
   <script src="./scripts/AboutScene.js"></script>
   <script src="./scripts/SceneWrapper.js"></script>
+  <script src="./scripts/Menu.js"></script>
   <script src="./scripts/main.js"></script>
   <script>
     var w = window.innerWidth;

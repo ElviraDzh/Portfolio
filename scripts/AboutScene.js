@@ -1,4 +1,5 @@
 class AboutScene {
+  #sceneSection = getById("about-scene");
   #center = SCREEN.centerX;
   #speed = 1;
   #animation = null;
@@ -61,6 +62,10 @@ class AboutScene {
     };
   }
 
+  show(visible) {
+    this.#sceneSection.style.display = visible ? "block" : "none";
+  }
+
   // Returns true if the scene can move in a given direction.
   canMove(direction) {
     if (
@@ -86,7 +91,6 @@ class AboutScene {
     // Move layers.
     for (const layer of this.#layers) {
       layer.left -= direction * layer.step * smoothFactor;
-      //layer.left -= direction * layer.step;
       if (layer.moveBackground) {
         layer.layer.style.backgroundPositionX = layer.left + "px";
       } else {
