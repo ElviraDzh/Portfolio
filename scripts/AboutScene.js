@@ -43,15 +43,6 @@ class AboutScene {
     this.#initLayer("about-road", 1, false),
     this.#initLayer("grass", 2, true),
   ];
-  // #layers = [
-  //   this.#initLayer("mountains", 1, true),
-  //   this.#initLayer("city-panorama", 2, true),
-  //   this.#initLayer("front-city", 3, true),
-  //   this.#initLayer("about-billboards", 4, false),
-  //   this.#initLayer("park", 4, true),
-  //   this.#initLayer("about-road", 5, false),
-  //   this.#initLayer("grass", 6, true),
-  // ];
 
   #initLayer(id, step, moveBackground) {
     return {
@@ -89,12 +80,13 @@ class AboutScene {
     this.#handleAnimations(direction);
 
     // Move layers.
-    for (const layer of this.#layers) {
-      layer.left -= direction * layer.step * smoothFactor;
-      if (layer.moveBackground) {
-        layer.layer.style.backgroundPositionX = layer.left + "px";
+    for (const layerObj of this.#layers) {
+      layerObj.left -= direction * layerObj.step * smoothFactor;
+      if (layerObj.moveBackground) {
+        // moveBackground property defines layer(div) has background-image or not. If it has, layer's background-position changes, if it has not layer move itself with position.
+        layerObj.layer.style.backgroundPositionX = layerObj.left + "px";
       } else {
-        layer.layer.style.left = layer.left + "px";
+        layerObj.layer.style.left = layerObj.left + "px";
       }
     }
 

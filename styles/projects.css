@@ -1,0 +1,111 @@
+#projects-scene {
+  display: none;
+}
+
+#projects-sky {
+  height: 100%;
+  background: url(../images/projects/scene/layer-0.png) center/cover;
+}
+
+#projects-mountains {
+  height: 100%;
+  max-height: 25%;
+  background: url(../images/projects/scene/layer-1.png) repeat-x;
+  background-size: contain;
+  bottom: 2%;
+}
+
+#projects-trees-far {
+  max-height: 18%;
+  height: 100%;
+  background: url(../images/projects/scene/layer-2.png) repeat-x;
+  background-size: contain;
+  bottom: 8%;
+}
+
+#projects-trees-middle {
+  max-height: 22%;
+  height: 100%;
+  background: url(../images/projects/scene/layer-3.png) repeat-x;
+  background-size: contain;
+  bottom: 8%;
+}
+
+#projects-bushes {
+  height: 100%;
+  max-height: 22%;
+  background: url(../images/projects/scene/layer-4.png) repeat-x;
+  background-size: contain;
+  bottom: 3%;
+}
+
+#projects-cable-lines {
+  height: 100%;
+  max-height: 40%;
+  background: url(../images/projects/scene/layer-5.png) repeat-x;
+  background-size: contain;
+  bottom: 5%;
+}
+
+#projects-trees-near {
+  height: 100%;
+  max-height: 36%;
+  background: url(../images/projects/scene/layer-6.png) repeat-x;
+  background-size: contain;
+  bottom: 0%;
+}
+
+#project-road-cones {
+  bottom: 6%;
+  left: 40%;
+}
+#project-road-closed {
+  left: 560%;
+}
+
+#projects-grasses {
+  max-height: 7%;
+  height: 100%;
+  background: url(../images/projects/scene/layer-8.png) repeat-x;
+  background-size: contain;
+  bottom: 0%;
+}
+
+#projects-sky-shadow {
+  height: 100%;
+  max-height: 100%;
+  top: 0;
+  left: 0;
+  background: url(../images/projects/scene/layer-9.png);
+}
+
+#projects-billboards {
+  height: 51%;
+  bottom: 10%;
+}
+
+.projects-billboard {
+  height: 100%;
+  background: url(../images/projects/scene/billboard.png) no-repeat;
+  background-size: 18em;
+  top: 1em;
+}
+
+#projects-billboard-1 {
+  left: 70%;
+}
+#projects-billboard-2 {
+  left: 170%;
+}
+
+#projects-billboard-3 {
+  left: 270%;
+}
+
+#projects-billboard-4 {
+  left: 370%;
+}
+
+#projects-billboard-5 {
+  left: 480%;
+}
