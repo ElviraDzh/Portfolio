@@ -2,15 +2,36 @@ class ProjectsScene {
   #sceneSection = getById("projects-scene");
   #center = SCREEN.centerX;
   #speed = 3;
-  #stopIndex = null;
+  #currentStop = null;
 
   #start = SCREEN.centerX;
-  #end = 5800;
+  #end = 3880;
   #stops = [
-    // {
-    //   start: 1116,
-    //   end: 1226,
-    // },
+    {
+      start: 730,
+      end: 760,
+      image: getById("projects-b1-imgTetris"),
+    },
+    {
+      start: 1480,
+      end: 1510,
+      image: getById("projects-billboard-2-tetris"),
+    },
+    {
+      start: 2225,
+      end: 2255,
+      image: getById("projects-billboard-3-tetris"),
+    },
+    {
+      start: 2880,
+      end: 2910,
+      image: getById("projects-billboard-4-tetris"),
+    },
+    {
+      start: 3533,
+      end: 3563,
+      image: getById("projects-billboard-5-tetris"),
+    },
   ];
 
   #layers = [
@@ -55,7 +76,7 @@ class ProjectsScene {
   // For example, reaching the end of scene.
   move(direction, smoothFactor) {
     if (!this.canMove(direction) || !this.#handleStops(direction)) return false;
-    this.#center += direction * this.#speed;
+    this.#center += direction * this.#speed * smoothFactor;
 
     // Move layers.
     for (const layerObj of this.#layers) {
@@ -73,21 +94,22 @@ class ProjectsScene {
 
   // Returns true if there is no stop and can continue moving.
   #handleStops(direction) {
-    if (this.#stopIndex !== null) {
+    if (this.#currentStop !== null) {
       // There is the current stop. "Unmark" the current stop when the scene goes out of the current stop,
       // so the scene can properly stop again when comes back.
-      const stop = this.#stops[this.#stopIndex];
       if (
-        (direction === 1 && stop.end < this.#center) ||
-        (direction === -1 && stop.start > this.#center)
+        (direction === 1 && this.#currentStop.end < this.#center) ||
+        (direction === -1 && this.#currentStop.start > this.#center)
       ) {
-        this.#stopIndex = null;
+        this.#handleImage(false);
+        this.#currentStop = null;
       }
     } else {
       // No current stop. Stop the scene if get within any of stops.
-      const index = this.#getStopIndex();
-      if (index !== null) {
-        this.#stopIndex = index;
+      const stop = this.#getStop();
+      if (stop !== null) {
+        this.#currentStop = stop;
+        this.#handleImage(true);
         return false;
       }
     }
@@ -95,15 +117,23 @@ class ProjectsScene {
     return true;
   }
 
-  #getStopIndex() {
+  #getStop() {
     for (let i = 0; i < this.#stops.length; i++) {
       const stop = this.#stops[i];
       if (this.#center >= stop.start && this.#center <= stop.end) {
-        return i;
+        return stop;
       }
     }
 
     // Not within any of stops.
     return null;
+  }
+
+  #handleImage(useGif) {
+    const image = this.#currentStop.image;
+    image.src = useGif
+      ? image.src.replace(".png", ".gif")
+      : image.src.replace(".gif", ".png");
+    overlayBillboards.style.display = useGif ? "block" : "none";
   }
 }
