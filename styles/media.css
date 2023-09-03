@@ -170,6 +170,7 @@
  } */
 
 /* for mobile */
+
 @media (min-height: 980px) and (min-width: 1800px){
    .tv-stand{
     display: block;
@@ -181,6 +182,7 @@
       background-size: 100% 210%;
    }
 } */
+
 
  @media (min-width: 280px) and (max-width: 480px) {
    .container {

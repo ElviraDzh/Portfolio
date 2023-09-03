@@ -44,15 +44,6 @@ class AboutScene {
     this.#initLayer("about-road", 1, false),
     this.#initLayer("grass", 2, true),
   ];
-  // #layers = [
-  //   this.#initLayer("mountains", 1, true),
-  //   this.#initLayer("city-panorama", 2, true),
-  //   this.#initLayer("front-city", 3, true),
-  //   this.#initLayer("about-billboards", 4, false),
-  //   this.#initLayer("park", 4, true),
-  //   this.#initLayer("about-road", 5, false),
-  //   this.#initLayer("grass", 6, true),
-  // ];
 
   #initLayer(id, step, moveBackground) {
     return {
