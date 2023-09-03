@@ -1,5 +1,6 @@
 const SCREEN = new Screen();
 const KEY_HANDLER = new KeyHandler();
+const TOUCH_HANDLER = new TouchHandler();
 
 const SKATER = new Skater();
 SKATER.setImage("about-skater");
