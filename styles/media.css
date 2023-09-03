@@ -170,19 +170,19 @@
  } */
 
 /* for mobile */
-@media screen and (min-width: 1500px) {
 
- .tv-set {
-      background-size: 100% 100%; 
-   }
-
+@media (min-height: 980px) and (min-width: 1800px){
+   .tv-stand{
+    display: block;
+    }
 }
 
-@media screen and (max-width: 1200px) {
+/* @media screen and (max-width: 1200px) {
    .tv-set {
-      background-size: 100% 100%; 
+      background-size: 100% 210%;
    }
-}
+} */
+
 
  @media (min-width: 280px) and (max-width: 480px) {
    .container {

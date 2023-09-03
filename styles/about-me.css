@@ -1,125 +1,132 @@
-@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Merienda:wght@500;800;900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,400;1,700;1,900&display=swap");
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Merienda:wght@500;800;900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,400;1,700;1,900&display=swap');
 
 #about-scene {
   display: block;
+  position: relative;
+  z-index: -1;
 }
+
 #mountains {
   height: 100%;
   background: url(../images/about-me/mountains.png) center/cover;
 }
 
 #city-panorama {
-  height: 47%;
+  height: 100%;
+  max-height: 52%;
   background: url(../images/about-me/city-panorama.png) repeat-x;
-  background-size: 62em;
-  bottom: 8%;
+  background-size: contain;
+  top: 35%;
 }
 
 #front-city {
-  height: 47%;
+  height: 100%;
+  max-height: 37%;
   background: url(../images/about-me/greenroadCity.png) repeat-x;
-  background-size: 48em;
-  bottom: 10%;
+  background-size: contain;
+  bottom: 9%;
 }
 
 #park {
-  height: 61%;
-  background: url(../images/about-me/frontroad.png) repeat-x;
-  background-size: 40em;
-
-  height: 29%;
-  background: url(../images/about-me/greenroadCity.png) repeat-x;
-  background-size: 58em;
-  bottom: 7%;
-}
-
-#park {
-  height: 61%;
+  height: 100%;
+  max-height: 50%;
   background: url(../images/about-me/front-road-elements.png) repeat-x;
-  background-size: 40em;
-  height: 42%;
-}
-
-#grass {
-  height: 5%;
-  background: url(../images/about-me/grass.png) repeat-x;
-  background-size: 40em;
+  background-size: contain;
   bottom: 0%;
 }
 
+#grass {
+  height: 100%;
+  background: url(../images/about-me/grass.png) repeat-x;
+  background-size: 40em;
+  bottom: -93%;
+}
+
 #about-billboards {
-  height: 49%;
-  bottom: 3%;
+  height: 100%;
+  max-height: 66%;
+  position: relative;
+  bottom: -26%;
 }
 
 #about-billboard-1 {
+  position: relative;
   height: 100%;
+  max-height: 100%;
   background: url(../images/about-me/billboard-1/billboard.png) no-repeat;
-  background-size: 27em;
-  left: 102px;
+  background-size: contain;
+  position: relative;
 }
 
 #about-billboard-1-arrow {
+  height: 12%;
   position: absolute;
-  height: 13%;
-  bottom: 40%;
-  left: 10%;
+  top: 48%;
+  left: 15%;
 }
 
 #about-billboard-2 {
-  width: 150%;
   height: 100%;
+  max-height: 57%;
   background: url(../images/about-me/billboard-2/billboard2Elvira.png) no-repeat;
-  background-size: 37em;
-  bottom: -146px;
-  left: 526px;
+  background-size: contain;
+  left: 60%;
+  bottom: 0%;
 }
 
 #about-billboard-2-girl {
+  width: 17%;
+  height: 46%;
   position: absolute;
-  width: 10%;
-  height: 36%;
   left: 2%;
-  top: 10%;
+  top: 21%;
   object-fit: contain;
 }
 
 #about-billboard-3 {
-  width: 135%;
-  height: 116%;
+  height: 100%;
+  max-height: 100%;
   background: url(../images/about-me/billboard-3/billboard.png) no-repeat;
-  background-size: 27em;
-  bottom: -17%;
-  left: 127%;
+  background-size: contain;
+  left: 137%;
+  bottom: -2%;
 }
+
 #about-billboard-3-girl {
+  height: 24%;
   position: absolute;
-  height: 21%;
-  bottom: 39%;
-  left: 20%;
+  top: 49%;
+  left: 35%;
+  object-fit: contain;
 }
 
 #about-billboard-4 {
+  position: relative;
   height: 100%;
+  max-height: 100%;
   background: url(../images/about-me/billboard-4/billboard.png) no-repeat;
-  background-size: 26em;
-  bottom: -4%;
-  left: 185%;
+  background-size:contain;
+  left: 210%;
+  bottom: 0%;
 }
 
 #about-billboard-4-balloon {
+  height: 21%;
   position: absolute;
-  height: 18%;
-  bottom: 60%;
-  left: 22%;
+  bottom: 57%;
+  left: 31%;
 }
 
 #about-billboard-5 {
   height: 100%;
+  width: 100%;
+  max-height: 100%;
   background: url(../images/about-me/billboard-5/billboard5.png) no-repeat;
-  background-size: 18em;
+  background-size: contain;
+  position: absolute;
+  left: 285%;
   bottom: 0%;
-  left: 240%;
 }
 
 #about-billboard-5-butterfly {
@@ -127,24 +134,35 @@
   width: 9%;
   height: 22%;
   bottom: 67%;
-  left: 19%;
+  left: 27%;
 }
 
 #about-road {
-  height: 30%;
-  bottom: 0%;
+  height: 100%;
+  max-height: 30%;
+  bottom: -5%;
+  position: relative;
 }
 
-#about-road-cones {
+.road-cones {
   position: absolute;
-  height: 36%;
-  bottom: 12%;
+  height: 100%;
+  max-height: 36%;
   left: 28%;
+  bottom: 9%;
 }
 
-#about-road-closed {
+.road-closed {
   position: absolute;
-  height: 68%;
-  bottom: 22%;
-  left: 337%;
+  height: 69%;
+  left: 389%;
+  bottom: 17%;
+}
+
+#grass {
+  height: 100%;
+  max-height: 7%;
+  background: url(../images/about-me/grass.png) repeat-x;
+  background-size: contain;
+  bottom: 1%;
 }
