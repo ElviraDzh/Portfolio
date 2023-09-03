@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,11 +10,10 @@
   <link rel="stylesheet" href="./styles/projects.css" />
   <link rel="stylesheet" href="./styles/normalize.css" />
   <link rel="stylesheet" href="./styles/media.css">
-   <!-- fontawesome link -->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
+    <!-- fontawesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <body>
-  <div class="container">
+  <div class="container" id="container">
     <!-- Burger Menu -->
     <header>
       <div class="made-with-love">Made with<span class="heart"> &#10084; </span>by Elvira</div>
@@ -99,7 +99,7 @@
        <button class="btn-projects btn-scene" id="btn-projects">Projects</button>
      </div>
     
-    <div id="overlay-billboards"></div>
+    <div id="overlay-billboard"></div>
     <div class="modal">
       <div class="modal-content">
         <div class="slides">
@@ -185,10 +185,12 @@
       <img src="images/general/radio.png" alt="radio" class="radio">
     </div>
   </div> <!-- container-->
+  <script src="./scripts/hammer.js"></script>
   <script src="./scripts/globals.js"></script>
   <script src="./scripts/Screen.js"></script>
   <script src="./scripts/Skater.js"></script>
   <script src="./scripts/KeyHandler.js"></script>
+  <script src="./scripts/TouchHandler.js"></script>
   <script src="./scripts/Timer.js"></script>
   <script src="./scripts/ProjectsScene.js"></script>
   <script src="./scripts/AboutScene.js"></script>

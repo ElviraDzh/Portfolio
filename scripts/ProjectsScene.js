@@ -134,6 +134,6 @@ class ProjectsScene {
     image.src = useGif
       ? image.src.replace(".png", ".gif")
       : image.src.replace(".gif", ".png");
-    overlayBillboards.style.display = useGif ? "block" : "none";
+    overlayBillboard.style.display = useGif ? "block" : "none";
   }
 }
