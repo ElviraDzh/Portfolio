@@ -1,210 +1,321 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
-  <link rel="stylesheet" href="./styles/main.css" />
-  <link rel="stylesheet" href="./styles/about-me.css" />
-  <link rel="stylesheet" href="./styles/projects.css" />
-  <link rel="stylesheet" href="./styles/normalize.css" />
-  <link rel="stylesheet" href="./styles/media.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="stylesheet" href="./styles/about-me.css" />
+    <link rel="stylesheet" href="./styles/projects.css" />
+    <link rel="stylesheet" href="./styles/normalize.css" />
+    <link rel="stylesheet" href="./styles/media.css" />
     <!-- fontawesome link -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<body>
-  <div class="container" id="container">
-    <!-- Burger Menu -->
-    <header>
-      <div class="made-with-love">Made with<span class="heart"> &#10084; </span>by Elvira</div>
-    <div class="burger-menu">
-      <i class="fas fa-bars burger"></i>
-      <nav class="menu">
-        <ul>
-          <li><a href="#"><img src="images/burger-menu-icons/account.gif" width="24px" alt="about me icon">About me</a></li>
-          <li><a href="#"> <img src="images/burger-menu-icons/folder.gif" width="24px" alt="projects icon">Projects</a></li>
-          <li><a href="#"><img src="images/burger-menu-icons/article.gif" width="24px" alt="cv icon"> Resume</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-    <!-- Burger Menu End -->
-    <div class="tv-set">
-      <section id="about-scene" class="scene-container">
-        <div id="mountains" class="layer"></div>
-        <div id="city-panorama" class="layer"></div>
-        <div id="front-city" class="layer"></div>
-        <div id="about-billboards" class="layer">
-          <div id="about-billboard-1">
-            <img id="about-billboard-1-arrow" src="images/about-me/billboard-1/arrow.gif" />
-          </div>
-          <div id="about-billboard-2" class="layer">
-            <img id="about-billboard-2-girl" src="images/about-me/billboard-2/girl-programmer.png" />
-          </div>
-          <div id="about-billboard-3" class="layer">
-            <img id="about-billboard-3-girl" src="images/about-me/billboard-3/girl-working.png" />
-          </div>
-          <div id="about-billboard-4" class="layer">
-            <img id="about-billboard-4-balloon" src="images/about-me/billboard-4/balloon.png" />
-          </div>
-          <div id="about-billboard-5">
-            <img id="about-billboard-5-butterfly" class="layer" src="images/about-me/billboard-5/butterfly.png" />
-          </div>
-        </div>
-        <div id="park" class="layer"></div>
-       <div id="about-road" class="road-elements layer">
-      <img class="road-cones" src="images/common/cones.png" />
-      <img class="road-closed" src="images/common/road-closed.png" />
-    </div>
-    <div id="grass" class="layer"></div>
-    <img id="about-skater" class="skater" src="images/skater/idle.gif" />
-      </section>
-     <section id="projects-scene" class="scene-container">
-    <div id="projects-sky" class="layer"></div>
-    <div id="projects-mountains" class="layer"></div>
-    <div id="projects-trees-far" class="layer"></div>
-    <div id="projects-trees-middle" class="layer"></div>
-    <div id="projects-bushes" class="layer"></div>
-    <div id="projects-cable-lines" class="layer"></div>
-    <div id="projects-trees-near"></div>
-    <div id="projects-billboards" class="layer">
-      <div id="projects-billboard-1" class="projects-billboard layer">
-        <img src="./images/projects/billboards-content/tetris.png" id="projects-b1-imgTetris"alt="tetris" />
-      </div>
-      <div id="projects-billboard-2" class=" projects-billboard layer">
-        <img src="./images/projects/billboards-content/tetris.png" id="projects-billboard-2-tetris"alt="tetris"/>
-      </div>
-      <div id="projects-billboard-3" class=" projects-billboard layer">
-        <img src="./images/projects/billboards-content/tetris.png" id="projects-billboard-3-tetris"alt="tetris">
-      </div>
-      <div id="projects-billboard-4" class="projects-billboard layer">
-        <img src="./images/projects/billboards-content/tetris.png" id="projects-billboard-4-tetris"alt="tetris">
-      </div>
-      <div id="projects-billboard-5" class="projects-billboard layer">
-        <img src="./images/projects/billboards-content/tetris.png" id="projects-billboard-5-tetris"alt="tetris">
-      </div>
-    </div>
-    <div id="projects-road" class="road-elements layer">
-      <img class="road-cones" id="project-road-cones" src="images/common/cones.png" />
-      <img class="road-closed" id="project-road-closed" src="images/common/road-closed.png" />
-    </div>
-    <div id="projects-grasses" class="layer"></div>
-    <div id="projects-sky-shadow" class="layer"></div>
-    <img id="projects-skater" class="skater" src="images/skater/idle.gif" />
-    <div id="overlay-modal"></div>
-    
-     </section>
-     <div class="switch-btns">
-       <button class="btn-about btn-scene" id="btn-about">About me</button>
-       <button class="btn-projects btn-scene" id="btn-projects">Projects</button>
-     </div>
-    
-    <div id="overlay-billboard"></div>
-    <div class="modal">
-      <div class="modal-content">
-        <div class="slides">
-          <div class="modalImgTetris current">
-            <img src="./images/projects/modal/aboutTetris.png" alt="" />
-            <a
-              href="https://tetris.elvira.ie/"
-              target="_blank"
-              class="link-tetris link-demo"
-              >Demo</a
-            >
-            <a
-              href="https://github.com/ElviraDzh/Tetris"
-              target="_blank"
-              class="link-tetris link-github"
-              >Github</a
-            >
-            <span class="close" id="close"
-              ><i class="fa-regular fa-circle-xmark"></i
-            ></span>
-            <button class="btn-prev">
-              <i class="fa-solid fa-angle-left"></i>
-            </button>
-            <button class="btn-next">
-              <i class="fa-solid fa-angle-right"></i>
-            </button>
-          </div>
-          <div class="modalImgTetris">
-            <img src="./images/projects/modal/Group 7.png" alt="aboutTetrisGame" />
-            <a
-              href="https://tetris.elvira.ie/"
-              target="_blank"
-              class="link-tetris link-demo"
-              >Demo</a
-            >
-            <a
-              href="https://github.com/ElviraDzh/Tetris"
-              target="_blank"
-              class="link-tetris link-github"
-              >Github</a
-            >
-            <span class="close" id="close"
-              ><i class="fa-regular fa-circle-xmark"></i
-            ></span>
-            <button class="btn-prev">
-              <i class="fa-solid fa-angle-left"></i>
-            </button>
-            <button class="btn-next">
-              <i class="fa-solid fa-angle-right"></i>
-            </button>
-          </div>
-          <div class="modalImgTetris">
-            <img src="./images/projects/modal/Group 8.png" alt="tetrisWebPage" />
-            <a
-              href="https://tetris.elvira.ie/"
-              target="_blank"
-              class="link-tetris link-demo"
-              >Demo</a
-            >
-            <a
-              href="https://github.com/ElviraDzh/Tetris"
-              target="_blank"
-              class="link-tetris link-github"
-              >Github</a
-            >
-            <span class="close" id="close"
-              ><i class="fa-regular fa-circle-xmark"></i
-            ></span>
-            <button class="btn-prev">
-              <i class="fa-solid fa-angle-left"></i>
-            </button>
-            <button class="btn-next">
-              <i class="fa-solid fa-angle-right"></i>
-            </button>
-          </div>
-        </div>
-      </div>
-     </div>
-   
-    </div> <!-- tv-set -->
-        <div class="tv-stand">
-      <img src="images/general/clock.png" alt="clock" class="clock">
-      <img src="images/general/radio.png" alt="radio" class="radio">
-    </div>
-  </div> <!-- container-->
-  <script src="./scripts/hammer.js"></script>
-  <script src="./scripts/globals.js"></script>
-  <script src="./scripts/Screen.js"></script>
-  <script src="./scripts/Skater.js"></script>
-  <script src="./scripts/KeyHandler.js"></script>
-  <script src="./scripts/TouchHandler.js"></script>
-  <script src="./scripts/Timer.js"></script>
-  <script src="./scripts/ProjectsScene.js"></script>
-  <script src="./scripts/AboutScene.js"></script>
-  <script src="./scripts/SceneWrapper.js"></script>
-  <script src="./scripts/Menu.js"></script>
-  <script src="./scripts/Modal.js"></script>
-  <script src="./scripts/main.js"></script>
-  <script src="./scripts/burgerMenu.js"></script>
-  <script>
-    var w = window.innerWidth;
-    var h = window.innerHeight;
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
 
-    console.log("w" + w);
-    console.log("h" + h);
-  </script>
-</body>
+  <body>
+    <div class="container" id="container">
+      <!-- Burger Menu -->
+      <header>
+        <div class="made-with-love">
+          Made with<span class="heart"> &#10084; </span>by Elvira
+        </div>
+        <div class="burger-menu">
+          <i class="fas fa-bars burger"></i>
+          <nav class="menu">
+            <ul>
+              <li>
+                <a href="#"
+                  ><img
+                    src="images/burger-menu-icons/account.gif"
+                    width="24px"
+                    alt="about me icon"
+                  />About me</a
+                >
+              </li>
+              <li>
+                <a href="#">
+                  <img
+                    src="images/burger-menu-icons/folder.gif"
+                    width="24px"
+                    alt="projects icon"
+                  />Projects</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><img
+                    src="images/burger-menu-icons/article.gif"
+                    width="24px"
+                    alt="cv icon"
+                  />
+                  Resume</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <!-- Burger Menu End -->
+      <div class="tv-set">
+        <section id="about-scene" class="scene-container">
+          <div id="mountains" class="layer"></div>
+          <div id="city-panorama" class="layer"></div>
+          <div id="front-city" class="layer"></div>
+          <div id="about-billboards" class="layer">
+            <div id="about-billboard-1">
+              <img
+                id="about-billboard-1-arrow"
+                src="images/about-me/billboard-1/arrow.gif"
+              />
+            </div>
+            <div id="about-billboard-2" class="layer">
+              <img
+                id="about-billboard-2-girl"
+                src="images/about-me/billboard-2/girl-programmer.png"
+              />
+            </div>
+            <div id="about-billboard-3" class="layer">
+              <img
+                id="about-billboard-3-girl"
+                src="images/about-me/billboard-3/girl-working.png"
+              />
+            </div>
+            <div id="about-billboard-4" class="layer">
+              <img
+                id="about-billboard-4-balloon"
+                src="images/about-me/billboard-4/balloon.png"
+              />
+            </div>
+            <div id="about-billboard-5">
+              <img
+                id="about-billboard-5-butterfly"
+                class="layer"
+                src="images/about-me/billboard-5/butterfly.png"
+              />
+            </div>
+          </div>
+          <div id="park" class="layer"></div>
+          <div id="about-road" class="road-elements layer">
+            <img class="road-cones" src="images/common/cones.png" />
+            <img class="road-closed" src="images/common/road-closed.png" />
+          </div>
+          <div id="grass" class="layer"></div>
+          <img id="about-skater" class="skater" src="images/skater/idle.gif" />
+        </section>
+        <section id="projects-scene" class="scene-container">
+          <div id="projects-sky" class="layer"></div>
+          <div id="projects-mountains" class="layer"></div>
+          <div id="projects-trees-far" class="layer"></div>
+          <div id="projects-trees-middle" class="layer"></div>
+          <div id="projects-bushes" class="layer"></div>
+          <div id="projects-cable-lines" class="layer"></div>
+          <div id="projects-trees-near"></div>
+          <div id="projects-billboards" class="layer">
+            <div
+              id="projects-billboard-1"
+              class="projects-billboards-styles layer"
+            >
+              <img
+                src="./images/projects/billboards-content/tetris.png"
+                id="projects-billboard-1-tetris"
+                class="projects-billboards-content"
+                alt="tetris"
+              />
+            </div>
+            <div
+              id="projects-billboard-2"
+              class="projects-billboards-styles layer"
+            >
+              <img
+                src="./images/projects/billboards-content/tetris.png"
+                id="projects-billboard-2-tetris"
+                class="projects-billboards-content"
+                alt="tetris"
+              />
+            </div>
+            <div
+              id="projects-billboard-3"
+              class="projects-billboards-styles layer"
+            >
+              <img
+                src="./images/projects/billboards-content/tetris.png"
+                id="projects-billboard-3-tetris"
+                class="projects-billboards-content"
+                alt="tetris"
+              />
+            </div>
+            <div
+              id="projects-billboard-4"
+              class="projects-billboards-styles layer"
+            >
+              <img
+                src="./images/projects/billboards-content/tetris.png"
+                id="projects-billboard-4-tetris"
+                class="projects-billboards-content"
+                alt="tetris"
+              />
+            </div>
+            <div
+              id="projects-billboard-5"
+              class="projects-billboards-styles layer"
+            >
+              <img
+                src="./images/projects/billboards-content/tetris.png"
+                id="projects-billboard-5-tetris"
+                class="projects-billboards-content"
+                alt="tetris"
+              />
+            </div>
+          </div>
+          <div id="projects-road" class="road-elements layer">
+            <img
+              class="road-cones"
+              id="projects-road-cones"
+              src="images/common/cones.png"
+            />
+            <img
+              class="road-closed"
+              id="projects-road-closed"
+              src="images/common/road-closed.png"
+            />
+          </div>
+          <div id="projects-grasses" class="layer"></div>
+          <div id="projects-sky-shadow" class="layer"></div>
+          <img
+            id="projects-skater"
+            class="skater"
+            src="images/skater/idle.gif"
+          />
+          <div id="overlay-modal"></div>
+        </section>
+        <div class="switch-btns">
+          <button class="btn-about btn-scene" id="btn-about">About me</button>
+          <button class="btn-projects btn-scene" id="btn-projects">
+            Projects
+          </button>
+        </div>
+
+        <div id="overlay-billboard"></div>
+        <div class="modal">
+          <div class="modal-content">
+            <div class="slides">
+              <div class="modalImgTetris current">
+                <img src="./images/projects/modal/aboutTetris.png" alt="" />
+                <a
+                  href="https://tetris.elvira.ie/"
+                  target="_blank"
+                  class="link-tetris link-demo"
+                  >Demo</a
+                >
+                <a
+                  href="https://github.com/ElviraDzh/Tetris"
+                  target="_blank"
+                  class="link-tetris link-github"
+                  >Github</a
+                >
+                <span class="close" id="close"
+                  ><i class="fa-regular fa-circle-xmark"></i
+                ></span>
+                <button class="btn-prev">
+                  <i class="fa-solid fa-angle-left"></i>
+                </button>
+                <button class="btn-next">
+                  <i class="fa-solid fa-angle-right"></i>
+                </button>
+              </div>
+              <div class="modalImgTetris">
+                <img
+                  src="./images/projects/modal/Group 7.png"
+                  alt="aboutTetrisGame"
+                />
+                <a
+                  href="https://tetris.elvira.ie/"
+                  target="_blank"
+                  class="link-tetris link-demo"
+                  >Demo</a
+                >
+                <a
+                  href="https://github.com/ElviraDzh/Tetris"
+                  target="_blank"
+                  class="link-tetris link-github"
+                  >Github</a
+                >
+                <span class="close" id="close"
+                  ><i class="fa-regular fa-circle-xmark"></i
+                ></span>
+                <button class="btn-prev">
+                  <i class="fa-solid fa-angle-left"></i>
+                </button>
+                <button class="btn-next">
+                  <i class="fa-solid fa-angle-right"></i>
+                </button>
+              </div>
+              <div class="modalImgTetris">
+                <img
+                  src="./images/projects/modal/Group 8.png"
+                  alt="tetrisWebPage"
+                />
+                <a
+                  href="https://tetris.elvira.ie/"
+                  target="_blank"
+                  class="link-tetris link-demo"
+                  >Demo</a
+                >
+                <a
+                  href="https://github.com/ElviraDzh/Tetris"
+                  target="_blank"
+                  class="link-tetris link-github"
+                  >Github</a
+                >
+                <span class="close" id="close"
+                  ><i class="fa-regular fa-circle-xmark"></i
+                ></span>
+                <button class="btn-prev">
+                  <i class="fa-solid fa-angle-left"></i>
+                </button>
+                <button class="btn-next">
+                  <i class="fa-solid fa-angle-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- tv-set -->
+      <div class="tv-stand">
+        <img src="images/general/clock.png" alt="clock" class="clock" />
+        <img src="images/general/radio.png" alt="radio" class="radio" />
+      </div>
+    </div>
+    <!-- container-->
+    <script src="./scripts/hammer.js"></script>
+    <script src="./scripts/globals.js"></script>
+    <script src="./scripts/Screen.js"></script>
+    <script src="./scripts/Skater.js"></script>
+    <script src="./scripts/KeyHandler.js"></script>
+    <script src="./scripts/TouchHandler.js"></script>
+    <script src="./scripts/Timer.js"></script>
+    <script src="./scripts/ProjectsScene.js"></script>
+    <script src="./scripts/AboutScene.js"></script>
+    <script src="./scripts/SceneWrapper.js"></script>
+    <script src="./scripts/Menu.js"></script>
+    <script src="./scripts/Modal.js"></script>
+    <script src="./scripts/main.js"></script>
+    <script src="./scripts/burgerMenu.js"></script>
+    <script>
+      var w = window.innerWidth;
+      var h = window.innerHeight;
+
+      console.log("w" + w);
+      console.log("h" + h);
+    </script>
+  </body>
 </html>

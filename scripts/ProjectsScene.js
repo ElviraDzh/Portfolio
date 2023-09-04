@@ -10,7 +10,7 @@ class ProjectsScene {
     {
       start: 730,
       end: 760,
-      image: getById("projects-b1-imgTetris"),
+      image: getById("projects-billboard-1-tetris"),
     },
     {
       start: 1480,

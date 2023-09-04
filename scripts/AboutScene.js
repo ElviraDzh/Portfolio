@@ -1,7 +1,7 @@
 class AboutScene {
   #sceneSection = getById("about-scene");
   #center = SCREEN.centerX;
-  #speed = 1;
+  #speed = 3;
   #animation = null;
 
   #start = SCREEN.centerX;
@@ -38,8 +38,8 @@ class AboutScene {
     this.#initLayer("mountains", 0.1, true),
     this.#initLayer("city-panorama", 0.2, true),
     this.#initLayer("front-city", 0.3, true),
-    this.#initLayer("about-billboards", 0.8, false),
-    // this.#initLayer("about-billboards", 5, false),
+    // this.#initLayer("about-billboards", 0.8, false),
+    this.#initLayer("about-billboards", 5, false),
     this.#initLayer("park", 0.8, true),
     this.#initLayer("about-road", 1, false),
     this.#initLayer("grass", 2, true),

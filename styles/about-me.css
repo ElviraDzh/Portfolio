@@ -108,7 +108,7 @@
   background: url(../images/about-me/billboard-4/billboard.png) no-repeat;
   background-size:contain;
   left: 210%;
-  bottom: 0%;
+  bottom: 100%;
 }
 
 #about-billboard-4-balloon {
