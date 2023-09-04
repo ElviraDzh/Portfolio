@@ -1,159 +1,156 @@
-
 @media (min-height: 980px) and (min-width: 1400px) {
-   .container {
-      overflow: visible;
-   }
+  .container {
+    overflow: visible;
+  }
 
-   .tv-stand{
+  .tv-stand {
     display: block;
-    }
+  }
 }
 
 @media (max-height: 880px) and (max-width: 1750px) {
-   .tv-set {
-      background-size: 95% 106%;
-   }
+  .tv-set {
+    background-size: 95% 106%;
+  }
 
-   #about-billboard-1-arrow {
-      left: 14%;
+  #about-billboard-1-arrow {
+    left: 14%;
   }
 
   #about-billboard-3-girl {
-   left: 32%;
+    left: 32%;
   }
 
   #about-billboard-4-balloon {
-   left: 27%;
-   }
+    left: 27%;
+  }
 
-   #about-billboard-5-butterfly {
-      left: 24%;
+  #about-billboard-5-butterfly {
+    left: 24%;
   }
 }
 
 @media (max-height: 771px) and (max-width: 1550px) {
-   .tv-set {
-      background-size: 82% 106%;
-   } 
+  .tv-set {
+    background-size: 82% 106%;
+  }
 
-   .scene-container {
-      left: 12%;
-   }
+  .scene-container {
+    left: 12%;
+  }
 
-   #about-billboard-1-arrow {
-      left: 12%;
+  #about-billboard-1-arrow {
+    left: 12%;
   }
 
   #about-billboard-2-girl {
-      width: 14%; 
-   }
+    width: 14%;
+  }
 
-   #about-billboard-3-girl {
-      left: 28%;
-   }
+  #about-billboard-3-girl {
+    left: 28%;
+  }
 
-   #about-billboard-4-balloon {
-      left: 25%;
+  #about-billboard-4-balloon {
+    left: 25%;
   }
 
   #about-billboard-5-butterfly {
-   left: 20%;
-}
+    left: 20%;
+  }
 
-.projects-billboards-content {
-   left: 0.7%;
-}
-
+  .projects-billboards-content {
+    left: 0.7%;
+  }
 }
 
 @media (max-height: 790px) and (max-width: 1450px) {
-   .tv-set {
-      background-size: 85% 106%;
-   }
+  .tv-set {
+    background-size: 85% 106%;
+  }
 
-   .scene-container {
-      left: 12%;
-   }
+  .scene-container {
+    left: 12%;
+  }
 
-   #about-billboard-1-arrow {
-      left: 12%;
+  #about-billboard-1-arrow {
+    left: 12%;
   }
 
   #about-billboard-2-girl {
-    width: 14%; 
-   }
+    width: 14%;
+  }
 
-   #about-billboard-3-girl {
+  #about-billboard-3-girl {
     left: 28%;
-   }
+  }
 
-   #about-billboard-4-balloon {
-      left: 25%;
-   }
+  #about-billboard-4-balloon {
+    left: 25%;
+  }
 
-   #about-billboard-5-butterfly {
+  #about-billboard-5-butterfly {
     left: 20%;
-   }
-   
-   .projects-billboards-content {
-      left: 0.7%;
-   }
+  }
+
+  .projects-billboards-content {
+    left: 0.7%;
+  }
 }
 
 @media screen and (max-width: 1390px) {
-   .tv-set {
-     background: none;
-   }
+  .tv-set {
+    background: none;
+  }
 }
 
-@media screen and (max-height: 815px){
-   .tv-set {
-      background-size: 88% 106%;
-   }
+@media screen and (max-height: 815px) {
+  .tv-set {
+    background-size: 88% 106%;
+  }
 
-   .scene-container {
-      left: 10%;
-   }
+  .scene-container {
+    left: 10%;
+  }
 
-   #about-billboard-1-arrow {
-      left: 12%;
+  #about-billboard-1-arrow {
+    left: 12%;
   }
 
   #about-billboard-2-girl {
-    width: 14%; 
-   }
+    width: 14%;
+  }
 
-   #about-billboard-3-girl {
+  #about-billboard-3-girl {
     left: 28%;
-   }
+  }
 
-   #about-billboard-4-balloon {
-      left: 25%;
-   }
+  #about-billboard-4-balloon {
+    left: 25%;
+  }
 
-   #about-billboard-5-butterfly {
+  #about-billboard-5-butterfly {
     left: 20%;
-   }
-   
-   .projects-billboards-content {
-      left: 0.7%;
-   }
+  }
 
+  .projects-billboards-content {
+    left: 0.7%;
+  }
 }
 
-@media screen and (max-height: 750px){
-   .tv-set {
-      background: none;
-    }
+@media screen and (max-height: 750px) {
+  .tv-set {
+    background: none;
+  }
 }
 
 @media (min-width: 280px) and (max-width: 480px) {
-   .container {
-      padding: 0 15px;
-    }
+  .container {
+    padding: 0 15px;
+  }
 
-    .scene-container {
-      top: 0%;
-      left: 0%;
-    }
+  .scene-container {
+    top: 0%;
+    left: 0%;
+  }
 }

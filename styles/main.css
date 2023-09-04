@@ -6,7 +6,9 @@
   box-sizing: border-box;
 }
 
-html { overflow: hidden; }
+html {
+  overflow: hidden;
+}
 
 body {
   background: url(../images/general/background-1.png);
@@ -37,7 +39,7 @@ body {
   background-size: 100% 106%;
   background-position: 57% 41%;
   position: relative;
-}   
+}
 
 .scene-container {
   width: 100%;
@@ -63,7 +65,7 @@ body {
 
 .tv-stand {
   height: 100%;
-  width:2700px;
+  width: 2700px;
   background: url(../images/general/shelf.png) no-repeat;
   background-size: contain;
   bottom: 2%;
@@ -97,6 +99,18 @@ body {
   border: none;
   text-transform: uppercase;
   font-weight: bold;
+}
+
+#white-noise {
+  position: absolute;
+  z-index: -1;
+  width: 80%;
+  height: 85%;
+  background: url(../images/general/\ white-noise.gif);
+  background-size: contain;
+  bottom: 10%;
+  left: 7%;
+  display: none;
 }
 
 .layer {
@@ -164,12 +178,12 @@ header {
 
 .made-with-love {
   position: fixed;
-  background-color:rgba(1, 1,1,0.5);
+  background-color: rgba(1, 1, 1, 0.5);
   width: 100%;
   height: 50px;
   left: 0;
   z-index: 999;
-  font-family: 'Merienda', cursive;
+  font-family: "Merienda", cursive;
   font-size: 1rem;
   color: orange;
   text-align: center;
@@ -209,8 +223,8 @@ header {
   position: absolute;
   top: 2.4rem;
   right: 0;
-  background-color:rgba(1, 1,1,0.5);
-  padding: 10px ;
+  background-color: rgba(1, 1, 1, 0.5);
+  padding: 10px;
   width: 150px;
 }
 
@@ -232,15 +246,16 @@ header {
 .menu a {
   text-decoration: none;
   color: #fff;
-  font-family: 'Merienda', cursive;
+  font-family: "Merienda", cursive;
   font-size: 1rem;
 }
 
 .menu li:hover {
-text-decoration: underline;
-text-decoration-thickness: 1.5px;
-text-underline-offset:0.5rem;
-text-decoration-color: #fff;}
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 0.5rem;
+  text-decoration-color: #fff;
+}
 
 .menu img {
   position: relative;
@@ -249,11 +264,11 @@ text-decoration-color: #fff;}
   margin-right: 1rem;
   background-color: orange;
   padding: 5px;
- border-radius: 50%;
+  border-radius: 50%;
 }
 
 /* Media Query for Mobile Sizes */
-@media screen and (max-width:767px) {
+@media screen and (max-width: 767px) {
   .burger-menu {
     display: block;
   }
