@@ -13,4 +13,3 @@ const TIMER = new Timer();
 TIMER.start();
 
 const MENU = new Menu();
-MENU.init();

@@ -1,4 +1,16 @@
 class Menu {
+  constructor() {
+    getById("btn-about").addEventListener("click", () => {
+      this.#showWhiteNoise();
+      this.#showAboutScene();
+    });
+
+    getById("btn-projects").addEventListener("click", () => {
+      this.#showWhiteNoise();
+      this.#showProjectsScene();
+    });
+  }
+
   #showAboutScene() {
     SCENE_WRAPPER.down();
     ABOUT_SCENE.show(true);
@@ -15,12 +27,15 @@ class Menu {
     CURRENT_SCENE = PROJECTS_SCENE;
   }
 
-  init() {
-    getById("btn-about").addEventListener("click", () => {
-      this.#showAboutScene();
-    });
-    getById("btn-projects").addEventListener("click", () => {
-      this.#showProjectsScene();
-    });
+  #showWhiteNoise() {
+    const tv = document.querySelector(".tv-set");
+    const whiteNoise = getById("white-noise");
+    const tvStyle = getComputedStyle(tv);
+    if (tvStyle.backgroundImage === "none") return;
+
+    whiteNoise.style.display = "block";
+    setTimeout(() => {
+      whiteNoise.style.display = "none";
+    }, 750);
   }
 }
