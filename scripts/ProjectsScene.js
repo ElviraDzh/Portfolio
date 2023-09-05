@@ -42,6 +42,7 @@ class ProjectsScene {
     this.#initLayer("projects-cable-lines", 2, true),
     this.#initLayer("projects-trees-near", 3, true),
     this.#initLayer("projects-road", 3, false),
+    this.#initLayer("projects-street-lights", 3, false),
     this.#initLayer("projects-billboards", 3, false),
     this.#initLayer("projects-grasses", 5, true),
   ];

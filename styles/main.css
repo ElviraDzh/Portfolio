@@ -99,6 +99,7 @@ body {
   border: none;
   text-transform: uppercase;
   font-weight: bold;
+  cursor: pointer;
 }
 
 #white-noise {
