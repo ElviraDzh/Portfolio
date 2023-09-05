@@ -9,7 +9,8 @@
 
 #mountains {
   height: 100%;
-  background: url(../images/about-me/mountains.png) center/cover;
+background: url(../images/about-me/mountains.png);
+background-size: cover;
 }
 
 #city-panorama {
@@ -39,7 +40,7 @@
 #grass {
   height: 100%;
   background: url(../images/about-me/grass.png) repeat-x;
-  background-size: 40em;
+  background-size:  contain;
   bottom: -93%;
 }
 
@@ -54,16 +55,9 @@
   position: relative;
   height: 100%;
   max-height: 100%;
-  background: url(../images/about-me/billboard-1/billboard.png) no-repeat;
+  background: url(../images/about-me/billboard-1/billboard.gif) no-repeat;
   background-size: contain;
   position: relative;
-}
-
-#about-billboard-1-arrow {
-  height: 12%;
-  position: absolute;
-  top: 48%;
-  left: 15%;
 }
 
 #about-billboard-2 {
@@ -105,7 +99,7 @@
   position: relative;
   height: 100%;
   max-height: 100%;
-  background: url(../images/about-me/billboard-4/billboard.png) no-repeat;
+  background: url(../images/about-me/billboard-4/billboard-without-img.psd) no-repeat;
   background-size:contain;
   left: 210%;
   bottom: 100%;
