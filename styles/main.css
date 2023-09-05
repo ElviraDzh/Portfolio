@@ -23,13 +23,15 @@ body {
 .container {
   height: 100%;
   width: 100%;
-  max-height: 970px;
+  max-height: 938px;
+/* bylo  max-height: 970px; */
   max-width: 1400px;
-  min-width: 1024px;
-  min-height: 700px;
+  min-width: 1300px;
+  min-height: 701px;
   margin: auto auto;
   position: relative;
   overflow: hidden;
+  border: 1px solid red;
 }
 
 .tv-set {
@@ -99,18 +101,22 @@ body {
   border: none;
   text-transform: uppercase;
   font-weight: bold;
+  cursor: pointer;
 }
 
 #white-noise {
   position: absolute;
   z-index: -1;
-  width: 80%;
-  height: 85%;
+  width: 100%;
+  height: 82%;
+  max-height: 793px;
+  max-width: 879px;
   background: url(../images/general/\ white-noise.gif);
   background-size: contain;
-  bottom: 10%;
+  top: 6%;
   left: 7%;
   display: none;
+  border: 1px solid;
 }
 
 .layer {
@@ -152,23 +158,6 @@ body {
   left: 337%;
 }
 
-@media (orientation: landscape) {
-  #layer-1,
-  #layer-2,
-  #layer3,
-  #layer-4,
-  #layer-5,
-  #layer-6,
-  #layer-7,
-  #layer-8,
-  #mountains,
-  #city-panorama,
-  #front-city,
-  #park,
-  #grass {
-    background-size: contain;
-  }
-}
 
 /*------------ Burger Menu Styles----------- */
 header {
@@ -265,20 +254,4 @@ header {
   background-color: orange;
   padding: 5px;
   border-radius: 50%;
-}
-
-/* Media Query for Mobile Sizes */
-@media screen and (max-width: 767px) {
-  .burger-menu {
-    display: block;
-  }
-  .menu {
-    display: none;
-  }
-  .burger-menu.open .menu {
-    display: block;
-  }
-  .made-with-love {
-    display: block;
-  }
 }

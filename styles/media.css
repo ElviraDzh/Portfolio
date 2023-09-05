@@ -1,4 +1,8 @@
-@media (min-height: 980px) and (min-width: 1400px) {
+@media (min-height: 940px) and (min-width: 1024px) {
+  body {
+    overflow: hidden;
+  }
+
   .container {
     overflow: visible;
   }
@@ -6,11 +10,18 @@
   .tv-stand {
     display: block;
   }
-}
 
-@media (max-height: 880px) and (max-width: 1750px) {
+}
+/* bylo (min-height: 980px)*/
+
+/* desktop  */
+@media (max-height: 880px) and (min-width: 1400px) {
   .tv-set {
-    background-size: 95% 106%;
+    background-size: 92% 106%;
+  }
+
+  .scene-container {
+    left: 8%;
   }
 
   #about-billboard-1-arrow {
@@ -28,129 +39,464 @@
   #about-billboard-5-butterfly {
     left: 24%;
   }
+
 }
 
-@media (max-height: 771px) and (max-width: 1550px) {
+@media (max-height: 830px) and (min-width: 1301px) {
   .tv-set {
-    background-size: 82% 106%;
+    background-size: 90% 106%;
+  }
+
+  #white-noise {
+    left: 15%;
+}
+}
+
+@media (max-height: 815px) and (min-width: 1301px) {
+  .tv-set {
+    background-size: 84% 106%;
   }
 
   .scene-container {
-    left: 12%;
-  }
-
-  #about-billboard-1-arrow {
-    left: 12%;
-  }
-
-  #about-billboard-2-girl {
-    width: 14%;
-  }
-
-  #about-billboard-3-girl {
-    left: 28%;
-  }
-
-  #about-billboard-4-balloon {
-    left: 25%;
-  }
-
-  #about-billboard-5-butterfly {
-    left: 20%;
-  }
-
-  .projects-billboards-content {
-    left: 0.7%;
+    left: 13%;
   }
 }
 
-@media (max-height: 790px) and (max-width: 1450px) {
+@media (max-height: 780px) and (min-width: 1301px) {
   .tv-set {
-    background-size: 85% 106%;
+    background-size: 79% 106%;
   }
 
   .scene-container {
-    left: 12%;
-  }
-
-  #about-billboard-1-arrow {
-    left: 12%;
-  }
-
-  #about-billboard-2-girl {
-    width: 14%;
-  }
-
-  #about-billboard-3-girl {
-    left: 28%;
-  }
-
-  #about-billboard-4-balloon {
-    left: 25%;
-  }
-
-  #about-billboard-5-butterfly {
-    left: 20%;
-  }
-
-  .projects-billboards-content {
-    left: 0.7%;
-  }
+    max-width: 755px;
+    left: 17%;
 }
 
-@media screen and (max-width: 1390px) {
-  .tv-set {
+}
+
+/* mobile responsive */
+/* mini desktops */
+@media (max-height: 1200px) and (max-width: 1300px) {
+body {
+  overflow: hidden;
+}
+
+.container {
+  max-height: 100%;
+}
+
+.burger-menu {
+  display: block;
+}
+
+.menu {
+  display: none;
+}
+
+.burger-menu.open .menu {
+  display: block;
+}
+
+.made-with-love {
+  display: block;
+}
+
+.tv-set {
+  background: none;
+}
+
+.scene-container {
+  height: 100%;
+  max-height: 100%;
+  max-width: 100%;
+  top: 0%;
+  left: 0%;
+}
+
+#front-city {
+  max-height: 33%;
+}
+
+#grass {
+  bottom: 0%;
+}
+
+#about-billboards {
+  max-height: 72%;
+  bottom: -21%;
+}
+
+#about-billboard-1-arrow {
+  left: 13%;
+}
+
+#about-billboard-2 {
+  left: 90%;
+}
+
+#about-billboard-2-girl {
+  left: 1%;
+}
+
+#about-billboard-3 {
+  left: 200%;
+}
+
+#about-billboard-3-girl {
+  left: 30%;
+}
+
+#about-billboard-4 {
+  left: 300%;
+}
+
+#about-billboard-4-balloon {
+  left: 25%;
+}
+
+#about-billboard-5 {
+  left: 390%;
+}
+
+#about-billboard-5-butterfly {
+  left: 22%;
+}
+
+.skater {
+  width: 16em;
+  height: 15em;
+}
+
+}
+
+/* tablet portrait*/
+/* big tablets */
+@media only screen and (min-height: 1200px) and (max-width: 1300px){
+  body {
     background: none;
   }
-}
 
-@media screen and (max-height: 815px) {
-  .tv-set {
-    background-size: 88% 106%;
-  }
-
-  .scene-container {
-    left: 10%;
-  }
-
-  #about-billboard-1-arrow {
-    left: 12%;
-  }
-
-  #about-billboard-2-girl {
-    width: 14%;
-  }
-
-  #about-billboard-3-girl {
-    left: 28%;
-  }
-
-  #about-billboard-4-balloon {
-    left: 25%;
-  }
-
-  #about-billboard-5-butterfly {
-    left: 20%;
-  }
-
-  .projects-billboards-content {
-    left: 0.7%;
-  }
-}
-
-@media screen and (max-height: 750px) {
-  .tv-set {
-    background: none;
-  }
-}
-
-@media (min-width: 280px) and (max-width: 480px) {
   .container {
-    padding: 0 15px;
+    max-height: 1400px;
   }
 
+  .burger-menu {
+    display: block;
+  }
+  
+  .menu {
+    display: none;
+  }
+  
+  .burger-menu.open .menu {
+    display: block;
+  }
+  
+  .made-with-love {
+    display: block;
+  }
+
+  .tv-set {
+    background: none;
+   }
+
   .scene-container {
+    height: 100%;
+    max-height: 100%;
+    max-width: 100%;
     top: 0%;
     left: 0%;
   }
+
+  #city-panorama {
+    top: 46%;
+  }
+
+  #front-city {
+    max-height: 29%;
+  }
+
+  #park {
+    max-height: 46%;
+  }
+
+  #about-billboard-2 {
+    left: 80%;
+  }
+
+  #about-billboard-3 {
+    left: 197%;
+  }
+
+  #about-billboard-4 {
+    left: 299%;
+  }
+
+  #about-billboard-5 {
+    left: 409%;
+  }
+
+  #grass {
+    bottom: 0%;
+  }
+
+  .skater {
+    width: 23em;
+    height: 20em;
+  }
+
+  .tv-stand {
+    display: none;
+  }
+
+}
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1200px) 
+and (max-device-height: 1180px)
+and (orientation : portrait) {
+  #about-billboard-1-arrow {
+    left: 16%;
+  }
+  
+  #about-billboard-2-girl {
+    width: 19%;
+    left: 3%;
+  }
+  
+  #about-billboard-3 {
+    left: 155%;
+  }
+  
+  #about-billboard-3-girl {
+    left: 38%;
+  }
+  
+  #about-billboard-4 {
+    left: 250%;
+  }
+  
+  #about-billboard-4-balloon {
+    left: 33%;
+  }
+  
+  #about-billboard-5 {
+    left: 338%;
+  }
+  
+  #about-billboard-5-butterfly {
+    left: 29%;
+  }
+
+  .road-cones {
+    left: 7%;
+  }
+
+  #projects-road-cones {
+    bottom: 0%;
+    left: 14%;
+  }
+
+  #projects-trees-near {
+    bottom: -1%;
+  }
+
+  #projects-bushes {
+    bottom: 0%;
+  }
+  
+  .skater {
+    width: 19em;
+    height: 17em;
+    left: 33%;
+  }
+  
+  }
+
+/* tablet landscape */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1200px) 
+and (max-device-height: 820px)
+and (orientation : landscape) {
+  .skater {
+    width: 15em;
+    height: 13em;
+  }
+
+  #about-billboard-1-arrow {
+    left: 11%;
+  }
+  
+  #about-billboard-2-girl {
+    left: 0%;
+  }
+  
+  #about-billboard-3 {
+    left: 155%;
+  }
+  
+  #about-billboard-3-girl {
+    left: 27%;
+  }
+  
+  #about-billboard-4 {
+    left: 250%;
+  }
+  
+  #about-billboard-4-balloon {
+    left: 23%;
+  }
+  
+  #about-billboard-5 {
+    left: 338%;
+  }
+  
+  #about-billboard-5-butterfly {
+    left: 19%;
+  }
+
+  #projects-road-cones {
+    bottom: 0%;
+    left: 16%;
+  }
+
+  .skater {
+    left: 43%;
+  }
+
+  .projects-billboards-content {
+    left: 0.6%;
+}
+  
+
+
+
+
+}
+
+/* phones portrait */
+@media only screen and (max-device-width: 480px) and (max-device-height: 915px) and (orientation : portrait) {
+
+  .container {
+    max-height: 938px;
+    min-width: 1300px;
+  }
+  
+  #about-billboards {
+    max-height: 48%;
+    bottom: -43%;
+  }
+
+  #about-billboard-1-arrow {
+    left: 8%;
+  }
+
+  #about-billboard-2 {
+    left: 42%;
+  }
+
+  #about-billboard-2-girl {
+    width: 10%;
+    height: 41%;
+    left: 1%;
+    top: 22%;
+  }
+
+  #about-billboard-3 {
+    left: 91%;
+  }
+
+  #about-billboard-3-girl {
+    left: 20%;
+  }
+
+  #about-billboard-4 {
+    left: 146%;
+  }
+
+  #about-billboard-4-balloon {
+    left: 17%;
+  }
+
+  #about-billboard-5 {
+    left: 197%;
+  }
+
+  #about-billboard-5-butterfly {
+    left: 13%;
+  }
+
+  .road-cones {
+   left: 6%;
+   bottom: -51%;
+  }
+
+  #projects-road-cones {
+    left: 5%;
+  }
+
+  .projects-billboards-content {
+    left: 0.6%;
+}
+
+  .skater {
+    width: 15em;
+    height: 12em;
+    left: 19%;
+  }
+}
+
+/* phones landscape */
+@media only screen and (max-height: 575.98px) and (orientation: landscape) {
+  .container {
+    min-width: 100%;
+    min-height: 100%;
+}
+
+#about-billboards {
+  max-height: 79%;
+  bottom: -14%;
+}
+
+.skater {
+  width: 10em;
+  height: 8em;
+}
+
+#grass {
+  bottom: 0%;
+}
+
+#about-billboard-1-arrow {
+  left: 10%;
+}
+
+#about-billboard-2-girl {
+  left: -1%;
+}
+
+#about-billboard-3-girl {
+    left: 23%;
+}
+
+#about-billboard-4-balloon {
+  left: 20%;
+}
+
+#about-billboard-5-butterfly {
+  left: 16%;
+}
+
+.road-cones {
+  max-height: 46%;
+  bottom: 48%;
+}
+
+.road-closed {
+  height: 100%;
+  bottom: 55%;
+}
+
 }
