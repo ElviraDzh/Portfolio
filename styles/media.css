@@ -21,6 +21,7 @@
   }
 
   .scene-container {
+    height: 84%;
     left: 8%;
   }
 
@@ -50,6 +51,10 @@
   #white-noise {
     left: 15%;
 }
+
+#front-city {
+  max-height: 36%;
+}
 }
 
 @media (max-height: 815px) and (min-width: 1301px) {
@@ -60,6 +65,12 @@
   .scene-container {
     left: 13%;
   }
+
+  .menu-style {
+    width: 9%;
+    right: 18%;
+}
+
 }
 
 @media (max-height: 780px) and (min-width: 1301px) {
@@ -69,7 +80,23 @@
 
   .scene-container {
     max-width: 755px;
+    height: 84%;
     left: 17%;
+}
+
+#about-me-btn {
+  top: 19%;
+}
+
+#resume-btn {
+  top: 30.5%;
+}
+
+
+.menu-style {
+  width: 7%;
+  height: 32px;
+  right: 20%;
 }
 
 }
@@ -160,6 +187,10 @@ body {
 
 #about-billboard-5-butterfly {
   left: 22%;
+}
+
+.menu-style {
+  display: none;
 }
 
 .skater {
