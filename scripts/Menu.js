@@ -1,13 +1,22 @@
 class Menu {
   constructor() {
-    getById("btn-about").addEventListener("click", () => {
+    getById("about-me-btn").addEventListener("click", () => {
       this.#showWhiteNoise();
       this.#showAboutScene();
+      document.querySelector(".tv-set").style.backgroundImage =
+        "url(../images/general/tv-set-about-me.png)";
     });
 
-    getById("btn-projects").addEventListener("click", () => {
+    getById("projects-btn").addEventListener("click", () => {
       this.#showWhiteNoise();
       this.#showProjectsScene();
+      document.querySelector(".tv-set").style.backgroundImage =
+        "url(../images/general/tv-set-projects.png)";
+    });
+
+    getById("resume-btn").addEventListener("click", () => {
+      document.querySelector(".tv-set").style.backgroundImage =
+        "url(../images/general/tv-set-resume.png)";
     });
   }
 
