@@ -1,15 +1,15 @@
 class AboutScene {
   #sceneSection = getById("about-scene");
   #center = SCREEN.centerX;
-  #speed = 3;
+  #speed = 1;
   #animation = null;
 
   #start = SCREEN.centerX;
-  #end = 3340;
+  #end = 4000;
   #animations = [
     {
-      start: 390,
-      end: 500,
+      start: 500,
+      end: 600,
       image: getById("about-billboard-1-arrow"),
     },
     {
@@ -38,8 +38,8 @@ class AboutScene {
     this.#initLayer("mountains", 0.1, true),
     this.#initLayer("city-panorama", 0.2, true),
     this.#initLayer("front-city", 0.3, true),
-    // this.#initLayer("about-billboards", 0.8, false),
-    this.#initLayer("about-billboards", 5, false),
+    this.#initLayer("about-billboards", 0.8, false),
+    // this.#initLayer("about-billboards", 3, false),
     this.#initLayer("park", 0.8, true),
     this.#initLayer("about-road", 1, false),
     this.#initLayer("grass", 2, true),
@@ -68,7 +68,6 @@ class AboutScene {
 
       return false;
     }
-    console.log(this.#center);
     return true;
   }
 
@@ -130,6 +129,7 @@ class AboutScene {
 
   #handleImage(useGif) {
     const image = this.#animation.image;
+    console.log(image.src);
     image.src = useGif
       ? image.src.replace(".png", ".gif")
       : image.src.replace(".gif", ".png");

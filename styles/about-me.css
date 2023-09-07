@@ -1,5 +1,4 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Merienda:wght@500;800;900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,400;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Merienda:wght@500;800;900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,400;1,700;1,900&display=swap");
 
 #about-scene {
   display: block;
@@ -9,8 +8,8 @@
 
 #mountains {
   height: 100%;
-background: url(../images/about-me/mountains.png);
-background-size: cover;
+  background: url(../images/about-me/mountains.png);
+  background-size: cover;
 }
 
 #city-panorama {
@@ -40,7 +39,7 @@ background-size: cover;
 #grass {
   height: 100%;
   background: url(../images/about-me/grass.png) repeat-x;
-  background-size:  contain;
+  background-size: contain;
   bottom: -93%;
 }
 
@@ -52,83 +51,77 @@ background-size: cover;
 }
 
 #about-billboard-1 {
-  position: relative;
-  height: 100%;
-  max-height: 100%;
-  background: url(../images/about-me/billboard-1/billboard.gif) no-repeat;
-  background-size: contain;
-  position: relative;
+  position: absolute;
+  left: 10%;
+  bottom: -1%;
+}
+
+#about-billboard-1-arrow {
+  width: 60%;
+  object-fit: contain;
 }
 
 #about-billboard-2 {
-  height: 100%;
-  max-height: 57%;
-  background: url(../images/about-me/billboard-2/billboard2Elvira.png) no-repeat;
-  background-size: contain;
-  left: 60%;
-  bottom: 0%;
+  /* position: relative; */
+  /* height: 100%;
+  max-height: 57%; */
+  /* background: url(../images/about-me/billboard-2/billboard2Elvira.png) no-repeat;
+  background-size: contain; */
+  /* background-size: auto 100%; */
+  left: 80%;
+  bottom: -1%;
 }
 
 #about-billboard-2-girl {
-  width: 17%;
-  height: 46%;
-  position: absolute;
-  left: 2%;
-  top: 21%;
+  width: 80%;
+  /* height: 47%; */
+  /* position: absolute; */
   object-fit: contain;
 }
 
 #about-billboard-3 {
-  height: 100%;
+  /* height: 100%;
   max-height: 100%;
   background: url(../images/about-me/billboard-3/billboard.png) no-repeat;
-  background-size: contain;
-  left: 137%;
-  bottom: -2%;
+  background-size: contain; */
+  left: 180%;
+  bottom: -3%;
 }
 
 #about-billboard-3-girl {
-  height: 24%;
-  position: absolute;
-  top: 49%;
-  left: 35%;
+  width: 53%;
+  /* height: 24%; */
   object-fit: contain;
 }
 
 #about-billboard-4 {
-  position: relative;
-  height: 100%;
-  max-height: 100%;
-  background: url(../images/about-me/billboard-4/billboard-without-img.psd) no-repeat;
-  background-size:contain;
-  left: 210%;
-  bottom: 100%;
+  left: 250%;
+  bottom: -3%;
 }
 
 #about-billboard-4-balloon {
-  height: 21%;
-  position: absolute;
-  bottom: 57%;
-  left: 31%;
+  width: 53%;
+  /* height: 24%; */
+  object-fit: contain;
 }
 
 #about-billboard-5 {
-  height: 100%;
+  /* height: 100%;
   width: 100%;
   max-height: 100%;
   background: url(../images/about-me/billboard-5/billboard5.png) no-repeat;
   background-size: contain;
-  position: absolute;
-  left: 285%;
+  position: absolute; */
+  left: 320%;
   bottom: 0%;
 }
 
 #about-billboard-5-butterfly {
-  position: absolute;
-  width: 9%;
-  height: 22%;
+  /* position: absolute; */
+  width: 35%;
+  /* height: 22%;
   bottom: 67%;
-  left: 27%;
+  left: 27%; */
 }
 
 #about-road {
@@ -149,7 +142,7 @@ background-size: cover;
 .road-closed {
   position: absolute;
   height: 69%;
-  left: 389%;
+  left: 440%;
   bottom: 17%;
 }
 
