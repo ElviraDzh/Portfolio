@@ -8,28 +8,18 @@ class ProjectsScene {
   #end = 3880;
   #stops = [
     {
-      start: 730,
-      end: 760,
       image: getById("projects-billboard-1-tetris"),
     },
     {
-      start: 1480,
-      end: 1510,
       image: getById("projects-billboard-2-tetris"),
     },
     {
-      start: 2225,
-      end: 2255,
       image: getById("projects-billboard-3-tetris"),
     },
     {
-      start: 2880,
-      end: 2910,
       image: getById("projects-billboard-4-tetris"),
     },
     {
-      start: 3533,
-      end: 3563,
       image: getById("projects-billboard-5-tetris"),
     },
   ];
@@ -60,6 +50,7 @@ class ProjectsScene {
     this.#sceneSection.style.display = visible ? "block" : "none";
   }
 
+  skaterImg = getById("projects-skater");
   // Returns true if the scene can move in a given direction.
   canMove(direction) {
     if (
@@ -96,11 +87,17 @@ class ProjectsScene {
   // Returns true if there is no stop and can continue moving.
   #handleStops(direction) {
     if (this.#currentStop !== null) {
+      const skaterLeft = this.skaterImg.getBoundingClientRect().left; // skater's position relative to viewport
+      const skaterRight = this.skaterImg.getBoundingClientRect().right;
+      const billboardLeft =
+        this.#currentStop.image.getBoundingClientRect().left; // billboard's position relative to viewport
+      const billboardRight =
+        this.#currentStop.image.getBoundingClientRect().right;
       // There is the current stop. "Unmark" the current stop when the scene goes out of the current stop,
       // so the scene can properly stop again when comes back.
       if (
-        (direction === 1 && this.#currentStop.end < this.#center) ||
-        (direction === -1 && this.#currentStop.start > this.#center)
+        (direction === 1 && billboardRight < skaterRight) ||
+        (direction === -1 && billboardLeft > skaterLeft)
       ) {
         this.#handleImage(false);
         this.#currentStop = null;
@@ -119,9 +116,13 @@ class ProjectsScene {
   }
 
   #getStop() {
+    const skaterLeft = this.skaterImg.getBoundingClientRect().left;
+    const skaterRight = this.skaterImg.getBoundingClientRect().right;
     for (let i = 0; i < this.#stops.length; i++) {
       const stop = this.#stops[i];
-      if (this.#center >= stop.start && this.#center <= stop.end) {
+      const billboardLeft = stop.image.getBoundingClientRect().left;
+      const billboardRight = stop.image.getBoundingClientRect().right;
+      if (skaterLeft >= billboardLeft && skaterRight <= billboardRight) {
         return stop;
       }
     }

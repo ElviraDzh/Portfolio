@@ -1,3 +1,3 @@
 class Screen {
-    centerX = 400;
+  centerX = 400;
 }

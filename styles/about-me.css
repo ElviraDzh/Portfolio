@@ -52,45 +52,32 @@
 
 #about-billboard-1 {
   position: absolute;
-  left: 10%;
+  left: 33%;
   bottom: -1%;
 }
 
 #about-billboard-1-arrow {
-  width: 60%;
+  width: 55%;
   object-fit: contain;
 }
 
 #about-billboard-2 {
-  /* position: relative; */
-  /* height: 100%;
-  max-height: 57%; */
-  /* background: url(../images/about-me/billboard-2/billboard2Elvira.png) no-repeat;
-  background-size: contain; */
-  /* background-size: auto 100%; */
   left: 80%;
   bottom: -1%;
 }
 
 #about-billboard-2-girl {
   width: 80%;
-  /* height: 47%; */
-  /* position: absolute; */
   object-fit: contain;
 }
 
 #about-billboard-3 {
-  /* height: 100%;
-  max-height: 100%;
-  background: url(../images/about-me/billboard-3/billboard.png) no-repeat;
-  background-size: contain; */
   left: 180%;
   bottom: -3%;
 }
 
 #about-billboard-3-girl {
   width: 53%;
-  /* height: 24%; */
   object-fit: contain;
 }
 
@@ -101,27 +88,16 @@
 
 #about-billboard-4-balloon {
   width: 53%;
-  /* height: 24%; */
   object-fit: contain;
 }
 
 #about-billboard-5 {
-  /* height: 100%;
-  width: 100%;
-  max-height: 100%;
-  background: url(../images/about-me/billboard-5/billboard5.png) no-repeat;
-  background-size: contain;
-  position: absolute; */
   left: 320%;
   bottom: 0%;
 }
 
 #about-billboard-5-butterfly {
-  /* position: absolute; */
   width: 35%;
-  /* height: 22%;
-  bottom: 67%;
-  left: 27%; */
 }
 
 #about-road {
