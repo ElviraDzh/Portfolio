@@ -9,7 +9,6 @@ const overlayProjectScene = getById("overlay-modal");
 
 function showModalBox() {
   modalBox.classList.add("show");
-
   overlayProjectScene.classList.add("changeBackground");
 }
 

@@ -23,22 +23,6 @@
     height: 84%;
     left: 8%;
   }
-
-  #about-billboard-1-arrow {
-    left: 14%;
-  }
-
-  #about-billboard-3-girl {
-    left: 32%;
-  }
-
-  #about-billboard-4-balloon {
-    left: 27%;
-  }
-
-  #about-billboard-5-butterfly {
-    left: 24%;
-  }
 }
 
 @media (max-height: 830px) and (min-width: 1301px) {
@@ -47,17 +31,18 @@
   }
 
   #white-noise {
-    left: 15%;
+    left: 11%;
   }
 
   #front-city {
     max-height: 36%;
   }
+
 }
 
 @media (max-height: 815px) and (min-width: 1301px) {
   .tv-set {
-    background-size: 84% 106%;
+    background-size: 83% 106%;
   }
 
   .scene-container {
@@ -68,17 +53,18 @@
     width: 9%;
     right: 18%;
   }
+
 }
 
 @media (max-height: 780px) and (min-width: 1301px) {
   .tv-set {
-    background-size: 79% 106%;
+    background-size: 81% 106%;
   }
 
   .scene-container {
     max-width: 755px;
     height: 84%;
-    left: 17%;
+    left: 15%;
   }
 
   #about-me-btn {
@@ -94,6 +80,57 @@
     height: 32px;
     right: 20%;
   }
+
+
+  #white-noise {
+    left: 14%;
+  }
+}
+@media (max-height: 700px) and (min-width: 1300px) {
+  body {
+    background-image: none;
+    overflow: hidden;
+  }
+
+  .container {
+    max-height: 100%;
+    min-width: 0px;
+    min-height: 0px;
+  }
+
+  .burger-menu {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .burger-menu.open .menu {
+    display: block;
+  }
+
+  .made-with-love {
+    display: block;
+  }
+
+  .tv-set {
+    background: none !important;
+  }
+
+  .scene-container {
+    height: 100%;
+    max-height: 100%;
+    max-width: 100%;
+    top:0%;
+    left: 0%;
+    margin: 0 auto;
+  }
+
+  #grass {
+    bottom: 0%;
+  }
+
 }
 
 /* mobile responsive */
@@ -124,7 +161,7 @@
   }
 
   .tv-set {
-    background: none;
+    background: none !important;
   }
 
   .scene-container {
@@ -148,49 +185,23 @@
     bottom: -21%;
   }
 
-  #about-billboard-2 {
-    left: 90%;
-  }
-
-  #about-billboard-2-girl {
-    /* width: 14%; */
-    left: 3%;
-  }
-
-  #about-billboard-3 {
-    left: 200%;
-  }
-
-  #about-billboard-3-girl {
-    left: 30%;
-  }
-
-  #about-billboard-4 {
-    left: 300%;
-  }
-
-  #about-billboard-4-balloon {
-    left: 25%;
-  }
-
-  #about-billboard-5 {
-    left: 390%;
-  }
-
-  #about-billboard-5-butterfly {
-    left: 22%;
+  .road-cones {
+    bottom: 30%;
   }
 
   .menu-style {
     display: none;
   }
 
-  .skater {
-    width: 16em;
-    height: 15em;
-  }
-}
 
+}
+@media (max-height: 725px) and (max-width: 1299px){
+  .container {
+    min-width: 100%;
+    min-height: 100%;
+  }
+  
+}
 /* tablet portrait*/
 /* big tablets */
 @media only screen and (min-height: 1200px) and (max-width: 1300px) {
@@ -219,7 +230,7 @@
   }
 
   .tv-set {
-    background: none;
+    background: none !important;
   }
 
   .scene-container {
@@ -242,72 +253,19 @@
     max-height: 46%;
   }
 
-  #about-billboard-2 {
-    left: 80%;
-  }
-
-  #about-billboard-3 {
-    left: 197%;
-  }
-
-  #about-billboard-4 {
-    left: 299%;
-  }
-
-  #about-billboard-5 {
-    left: 409%;
-  }
-
   #grass {
     bottom: 0%;
   }
 
-  .skater {
-    width: 23em;
-    height: 20em;
-  }
-
   .tv-stand {
-    display: none;
+    display: none !important;
   }
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1200px) and (max-device-height: 1180px) and (orientation: portrait) {
-  #about-billboard-1-arrow {
-    left: 16%;
-  }
-
-  #about-billboard-2-girl {
-    width: 19%;
-    left: 3%;
-  }
-
-  #about-billboard-3 {
-    left: 155%;
-  }
-
-  #about-billboard-3-girl {
-    left: 38%;
-  }
-
-  #about-billboard-4 {
-    left: 250%;
-  }
-
-  #about-billboard-4-balloon {
-    left: 33%;
-  }
-
-  #about-billboard-5 {
-    left: 338%;
-  }
-
-  #about-billboard-5-butterfly {
-    left: 29%;
-  }
-
   .road-cones {
-    left: 7%;
+    bottom: -49%;
+    max-height: 34%;
   }
 
   #projects-road-cones {
@@ -324,58 +282,24 @@
   }
 
   .skater {
-    width: 19em;
-    height: 17em;
     left: 33%;
+  }
+
+}
+
+@media (max-height: 725px) and (max-width: 750px) {
+  .container {
+    min-width: 1300px;
+    min-height:0%;
   }
 }
 
 /* tablet landscape */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1200px) and (max-device-height: 820px) and (orientation: landscape) {
-  .skater {
-    width: 15em;
-    height: 13em;
-  }
-
-  #about-billboard-1-arrow {
-    left: 11%;
-  }
-
-  #about-billboard-2-girl {
-    left: 0%;
-  }
-
-  #about-billboard-3 {
-    left: 155%;
-  }
-
-  #about-billboard-3-girl {
-    left: 27%;
-  }
-
-  #about-billboard-4 {
-    left: 250%;
-  }
-
-  #about-billboard-4-balloon {
-    left: 23%;
-  }
-
-  #about-billboard-5 {
-    left: 338%;
-  }
-
-  #about-billboard-5-butterfly {
-    left: 19%;
-  }
 
   #projects-road-cones {
     bottom: 0%;
     left: 16%;
-  }
-
-  .skater {
-    left: 43%;
   }
 
   .projects-billboards-content {
@@ -395,45 +319,19 @@
     bottom: -43%;
   }
 
-  #about-billboard-2 {
-    left: 42%;
-  }
-
-  #about-billboard-2-girl {
-    width: 10%;
-    height: 41%;
-    left: 2%;
-    top: 22%;
-  }
-
-  #about-billboard-3 {
-    left: 91%;
-  }
-
-  #about-billboard-3-girl {
-    left: 20%;
-  }
-
-  #about-billboard-4 {
-    left: 146%;
-  }
-
-  #about-billboard-4-balloon {
-    left: 17%;
-  }
-
-  #about-billboard-5 {
-    left: 197%;
-  }
-
-  #about-billboard-5-butterfly {
-    left: 13%;
+  #about-billboard-1 {
+    left: 1%;
   }
 
   .road-cones {
     left: 6%;
     bottom: -51%;
   }
+
+  .skater {
+    left: 19% 
+  }
+
 
   #projects-road-cones {
     left: 5%;
@@ -442,50 +340,18 @@
   .projects-billboards-content {
     left: 0.6%;
   }
-
-  .skater {
-    width: 15em;
-    height: 12em;
-    left: 19%;
-  }
 }
 
 /* phones landscape */
 @media only screen and (max-height: 575.98px) and (orientation: landscape) {
-  .container {
-    min-width: 100%;
-    min-height: 100%;
-  }
 
   #about-billboards {
     max-height: 79%;
     bottom: -14%;
   }
 
-  .skater {
-    width: 10em;
-    height: 8em;
-  }
-
   #grass {
     bottom: 0%;
-  }
-
-  #about-billboard-2-girl {
-    width: 11%;
-    left: 2%;
-  }
-
-  #about-billboard-3-girl {
-    left: 23%;
-  }
-
-  #about-billboard-4-balloon {
-    left: 20%;
-  }
-
-  #about-billboard-5-butterfly {
-    left: 16%;
   }
 
   .road-cones {
@@ -497,4 +363,10 @@
     height: 100%;
     bottom: 55%;
   }
+
+  .skater {
+    width: 18%;
+    height: 32%;
+  }
+
 }
