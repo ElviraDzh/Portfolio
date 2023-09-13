@@ -13,7 +13,7 @@ html {
 body {
   background: url(../images/general/background-1.png);
   background-size: contain;
-  height: 100vh;
+  height: 100dvh;
   display: flex;
   flex-direction: column;
   align-items: center;
