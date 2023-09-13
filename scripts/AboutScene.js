@@ -1,12 +1,5 @@
 class AboutScene {
   #sceneSection = getById("about-scene");
-  #center = SCREEN.centerX;
-  //#speed = 1;
-  #speed = 2;
-  #animation = null;
-
-  #start = SCREEN.centerX;
-  #end = 4000;
   #animations = [
     {
       image: getById("about-billboard-1-arrow"),
@@ -24,6 +17,12 @@ class AboutScene {
       image: getById("about-billboard-5-butterfly"),
     },
   ];
+  roadStart = getById("road-cones").getBoundingClientRect().right;
+  #center = this.roadStart;
+
+  #speed = 3;
+  #animation = null;
+  skaterImg = getById("about-skater");
 
   #layers = [
     // this.#initLayer("mountains", 0.1, true),
@@ -33,13 +32,13 @@ class AboutScene {
     // this.#initLayer("park", 0.8, true),
     // this.#initLayer("about-road", 1, false),
     // this.#initLayer("grass", 2, true),
-    this.#initLayer("mountains", 0.2, true),
-    this.#initLayer("city-panorama", 0.4, true),
-    this.#initLayer("front-city", 0.6, true),
-    this.#initLayer("about-billboards", 1.6, false),
-    this.#initLayer("park", 1.6, true),
-    this.#initLayer("about-road", 2, false),
-    this.#initLayer("grass", 4, true),
+    this.#initLayer("mountains", 0.3, true),
+    this.#initLayer("city-panorama", 0.6, true),
+    this.#initLayer("front-city", 0.9, true),
+    this.#initLayer("about-billboards", 2.4, false),
+    this.#initLayer("park", 2.4, true),
+    this.#initLayer("about-road", 3, false),
+    this.#initLayer("grass", 6, true),
   ];
 
   #initLayer(id, step, moveBackground) {
@@ -57,9 +56,13 @@ class AboutScene {
 
   // Returns true if the scene can move in a given direction.
   canMove(direction) {
+    const skaterRect = this.skaterImg.getBoundingClientRect();
+    const roadEnd = getById("road-closed").getBoundingClientRect().left + 50;
+    const roadStart = getById("road-cones").getBoundingClientRect().right;
+
     if (
-      (direction === 1 && this.#center > this.#end) ||
-      (direction === -1 && this.#center < this.#start)
+      (direction === 1 && skaterRect.right > roadEnd) ||
+      (direction === -1 && skaterRect.left < roadStart)
     ) {
       // Reached the end or the start of the scene.
 
@@ -67,7 +70,7 @@ class AboutScene {
     }
     return true;
   }
-  skaterImg = getById("about-skater");
+
   // Returns true if the scene can move in a given direction. Otherwise, false.
   // For example, reaching the end of scene.
 
@@ -94,18 +97,15 @@ class AboutScene {
   // Handles showing or hiding of animations on the billboards.
   #handleAnimations(direction) {
     if (this.#animation !== null) {
-      const skaterLeft = this.skaterImg.getBoundingClientRect().left; // skater's position relative to viewport
-      const skaterRight = this.skaterImg.getBoundingClientRect().right;
-      const skaterCenter = (skaterLeft + skaterRight) / 2;
-      const billboardLeft = this.#animation.image.getBoundingClientRect().left; // billboard's position relative to viewport
-      const billboardRight =
-        this.#animation.image.getBoundingClientRect().right;
+      const skaterRect = this.skaterImg.getBoundingClientRect(); // skater's position relative to viewport
+      const skaterCenter = (skaterRect.left + skaterRect.right) / 2;
+      const billboardRect = this.#animation.image.getBoundingClientRect(); // billboard's position relative to viewport.
       // There is the current animation. "Unmark" the current animation when the scene goes out of the current animation,
       //so the scene can properly handle animation again when comes back.
 
       if (
-        (direction === 1 && billboardRight < skaterCenter) ||
-        (direction === -1 && billboardLeft > skaterCenter)
+        (direction === 1 && billboardRect.right < skaterCenter) ||
+        (direction === -1 && billboardRect.left > skaterCenter)
       ) {
         this.#handleImage(false);
         this.#animation = null;
@@ -121,14 +121,15 @@ class AboutScene {
   }
 
   #getAnimation() {
-    const skaterLeft = this.skaterImg.getBoundingClientRect().left;
-    const skaterRight = this.skaterImg.getBoundingClientRect().right;
-    const skaterCenter = (skaterLeft + skaterRight) / 2;
+    const skaterRect = this.skaterImg.getBoundingClientRect();
+    const skaterCenter = (skaterRect.left + skaterRect.right) / 2;
     for (let i = 0; i < this.#animations.length; i++) {
       const animation = this.#animations[i];
-      const billboardLeft = animation.image.getBoundingClientRect().left;
-      const billboardRight = animation.image.getBoundingClientRect().right;
-      if (skaterCenter >= billboardLeft && skaterCenter <= billboardRight) {
+      const billboardRect = animation.image.getBoundingClientRect();
+      if (
+        skaterCenter >= billboardRect.left &&
+        skaterCenter <= billboardRect.right
+      ) {
         return animation;
       }
     }
