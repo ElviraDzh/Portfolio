@@ -46,58 +46,81 @@
 #about-billboards {
   height: 100%;
   max-height: 66%;
+  width: 100%;
   position: relative;
   bottom: -26%;
+  border: 1px solid red;
 }
 
 #about-billboard-1 {
   position: absolute;
-  left: 33%;
+  height: 100%;
+  left: 28%;
   bottom: -1%;
 }
 
 #about-billboard-1-arrow {
-  width: 55%;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
 }
 
 #about-billboard-2 {
-  left: 80%;
+  position: absolute;
+  height: 100%;
+  left: 90%;
   bottom: -1%;
+  border: 1px solid green;
 }
 
 #about-billboard-2-girl {
-  width: 80%;
+  position: absolute;
+  bottom: -12%;
+  width: 84%;
+  height: 100%;
   object-fit: contain;
 }
 
 #about-billboard-3 {
+  position: absolute;
+  height: 100%;
   left: 180%;
   bottom: -3%;
+  border: 1px solid green;
 }
 
 #about-billboard-3-girl {
-  width: 53%;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
 }
 
 #about-billboard-4 {
-  left: 250%;
+  position: absolute;
+  height: 100%;
+  left: 268%;
   bottom: -3%;
+  border: 1px solid green;
 }
 
 #about-billboard-4-balloon {
-  width: 53%;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
 }
 
 #about-billboard-5 {
-  left: 320%;
+  position: absolute;
+  height: 100%;
+  left: 343%;
   bottom: 0%;
+  border: 1px solid green;
 }
 
 #about-billboard-5-butterfly {
-  width: 35%;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 #about-road {
@@ -118,7 +141,7 @@
 .road-closed {
   position: absolute;
   height: 69%;
-  left: 440%;
+  left: 511%;
   bottom: 17%;
 }
 
