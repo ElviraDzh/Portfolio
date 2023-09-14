@@ -17,12 +17,9 @@ class AboutScene {
       image: getById("about-billboard-5-butterfly"),
     },
   ];
-  roadStart = getById("road-cones").getBoundingClientRect().right;
-  #center = this.roadStart;
-
-  #speed = 3;
+  
   #animation = null;
-  skaterImg = getById("about-skater");
+  #skaterImg = getById("about-skater");
 
   #layers = [
     // this.#initLayer("mountains", 0.1, true),
@@ -56,9 +53,10 @@ class AboutScene {
 
   // Returns true if the scene can move in a given direction.
   canMove(direction) {
-    const skaterRect = this.skaterImg.getBoundingClientRect();
-    const roadEnd = getById("road-closed").getBoundingClientRect().left + 50;
-    const roadStart = getById("road-cones").getBoundingClientRect().right;
+    const skaterRect = this.#skaterImg.getBoundingClientRect();
+    const roadEnd =
+      getById("about-road-closed").getBoundingClientRect().left + 50;
+    const roadStart = getById("about-road-cones").getBoundingClientRect().right;
 
     if (
       (direction === 1 && skaterRect.right > roadEnd) ||
@@ -77,7 +75,6 @@ class AboutScene {
   move(direction, smoothFactor) {
     if (!this.canMove(direction)) return false;
 
-    this.#center += direction * this.#speed * smoothFactor;
     this.#handleAnimations(direction);
 
     // Move layers.
@@ -97,7 +94,7 @@ class AboutScene {
   // Handles showing or hiding of animations on the billboards.
   #handleAnimations(direction) {
     if (this.#animation !== null) {
-      const skaterRect = this.skaterImg.getBoundingClientRect(); // skater's position relative to viewport
+      const skaterRect = this.#skaterImg.getBoundingClientRect(); // skater's position relative to viewport
       const skaterCenter = (skaterRect.left + skaterRect.right) / 2;
       const billboardRect = this.#animation.image.getBoundingClientRect(); // billboard's position relative to viewport.
       // There is the current animation. "Unmark" the current animation when the scene goes out of the current animation,
@@ -121,7 +118,7 @@ class AboutScene {
   }
 
   #getAnimation() {
-    const skaterRect = this.skaterImg.getBoundingClientRect();
+    const skaterRect = this.#skaterImg.getBoundingClientRect();
     const skaterCenter = (skaterRect.left + skaterRect.right) / 2;
     for (let i = 0; i < this.#animations.length; i++) {
       const animation = this.#animations[i];
