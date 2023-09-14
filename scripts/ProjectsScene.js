@@ -1,11 +1,5 @@
 class ProjectsScene {
   #sceneSection = getById("projects-scene");
-  #center = SCREEN.centerX;
-  #speed = 3;
-  #currentStop = null;
-
-  #start = SCREEN.centerX;
-  #end = 3880;
   #stops = [
     {
       image: getById("projects-billboard-1-tetris"),
@@ -23,6 +17,9 @@ class ProjectsScene {
       image: getById("projects-billboard-5-tetris"),
     },
   ];
+
+  #currentStop = null;
+  #skaterImg = getById("projects-skater");
 
   #layers = [
     this.#initLayer("projects-mountains", 1, true),
@@ -50,12 +47,17 @@ class ProjectsScene {
     this.#sceneSection.style.display = visible ? "block" : "none";
   }
 
-  skaterImg = getById("projects-skater");
   // Returns true if the scene can move in a given direction.
   canMove(direction) {
+    const skater = this.#skaterImg.getBoundingClientRect();
+    const roadEnd =
+      getById("projects-road-closed").getBoundingClientRect().left + 50;
+    const roadStart = getById("projects-road-cones").getBoundingClientRect()
+      .right;
+
     if (
-      (direction === 1 && this.#center > this.#end) ||
-      (direction === -1 && this.#center < this.#start)
+      (direction === 1 && skater.right > roadEnd) ||
+      (direction === -1 && skater.left < roadStart)
     ) {
       // Reached the end or the start of the scene.
       return false;
@@ -68,7 +70,6 @@ class ProjectsScene {
   // For example, reaching the end of scene.
   move(direction, smoothFactor) {
     if (!this.canMove(direction) || !this.#handleStops(direction)) return false;
-    this.#center += direction * this.#speed * smoothFactor;
 
     // Move layers.
     for (const layerObj of this.#layers) {
@@ -87,17 +88,13 @@ class ProjectsScene {
   // Returns true if there is no stop and can continue moving.
   #handleStops(direction) {
     if (this.#currentStop !== null) {
-      const skaterLeft = this.skaterImg.getBoundingClientRect().left; // skater's position relative to viewport
-      const skaterRight = this.skaterImg.getBoundingClientRect().right;
-      const billboardLeft =
-        this.#currentStop.image.getBoundingClientRect().left; // billboard's position relative to viewport
-      const billboardRight =
-        this.#currentStop.image.getBoundingClientRect().right;
+      const skater = this.#skaterImg.getBoundingClientRect();
+      const billboard = this.#currentStop.image.getBoundingClientRect(); // billboard's position relative to viewport
       // There is the current stop. "Unmark" the current stop when the scene goes out of the current stop,
       // so the scene can properly stop again when comes back.
       if (
-        (direction === 1 && billboardRight < skaterRight) ||
-        (direction === -1 && billboardLeft > skaterLeft)
+        (direction === 1 && billboard.right < skater.right) ||
+        (direction === -1 && billboard.left > skater.left)
       ) {
         this.#handleImage(false);
         this.#currentStop = null;
@@ -116,13 +113,11 @@ class ProjectsScene {
   }
 
   #getStop() {
-    const skaterLeft = this.skaterImg.getBoundingClientRect().left;
-    const skaterRight = this.skaterImg.getBoundingClientRect().right;
+    const skater = this.#skaterImg.getBoundingClientRect();
     for (let i = 0; i < this.#stops.length; i++) {
       const stop = this.#stops[i];
-      const billboardLeft = stop.image.getBoundingClientRect().left;
-      const billboardRight = stop.image.getBoundingClientRect().right;
-      if (skaterLeft >= billboardLeft && skaterRight <= billboardRight) {
+      const billboard = stop.image.getBoundingClientRect();
+      if (skater.left >= billboard.left && skater.right <= billboard.right) {
         return stop;
       }
     }
