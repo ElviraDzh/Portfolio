@@ -2,14 +2,14 @@ class Menu {
   constructor() {
     getById("about-me-btn").addEventListener("click", () => {
       this.#showWhiteNoise();
-      this.#showAboutScene();
+      this.showAboutScene();
       document.querySelector(".tv-set").style.backgroundImage =
         "url(../images/general/tv-set-about-me.png)";
     });
 
     getById("projects-btn").addEventListener("click", () => {
       this.#showWhiteNoise();
-      this.#showProjectsScene();
+      this.showProjectsScene();
       document.querySelector(".tv-set").style.backgroundImage =
         "url(../images/general/tv-set-projects.png)";
     });
@@ -20,7 +20,7 @@ class Menu {
     });
   }
 
-  #showAboutScene() {
+  showAboutScene() {
     SCENE_WRAPPER.down();
     ABOUT_SCENE.show(true);
     PROJECTS_SCENE.show(false);
@@ -28,7 +28,7 @@ class Menu {
     CURRENT_SCENE = ABOUT_SCENE;
   }
 
-  #showProjectsScene() {
+  showProjectsScene() {
     SCENE_WRAPPER.down();
     ABOUT_SCENE.show(false);
     PROJECTS_SCENE.show(true);
