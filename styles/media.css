@@ -37,7 +37,6 @@
   #front-city {
     max-height: 36%;
   }
-
 }
 
 @media (max-height: 815px) and (min-width: 1301px) {
@@ -53,7 +52,6 @@
     width: 9%;
     right: 18%;
   }
-
 }
 
 @media (max-height: 780px) and (min-width: 1301px) {
@@ -80,7 +78,6 @@
     height: 32px;
     right: 20%;
   }
-
 
   #white-noise {
     left: 14%;
@@ -122,7 +119,7 @@
     height: 100%;
     max-height: 100%;
     max-width: 100%;
-    top:0%;
+    top: 0%;
     left: 0%;
     margin: 0 auto;
   }
@@ -134,7 +131,6 @@
   #about-billboard-2-girl {
     bottom: -1%;
   }
-
 }
 
 /* mobile responsive */
@@ -197,19 +193,17 @@
 
   .road-cones {
     bottom: 32%;
-}
+  }
 
   .road-closed {
     bottom: 39%;
   }
-  
+
   .menu-style {
     display: none;
   }
-
-
 }
-@media (max-height: 725px) and (max-width: 1299px){
+@media (max-height: 725px) and (max-width: 1299px) {
   .container {
     min-width: 100%;
     min-height: 100%;
@@ -223,7 +217,7 @@
     bottom: -7%;
     width: 76%;
     height: 83%;
-}
+  }
 
   #about-billboard-3 {
     left: 126%;
@@ -239,13 +233,12 @@
 
   .road-cones {
     bottom: 33%;
-}
-
-  .road-closed {
-   left: 368%;
-   bottom: 39%;
   }
 
+  .road-closed {
+    left: 368%;
+    bottom: 39%;
+  }
 }
 
 /* tablet portrait*/
@@ -321,7 +314,7 @@
     bottom: 32%;
     max-height: 34%;
     left: 11%;
-}
+  }
 
   #projects-road-cones {
     bottom: 0%;
@@ -339,19 +332,17 @@
   .skater {
     left: 33%;
   }
-
 }
 
 @media (max-height: 725px) and (max-width: 750px) {
   .container {
     min-width: 1300px;
-    min-height:0%;
+    min-height: 0%;
   }
 }
 
 /* tablet landscape */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1200px) and (max-device-height: 820px) and (orientation: landscape) {
-
   #projects-road-cones {
     bottom: 0%;
     left: 16%;
@@ -369,15 +360,13 @@
     min-width: 1300px;
   }
 
-  /* #about-billboards {
-    max-height: 56%;
-    bottom: -35%;
-} */
-
-  #about-billboard-1-arrow{
-    left: -5%;
+  #projects-billboards {
+    height: 59%;
   }
 
+  #about-billboard-1-arrow {
+    left: -5%;
+  }
 
   #about-billboard-2-girl {
     left: 48%;
@@ -405,12 +394,11 @@
   .road-closed {
     left: 385%;
     bottom: 31%;
-}
-
-  .skater {
-    left: 16% 
   }
 
+  .skater {
+    left: 16%;
+  }
 
   #projects-road-cones {
     left: 5%;
@@ -423,12 +411,14 @@
 
 /* phones landscape */
 @media only screen and (max-height: 575.98px) and (orientation: landscape) {
-
   #about-billboards {
     max-height: 79%;
     bottom: -14%;
   }
 
+  #projects-billboards {
+    height: 65%;
+  }
   #grass {
     bottom: 0%;
   }
@@ -444,8 +434,7 @@
   }
 
   .skater {
-    width: 18%;
+    /* width: 18%; */
     height: 32%;
   }
-
 }
