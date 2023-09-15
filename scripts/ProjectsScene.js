@@ -50,8 +50,8 @@ class ProjectsScene {
   // Returns true if the scene can move in a given direction.
   canMove(direction) {
     const skater = this.#skaterImg.getBoundingClientRect();
-    const roadEnd =
-      getById("projects-road-closed").getBoundingClientRect().left + 50;
+    const roadEnd = getById("projects-road-closed").getBoundingClientRect()
+      .left;
     const roadStart = getById("projects-road-cones").getBoundingClientRect()
       .right;
 
@@ -117,7 +117,11 @@ class ProjectsScene {
     for (let i = 0; i < this.#stops.length; i++) {
       const stop = this.#stops[i];
       const billboard = stop.image.getBoundingClientRect();
-      if (skater.left >= billboard.left && skater.right <= billboard.right) {
+      const padding = billboard.width * 0.24; //Padding variable helps to show interval where skater should stop(center of billboard) on defferent screens.
+      if (
+        skater.left >= billboard.left + padding &&
+        skater.right <= billboard.right - padding
+      ) {
         return stop;
       }
     }
