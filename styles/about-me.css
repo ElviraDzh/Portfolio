@@ -49,78 +49,37 @@
   width: 100%;
   position: relative;
   bottom: -26%;
-  border: 1px solid red;
 }
 
-#about-billboard-1 {
-  position: absolute;
+.img-set {
   height: 100%;
-  left: 28%;
-  bottom: -1%;
+  object-fit: contain;
+  position: absolute;
 }
 
 #about-billboard-1-arrow {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-#about-billboard-2 {
-  position: absolute;
-  height: 100%;
-  left: 90%;
-  bottom: -1%;
-  border: 1px solid green;
+  left: -2%;
 }
 
 #about-billboard-2-girl {
-  position: absolute;
-  bottom: -12%;
   width: 84%;
-  height: 100%;
-  object-fit: contain;
-}
-
-#about-billboard-3 {
-  position: absolute;
-  height: 100%;
-  left: 180%;
-  bottom: -3%;
-  border: 1px solid green;
+  left: 90%;
+  bottom: -7%;
 }
 
 #about-billboard-3-girl {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-#about-billboard-4 {
-  position: absolute;
-  height: 100%;
-  left: 268%;
+  left: 180%;
   bottom: -3%;
-  border: 1px solid green;
 }
 
 #about-billboard-4-balloon {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-#about-billboard-5 {
-  position: absolute;
-  height: 100%;
-  left: 343%;
-  bottom: 0%;
-  border: 1px solid green;
+  left: 268%;
+  bottom: -3%;
 }
 
 #about-billboard-5-butterfly {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+  left: 343%;
+  bottom: 0%;
 }
 
 #about-road {

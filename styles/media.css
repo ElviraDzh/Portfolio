@@ -195,6 +195,10 @@
     height: 83%;
   }
 
+  .road-cones {
+    bottom: 32%;
+}
+
   .road-closed {
     bottom: 39%;
   }
@@ -216,7 +220,7 @@
   }
 
   #about-billboard-2-girl {
-    bottom: 1%;
+    bottom: -7%;
     width: 76%;
     height: 83%;
 }
@@ -237,10 +241,10 @@
     bottom: 33%;
 }
 
-.road-closed {
-  left: 368%;
-  bottom: 39%;
-}
+  .road-closed {
+   left: 368%;
+   bottom: 39%;
+  }
 
 }
 
@@ -370,29 +374,26 @@
     bottom: -35%;
 } */
 
-  #about-billboard-1 {
+  #about-billboard-1-arrow{
     left: -5%;
   }
 
 
-  #about-billboard-2 {
-    left: 48%;
-  }
-
   #about-billboard-2-girl {
+    left: 48%;
     bottom: -1%;
     width: 61%;
   }
 
-  #about-billboard-3 {
+  #about-billboard-3-girl {
     left: 98%;
   }
 
-  #about-billboard-4 {
+  #about-billboard-4-balloon {
     left: 170%;
   }
 
-  #about-billboard-5 {
+  #about-billboard-5-butterfly {
     left: 235%;
   }
 
