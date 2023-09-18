@@ -6,6 +6,7 @@ const btnsNext = document.querySelectorAll(".btn-next");
 const closesInModalBox = document.querySelectorAll(".close");
 const overlayBillboard = getById("overlay-billboard");
 const overlayProjectScene = getById("overlay-modal");
+const projectInfo = document.querySelectorAll(".projects-billboards-content");
 
 function showModalBox() {
   modalBox.classList.add("show");
@@ -49,3 +50,11 @@ function nextSlide() {
     slides[0].classList.add("current");
   }
 }
+
+projectInfo.forEach((img) => {
+  img.addEventListener("click", () => {
+    showModalBox();
+  });
+});
+
+console.log(projectInfo);

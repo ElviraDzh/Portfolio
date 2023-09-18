@@ -23,6 +23,24 @@
     height: 84%;
     left: 8%;
   }
+
+.switch-buttons {
+  right: 7.7%;
+  width: 258px;
+  height: 258px;
+}
+
+#about-me-btn {
+  top: 19.6%;
+}
+
+#projects-btn {
+  top: 25.6%;
+}
+
+#resume-btn {
+  top: 31.8%;
+}
 }
 
 @media (max-height: 830px) and (min-width: 1301px) {
@@ -37,6 +55,24 @@
   #front-city {
     max-height: 36%;
   }
+
+  .scene-container {
+    height: 84%;  
+    left: 8%;
+  }
+
+  .modal {
+    max-width: 25%;
+    top: 21%;
+    left: 29%;
+}
+
+.switch-buttons {
+  right: 8.4%;
+  width: 251px;
+  height: 251px;
+}
+
 }
 
 @media (max-height: 815px) and (min-width: 1301px) {
@@ -52,6 +88,28 @@
     width: 9%;
     right: 18%;
   }
+
+  .switch-buttons {
+    right: 10.7%;
+    width: 241px;
+    height: 241px;
+}
+
+.menu-style {
+  width: 8%;
+  height: 32px;
+  right: 19%;
+}
+
+#projects-btn {
+  top: 25.4%;
+}
+
+#resume-btn {
+  top: 31.3%;
+}
+
+
 }
 
 @media (max-height: 780px) and (min-width: 1301px) {
@@ -65,13 +123,15 @@
     left: 15%;
   }
 
-  #about-me-btn {
-    top: 19%;
+  #white-noise {
+    left: 14%;
   }
 
-  #resume-btn {
-    top: 30.5%;
-  }
+  .switch-buttons {
+    right: 11.7%;
+    width: 228px;
+    height: 228px;
+}
 
   .menu-style {
     width: 7%;
@@ -79,11 +139,24 @@
     right: 20%;
   }
 
-  #white-noise {
-    left: 14%;
+  #about-me-btn {
+    top: 19.7%;
+  }
+
+  #projects-btn {
+    top: 25.7%;
+  }
+
+  #resume-btn {
+    top: 31.5%;
+  }
+
+  .modal {
+    max-width: 23%;
+    left: 31%;
   }
 }
-@media (max-height: 700px) and (min-width: 1300px) {
+@media (max-height: 700px) and (min-width: 1301px) {
   body {
     background-image: none;
     overflow: hidden;
@@ -131,6 +204,33 @@
   #about-billboard-2-girl {
     bottom: -1%;
   }
+
+  #modal-tv {
+    display: none;
+  }
+
+  #modal-mobile {
+    display: block;
+  }
+
+  #projects-scene {
+    z-index: 0;
+  }
+  
+  #overlay-billboard {
+    width: 0px;
+    height: 0px;
+  }
+
+  .projects-billboards-content {
+    left: 0.5%;
+  }
+  
+  .switch-buttons,
+  .menu-style {
+    display: none;
+  }
+  
 }
 
 /* mobile responsive */
@@ -199,10 +299,13 @@
     bottom: 39%;
   }
 
+  .switch-buttons,
   .menu-style {
     display: none;
   }
+
 }
+
 @media (max-height: 725px) and (max-width: 1299px) {
   .container {
     min-width: 100%;
@@ -243,7 +346,8 @@
 
 /* tablet portrait*/
 /* big tablets */
-@media only screen and (min-height: 1200px) and (max-width: 1300px) {
+
+@media only screen and (min-height: 1200px) and (max-width: 1300px){
   body {
     background: none;
   }
@@ -299,7 +403,109 @@
   .tv-stand {
     display: none !important;
   }
+
+  .switch-buttons,
+  .menu-style {
+    display: none;
+  }
 }
+/* menu */
+@media (min-width: 1316px) and (max-width: 1370px) and (min-height: 701px){
+.switch-buttons {
+  width: 227px;
+  height: 219px;
+}
+}
+
+@media (min-width: 1316px) and (max-width: 1370px) and (min-height: 716px){
+  .switch-buttons {
+    width: 266px;
+    height: 244px;
+  }
+}
+
+@media (min-width: 1316px) and (max-width: 1370px) and (min-height: 780px){
+  .switch-buttons {
+    width: 242px;
+    height: 227px;
+  }
+}
+
+@media (min-width: 1316px) and (max-width: 1370px) and (min-height: 830px){
+  .switch-buttons {
+    height: 264px;
+  }
+}
+
+@media (min-width: 1316px) and (max-width: 1370px) and (min-height: 900px){
+  .switch-buttons {
+    width: 266px;
+    height: 266px;
+  }
+}
+
+@media (min-width: 1301px) and (max-width: 1315px) and (min-height: 829px){
+  .switch-buttons {
+    width: 264px;
+    height: 259px;
+  }
+}
+
+@media (min-width: 1301px) and (max-width: 1315px) and (min-height: 701px){
+  .switch-buttons {
+    width: 232px;
+    height: 213px;
+  }
+
+  .menu-style {
+    height: 26px;
+  }
+
+  #about-me-btn {
+    top: 19.2%;
+  }
+
+  #projects-btn {
+    top: 24.7%;
+  }
+
+  #resume-btn {
+    top: 30%;
+  }
+
+}
+
+@media (min-width: 1301px) and (max-width: 1315px) and (min-height: 780px){
+  .switch-buttons {
+    height: 226px;
+  }
+
+  .menu-style {
+    height: 28px;
+  }
+
+  #projects-btn {
+    top: 24.4%;
+  }
+
+  #resume-btn {
+    top: 30.3%;
+  } 
+}
+
+@media (min-width: 1301px) and (max-width: 1315px) and (min-height: 816px){
+  .switch-buttons {
+    height: 238px;
+  }
+}
+
+@media (min-width: 1301px) and (max-width: 1315px) and (min-height: 830px){
+  .switch-buttons {
+    width: 246px;
+    height: 243px;
+  }
+}
+/* menu end*/
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1200px) and (max-device-height: 1180px) and (orientation: portrait) {
   #about-billboard-1 {
@@ -340,6 +546,7 @@
     min-height: 0%;
   }
 }
+
 
 /* tablet landscape */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1200px) and (max-device-height: 820px) and (orientation: landscape) {
