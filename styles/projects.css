@@ -118,12 +118,13 @@
 
 #overlay-billboard {
   position: absolute;
-  top: 43%;
-  left: 29%;
+  top: 41%;
+  left: 31%;
   width: 283px;
   height: 218px;
   display: none;
   cursor: pointer;
+  border: 2px solid green;
 }
 
 .projects-billboards-content {
@@ -181,93 +182,16 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  max-width: 29%;
+  max-width: 40%;
   max-height: 50%;
   opacity: 0;
   pointer-events: none;
-  top: 20%;
-  left: 25%;
+  top: 25%;
+  left: 20%;
 }
-
-/* .modal-content {  
-  position: absolute;
-  top: 23%;
-  left: 26%;
-} */
 
 #modal-mobile {
   display: none;
-}
-
-.modalImgTetris img {
-  width: 100%;
-  max-width: 25em;
-  height: auto;
-}
-
-.modalImgTetris {
-  position: relative;
-  display: none;
-}
-
-.modalImgTetris.current {
-  display: block;
-}
-
-.close,
-.btn-prev,
-.btn-next {
-  position: absolute;
-  background-color: transparent;
-  border: none;
-  font-size: 1.7em;
-  color: #fff;
-  font-weight: bold;
-  z-index: 10000;
-  padding: 0.5em;
-}
-
-.close {
-  top: -8%;
-  right: -10%;
-  font-size: 1.4em;
-  background-color: transparent;
-  color: #fff;
-  cursor: pointer;
-}
-
-.btn-next {
-  top: 42%;
-  right: -29%;
-  cursor: pointer;
-}
-.btn-prev {
-  left: -34%;
-  top: 42%;
-  cursor: pointer;
-}
-
-.link-tetris {
-  position: absolute;
-  bottom: -12%;
-  font-size: 1em;
-  color: #fff;
-  padding: 0.4em 1em;
-  background-color: #1e1e1e;
-  text-decoration: none;
-  border-radius: 0.3em;
-}
-
-.link-demo {
-  right: 52%;
-}
-
-.link-github {
-  left: 54%;
-}
-
-.modal.show .modal-content {
-  animation: zoom 0.5s ease-in-out;
 }
 
 @keyframes zoom {
@@ -282,4 +206,81 @@
 .modal.show {
   opacity: 1;
   pointer-events: auto;
+  animation: zoom 0.5s ease-in-out;
+}
+
+/*   modal content */
+
+.slider-wrapper {
+  margin: 1rem;
+  position: relative;
+}
+.slides-container {
+  height: calc(42vh - 2rem);
+  width: 100%;
+  display: flex;
+  overflow: scroll;
+  scroll-behavior: smooth;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.slide-arrow {
+  position: absolute;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 4rem;
+  background-color: white;
+  border: none;
+  width: 2rem;
+  font-size: 3rem;
+  padding: 0;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: opacity 100ms;
+}
+
+.slide-arrow:hover,
+.slide-arrow:focus {
+  opacity: 1;
+}
+
+#slide-arrow-prev {
+  left: 0;
+  padding-left: 0.25rem;
+  border-radius: 0 2rem 2rem 0;
+}
+
+#slide-arrow-next {
+  right: 0;
+  padding-left: 0.75rem;
+  border-radius: 2rem 0 0 2rem;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  flex: 1 0 100%;
+  background-color: #fff;
+}
+
+.img-content {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.close {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  font-size: 1.6em;
+  background-color: transparent;
+  color: #000;
+  cursor: pointer;
+  z-index: 10000;
+  padding: 0.5em;
 }

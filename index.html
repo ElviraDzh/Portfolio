@@ -126,10 +126,10 @@
               class="projects-billboards-styles layer"
             >
               <img
-                src="./images/projects/billboards-content/tetris.png"
-                id="projects-billboard-1-tetris"
+                src="./images/projects/billboards-content/proassess.png"
+                id="proassess"
                 class="projects-billboards-content"
-                alt="tetris"
+                alt="proassess"
               />
             </div>
             <div
@@ -138,9 +138,10 @@
             >
               <img
                 src="./images/projects/billboards-content/tetris.png"
-                id="projects-billboard-2-tetris"
+                id="tetris"
                 class="projects-billboards-content"
                 alt="tetris"
+                data-content="tetris"
               />
             </div>
             <div
@@ -148,10 +149,10 @@
               class="projects-billboards-styles layer"
             >
               <img
-                src="./images/projects/billboards-content/tetris.png"
-                id="projects-billboard-3-tetris"
+                src="./images/projects/billboards-content/selectiq.png"
+                id="selectiq"
                 class="projects-billboards-content"
-                alt="tetris"
+                alt="selectiq"
               />
             </div>
             <div
@@ -159,10 +160,10 @@
               class="projects-billboards-styles layer"
             >
               <img
-                src="./images/projects/billboards-content/tetris.png"
-                id="projects-billboard-4-tetris"
+                src="./images/projects/billboards-content/research.jpg"
+                id="research"
                 class="projects-billboards-content"
-                alt="tetris"
+                alt="research"
               />
             </div>
             <div
@@ -170,10 +171,10 @@
               class="projects-billboards-styles layer"
             >
               <img
-                src="./images/projects/billboards-content/tetris.png"
-                id="projects-billboard-5-tetris"
+                src="./images/projects/billboards-content/gamefolio.png"
+                id="gamefolio"
                 class="projects-billboards-content"
-                alt="tetris"
+                alt="gamefolio"
               />
             </div>
           </div>
@@ -219,11 +220,11 @@
             src="images/skater/idle.gif"
           />
           <div id="overlay-modal"></div>
-          <div class="modal" id="modal-mobile">
+          <!-- <div class="modal" id="modal-mobile">
             <div class="modal-content">
               <div class="slides">
                 <div class="modalImgTetris current">
-                  <img src="./images/projects/modal/aboutTetris.png" alt="" />
+                  <img src="./images/projects/modal/modal-content/tetris/aboutTetris.png" alt="" />
                   <a
                     href="https://tetris.elvira.ie/"
                     target="_blank"
@@ -302,7 +303,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
         </section>
         <div id="white-noise"></div>
         <div class="switch-buttons"></div>
@@ -310,89 +311,13 @@
         <p id="projects-btn" class="menu-style"></p>
         <p id="resume-btn" class="menu-style"></p>
         <div id="overlay-billboard"></div>
-        <div class="modal" id="modal-tv">
-          <div class="modal-content">
-            <div class="slides">
-              <div class="modalImgTetris current">
-                <img src="./images/projects/modal/aboutTetris.png" alt="" />
-                <a
-                  href="https://tetris.elvira.ie/"
-                  target="_blank"
-                  class="link-tetris link-demo"
-                  >Demo</a
-                >
-                <a
-                  href="https://github.com/ElviraDzh/Tetris"
-                  target="_blank"
-                  class="link-tetris link-github"
-                  >Github</a
-                >
-                <span class="close" id="close"
-                  ><i class="fa-regular fa-circle-xmark"></i
-                ></span>
-                <button class="btn-prev">
-                  <i class="fa-solid fa-angle-left"></i>
-                </button>
-                <button class="btn-next">
-                  <i class="fa-solid fa-angle-right"></i>
-                </button>
-              </div>
-              <div class="modalImgTetris">
-                <img
-                  src="./images/projects/modal/Group 7.png"
-                  alt="aboutTetrisGame"
-                />
-                <a
-                  href="https://tetris.elvira.ie/"
-                  target="_blank"
-                  class="link-tetris link-demo"
-                  >Demo</a
-                >
-                <a
-                  href="https://github.com/ElviraDzh/Tetris"
-                  target="_blank"
-                  class="link-tetris link-github"
-                  >Github</a
-                >
-                <span class="close" id="close"
-                  ><i class="fa-regular fa-circle-xmark"></i
-                ></span>
-                <button class="btn-prev">
-                  <i class="fa-solid fa-angle-left"></i>
-                </button>
-                <button class="btn-next">
-                  <i class="fa-solid fa-angle-right"></i>
-                </button>
-              </div>
-              <div class="modalImgTetris">
-                <img
-                  src="./images/projects/modal/Group 8.png"
-                  alt="tetrisWebPage"
-                />
-                <a
-                  href="https://tetris.elvira.ie/"
-                  target="_blank"
-                  class="link-tetris link-demo"
-                  >Demo</a
-                >
-                <a
-                  href="https://github.com/ElviraDzh/Tetris"
-                  target="_blank"
-                  class="link-tetris link-github"
-                  >Github</a
-                >
-                <span class="close" id="close"
-                  ><i class="fa-regular fa-circle-xmark"></i
-                ></span>
-                <button class="btn-prev">
-                  <i class="fa-solid fa-angle-left"></i>
-                </button>
-                <button class="btn-next">
-                  <i class="fa-solid fa-angle-right"></i>
-                </button>
-              </div>
-            </div>
-          </div>
+        <div class="modal slider-wrapper" id="modal-tv">
+          <span class="close" id="close-modal-box">
+            <i class="fa-regular fa-circle-xmark"></i>
+          </span>
+          <button class="slide-arrow" id="slide-arrow-prev">&#8249;</button>
+          <button class="slide-arrow" id="slide-arrow-next">&#8250;</button>
+          <ul class="slides-container" id="slides-container"></ul>
         </div>
       </div>
       <!-- tv-set -->

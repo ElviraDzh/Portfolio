@@ -2,22 +2,21 @@ class ProjectsScene {
   #sceneSection = getById("projects-scene");
   #stops = [
     {
-      image: getById("projects-billboard-1-tetris"),
+      image: getById("tetris"),
     },
     {
-      image: getById("projects-billboard-2-tetris"),
+      image: getById("proassess"),
     },
     {
-      image: getById("projects-billboard-3-tetris"),
+      image: getById("selectiq"),
     },
     {
-      image: getById("projects-billboard-4-tetris"),
+      image: getById("research"),
     },
     {
-      image: getById("projects-billboard-5-tetris"),
+      image: getById("gamefolio"),
     },
   ];
-
   #currentStop = null;
   #skaterImg = getById("projects-skater");
 
@@ -131,10 +130,14 @@ class ProjectsScene {
   }
 
   #handleImage(useGif) {
-    const image = this.#currentStop.image;
-    image.src = useGif
-      ? image.src.replace(".png", ".gif")
-      : image.src.replace(".gif", ".png");
+    //const image = this.#currentStop.image;
+    // image.src = useGif
+    //   ? image.src.replace(".png", ".gif")
+    //   : image.src.replace(".gif", ".png");
     overlayBillboard.style.display = useGif ? "block" : "none";
+  }
+
+  getStopId() {
+    return this.#currentStop.image.id;
   }
 }
