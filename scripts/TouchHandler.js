@@ -24,7 +24,6 @@ class TouchHandler {
     });
 
     hammerBillboard.on("tap", function () {
-      console.log("modal");
       showModalBox();
     });
   }

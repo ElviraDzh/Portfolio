@@ -3,20 +3,20 @@ class Menu {
     getById("about-me-btn").addEventListener("click", () => {
       this.#showWhiteNoise();
       this.showAboutScene();
-      document.querySelector(".tv-set").style.backgroundImage =
-        "url(../images/general/tv-set-about-me.png)";
+      document.querySelector(".switch-buttons").style.backgroundImage =
+        "url(../images/general/menu-about-me.png)";
     });
 
     getById("projects-btn").addEventListener("click", () => {
       this.#showWhiteNoise();
       this.showProjectsScene();
-      document.querySelector(".tv-set").style.backgroundImage =
-        "url(../images/general/tv-set-projects.png)";
+      document.querySelector(".switch-buttons").style.backgroundImage =
+        "url(../images/general/menu-projects.png)";
     });
 
     getById("resume-btn").addEventListener("click", () => {
-      document.querySelector(".tv-set").style.backgroundImage =
-        "url(../images/general/tv-set-resume.png)";
+      document.querySelector(".switch-buttons").style.backgroundImage =
+        "url(../images/general/menu-resume.png)";
     });
   }
 
