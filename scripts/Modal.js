@@ -1,11 +1,15 @@
 const closeInModalBox = getById("close-modal-box");
 const overlayBillboard = getById("overlay-billboard");
-const overlayProjectScene = getById("overlay-modal");
+const overlayAll = getById("overlay-modal");
 const modalTV = getById("modal-tv");
 const slidesContainer = document.getElementById("slides-container");
-console.log(slidesContainer);
 const prevButton = document.getElementById("slide-arrow-prev");
 const nextButton = document.getElementById("slide-arrow-next");
+const billboardImages = document.querySelectorAll(
+  ".projects-billboards-content"
+);
+const tv = getById("tv-set");
+const tvStand = getById("tv-stand");
 
 const modalBoxContents = [
   {
@@ -212,30 +216,26 @@ const modalBoxContents = [
 ];
 
 function showModalBox() {
-  // if (modalTV) {
-  //   modalMobile.classList.remove("show");
-  //   modalTV.classList.add("show");
-  //   overlayProjectScene.classList.add("changeBackground");
-  // } else {
-  //   modalTV.classList.remove("show");
-  //   modalMobile.classList.add("show");
-  //   overlayProjectScene.classList.add("changeBackground");
-  // }
-  const idOfBillboard = PROJECTS_SCENE.getStopId();
+  const billboardId = PROJECTS_SCENE.getStopId();
+  if (billboardId === null) return;
   for (let i = 0; i < modalBoxContents.length; i++) {
-    if (idOfBillboard === modalBoxContents[i].name) {
+    if (billboardId === modalBoxContents[i].name) {
       const modalContent = getById("slides-container");
       modalContent.innerHTML = modalBoxContents[i].html;
     }
   }
   modalTV.classList.add("show");
-  overlayProjectScene.classList.add("changeBackground");
+  overlayAll.classList.add("changeBackground");
+  tv.classList.add("shift");
+  tvStand.classList.add("shift");
 }
 
 closeInModalBox.addEventListener("click", () => {
   modalTV.classList.remove("show");
-  overlayProjectScene.classList.remove("changeBackground");
+  overlayAll.classList.remove("changeBackground");
   slidesContainer.scrollLeft = 0;
+  tv.classList.remove("shift");
+  tvStand.classList.remove("shift");
 });
 
 nextButton.addEventListener("click", () => {
@@ -245,7 +245,14 @@ nextButton.addEventListener("click", () => {
 });
 
 prevButton.addEventListener("click", () => {
+  console.log("click");
   const slide = document.querySelector(".slide");
   const slideWidth = slide.clientWidth;
   slidesContainer.scrollLeft -= slideWidth;
+});
+
+billboardImages.forEach((img) => {
+  img.addEventListener("click", () => {
+    showModalBox();
+  });
 });

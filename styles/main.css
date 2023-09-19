@@ -114,7 +114,6 @@ body {
   position: absolute;
   top: 13%;
   right: 5.7%;
-  z-index: 1;
   width: 279px;
   height: 279px;
 }
@@ -127,7 +126,6 @@ body {
   cursor: pointer;
   position: absolute;
   right: 15%;
-  border: 1px solid red;
   z-index: 1;
 }
 

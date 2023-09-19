@@ -21,6 +21,18 @@
   </head>
 
   <body>
+    <!-- modal box -->
+    <div id="overlay-modal">
+      <div class="modal" id="modal-tv">
+        <span class="close" id="close-modal-box">
+          <i class="fa-regular fa-circle-xmark"></i>
+        </span>
+        <button class="slide-arrow" id="slide-arrow-prev">&#8249;</button>
+        <button class="slide-arrow" id="slide-arrow-next">&#8250;</button>
+        <ul class="slides-container" id="slides-container"></ul>
+      </div>
+    </div>
+    <!-- modal box -->
     <div class="container" id="container">
       <!-- Burger Menu -->
       <header>
@@ -64,7 +76,7 @@
         </div>
       </header>
       <!-- Burger Menu End -->
-      <div class="tv-set">
+      <div class="tv-set" id="tv-set">
         <section id="about-scene" class="scene-container">
           <div id="mountains" class="layer"></div>
           <div id="city-panorama" class="layer"></div>
@@ -112,6 +124,7 @@
           <div id="grass" class="layer"></div>
           <img id="about-skater" class="skater" src="images/skater/idle.gif" />
         </section>
+        <!-- about-scene -->
         <section id="projects-scene" class="scene-container">
           <div id="projects-sky" class="layer"></div>
           <div id="projects-mountains" class="layer"></div>
@@ -120,6 +133,42 @@
           <div id="projects-bushes" class="layer"></div>
           <div id="projects-cable-lines" class="layer"></div>
           <div id="projects-trees-near"></div>
+          <div id="projects-road" class="road-elements layer">
+            <img
+              class="road-cones"
+              id="projects-road-cones"
+              src="images/common/cones.png"
+            />
+            <img
+              class="road-closed"
+              id="projects-road-closed"
+              src="images/common/road-closed.png"
+            />
+          </div>
+          <div id="projects-street-lights" class="layer">
+            <div
+              id="projects-street-light-1"
+              class="layer projects-street-lights-styles"
+            ></div>
+            <div
+              id="projects-street-light-2"
+              class="layer projects-street-lights-styles"
+            ></div>
+            <div
+              id="projects-street-light-3"
+              class="layer projects-street-lights-styles"
+            ></div>
+            <div
+              id="projects-street-light-4"
+              class="layer projects-street-lights-styles"
+            ></div>
+            <div
+              id="projects-street-light-5"
+              class="layer projects-street-lights-styles"
+            ></div>
+          </div>
+          <div id="projects-grasses" class="layer"></div>
+          <div id="projects-sky-shadow" class="layer"></div>
           <div id="projects-billboards" class="layer">
             <div
               id="projects-billboard-1"
@@ -178,155 +227,29 @@
               />
             </div>
           </div>
-          <div id="projects-road" class="road-elements layer">
-            <img
-              class="road-cones"
-              id="projects-road-cones"
-              src="images/common/cones.png"
-            />
-            <img
-              class="road-closed"
-              id="projects-road-closed"
-              src="images/common/road-closed.png"
-            />
-          </div>
-          <div id="projects-street-lights" class="layer">
-            <div
-              id="projects-street-light-1"
-              class="layer projects-street-lights-styles"
-            ></div>
-            <div
-              id="projects-street-light-2"
-              class="layer projects-street-lights-styles"
-            ></div>
-            <div
-              id="projects-street-light-3"
-              class="layer projects-street-lights-styles"
-            ></div>
-            <div
-              id="projects-street-light-4"
-              class="layer projects-street-lights-styles"
-            ></div>
-            <div
-              id="projects-street-light-5"
-              class="layer projects-street-lights-styles"
-            ></div>
-          </div>
-          <div id="projects-grasses" class="layer"></div>
-          <div id="projects-sky-shadow" class="layer"></div>
+          <!-- project-billboards -->
           <img
             id="projects-skater"
             class="skater"
             src="images/skater/idle.gif"
           />
-          <div id="overlay-modal"></div>
-          <!-- <div class="modal" id="modal-mobile">
-            <div class="modal-content">
-              <div class="slides">
-                <div class="modalImgTetris current">
-                  <img src="./images/projects/modal/modal-content/tetris/aboutTetris.png" alt="" />
-                  <a
-                    href="https://tetris.elvira.ie/"
-                    target="_blank"
-                    class="link-tetris link-demo"
-                    >Demo</a
-                  >
-                  <a
-                    href="https://github.com/ElviraDzh/Tetris"
-                    target="_blank"
-                    class="link-tetris link-github"
-                    >Github</a
-                  >
-                  <span class="close" id="close"
-                    ><i class="fa-regular fa-circle-xmark"></i
-                  ></span>
-                  <button class="btn-prev">
-                    <i class="fa-solid fa-angle-left"></i>
-                  </button>
-                  <button class="btn-next">
-                    <i class="fa-solid fa-angle-right"></i>
-                  </button>
-                </div>
-                <div class="modalImgTetris">
-                  <img
-                    src="./images/projects/modal/Group 7.png"
-                    alt="aboutTetrisGame"
-                  />
-                  <a
-                    href="https://tetris.elvira.ie/"
-                    target="_blank"
-                    class="link-tetris link-demo"
-                    >Demo</a
-                  >
-                  <a
-                    href="https://github.com/ElviraDzh/Tetris"
-                    target="_blank"
-                    class="link-tetris link-github"
-                    >Github</a
-                  >
-                  <span class="close" id="close"
-                    ><i class="fa-regular fa-circle-xmark"></i
-                  ></span>
-                  <button class="btn-prev">
-                    <i class="fa-solid fa-angle-left"></i>
-                  </button>
-                  <button class="btn-next">
-                    <i class="fa-solid fa-angle-right"></i>
-                  </button>
-                </div>
-                <div class="modalImgTetris">
-                  <img
-                    src="./images/projects/modal/Group 8.png"
-                    alt="tetrisWebPage"
-                  />
-                  <a
-                    href="https://tetris.elvira.ie/"
-                    target="_blank"
-                    class="link-tetris link-demo"
-                    >Demo</a
-                  >
-                  <a
-                    href="https://github.com/ElviraDzh/Tetris"
-                    target="_blank"
-                    class="link-tetris link-github"
-                    >Github</a
-                  >
-                  <span class="close" id="close"
-                    ><i class="fa-regular fa-circle-xmark"></i
-                  ></span>
-                  <button class="btn-prev">
-                    <i class="fa-solid fa-angle-left"></i>
-                  </button>
-                  <button class="btn-next">
-                    <i class="fa-solid fa-angle-right"></i>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div> -->
         </section>
+        <!-- projects-scene -->
         <div id="white-noise"></div>
         <div class="switch-buttons"></div>
         <p id="about-me-btn" class="menu-style"></p>
         <p id="projects-btn" class="menu-style"></p>
         <p id="resume-btn" class="menu-style"></p>
         <div id="overlay-billboard"></div>
-        <div class="modal slider-wrapper" id="modal-tv">
-          <span class="close" id="close-modal-box">
-            <i class="fa-regular fa-circle-xmark"></i>
-          </span>
-          <button class="slide-arrow" id="slide-arrow-prev">&#8249;</button>
-          <button class="slide-arrow" id="slide-arrow-next">&#8250;</button>
-          <ul class="slides-container" id="slides-container"></ul>
-        </div>
       </div>
       <!-- tv-set -->
-      <div class="tv-stand">
+      <div class="tv-stand" id="tv-stand">
         <img src="images/general/clock.png" alt="clock" class="clock" />
         <img src="images/general/radio.png" alt="radio" class="radio" />
       </div>
     </div>
     <!-- container-->
+
     <script src="./scripts/hammer.js"></script>
     <script src="./scripts/globals.js"></script>
     <script src="./scripts/Screen.js"></script>
@@ -341,12 +264,5 @@
     <script src="./scripts/Modal.js"></script>
     <script src="./scripts/main.js"></script>
     <script src="./scripts/burgerMenu.js"></script>
-    <script>
-      var w = window.innerWidth;
-      var h = window.innerHeight;
-
-      console.log("w" + w);
-      console.log("h" + h);
-    </script>
   </body>
 </html>
