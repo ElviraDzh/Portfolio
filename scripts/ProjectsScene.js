@@ -95,7 +95,7 @@ class ProjectsScene {
         (direction === 1 && billboard.right < skater.right) ||
         (direction === -1 && billboard.left > skater.left)
       ) {
-        this.#handleImage(false);
+        this.#handleImage();
         this.#currentStop = null;
       }
     } else {
@@ -103,7 +103,7 @@ class ProjectsScene {
       const stop = this.#getStop();
       if (stop !== null) {
         this.#currentStop = stop;
-        this.#handleImage(true);
+        this.#handleImage();
         return false;
       }
     }
@@ -129,12 +129,9 @@ class ProjectsScene {
     return null;
   }
 
-  #handleImage(useGif) {
-    //const image = this.#currentStop.image;
-    // image.src = useGif
-    //   ? image.src.replace(".png", ".gif")
-    //   : image.src.replace(".gif", ".png");
-    overlayBillboard.style.display = useGif ? "block" : "none";
+  #handleImage() {
+    const isMobile = getComputedStyle(tv).backgroundImage === "none";
+    overlayBillboard.style.display = isMobile ? "none" : "block";
   }
 
   getStopId() {
