@@ -153,6 +153,7 @@
     left: 31%;
   }
 }
+
 @media (max-height: 700px) and (min-width: 1301px) {
   body {
     background-image: none;
@@ -220,10 +221,6 @@
     display: none !important;
   }
 
-  .projects-billboards-content {
-    left: 0.5%;
-  }
-
   .switch-buttons,
   .menu-style {
     display: none;
@@ -260,6 +257,7 @@
   .tv-set {
     background: none !important;
   }
+
   #projects-scene {
     z-index: 0 !important;
   }
@@ -287,7 +285,6 @@
 
   #about-billboard-2-girl {
     bottom: -1%;
-    width: 76%;
     height: 83%;
   }
 
@@ -311,35 +308,13 @@
     min-height: 100%;
   }
 
-  #about-billboard-2 {
-    left: 70%;
-  }
-
   #about-billboard-2-girl {
-    bottom: -7%;
-    width: 76%;
+    bottom: 1%;
     height: 83%;
-  }
-
-  #about-billboard-3 {
-    left: 126%;
-  }
-
-  #about-billboard-4 {
-    left: 187%;
-  }
-
-  #about-billboard-5 {
-    left: 241%;
   }
 
   .road-cones {
     bottom: 33%;
-  }
-
-  .road-closed {
-    left: 368%;
-    bottom: 39%;
   }
 }
 
@@ -509,12 +484,8 @@
 /* menu end*/
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1200px) and (max-device-height: 1180px) and (orientation: portrait) {
-  #about-billboard-1 {
-    left: 4%;
-  }
-
-  #about-billboard-2 {
-    bottom: -11%;
+  #about-billboard-1-arrow {
+    left: 33%;
   }
 
   .road-cones {
@@ -554,10 +525,6 @@
     bottom: 0%;
     left: 16%;
   }
-
-  .projects-billboards-content {
-    left: 0.6%;
-  }
 }
 
 /* phones portrait */
@@ -572,25 +539,24 @@
   }
 
   #about-billboard-1-arrow {
-    left: -5%;
+    left: 16%;
   }
 
   #about-billboard-2-girl {
-    left: 48%;
+    left: 55%;
     bottom: -1%;
-    width: 61%;
   }
 
   #about-billboard-3-girl {
-    left: 98%;
+    left: 140%;
   }
 
   #about-billboard-4-balloon {
-    left: 170%;
+    left: 213%;
   }
 
   #about-billboard-5-butterfly {
-    left: 235%;
+    left: 290%;
   }
 
   .road-cones {
@@ -599,7 +565,7 @@
   }
 
   .road-closed {
-    left: 385%;
+    left: 415%;
     bottom: 31%;
   }
 
@@ -611,21 +577,51 @@
     left: 5%;
   }
 
-  .projects-billboards-content {
-    left: 0.6%;
+  #projects-billboard-1 {
+    left: 39%;
+  }
+
+  #projects-billboard-2 {
+    left: 90%;
+  }
+
+  #projects-billboard-3 {
+    left: 144%;
+  }
+
+  #projects-billboard-4 {
+    left: 201%;
+  }
+
+  #projects-billboard-5 {
+    left: 255%;
+  }
+
+  #projects-road-closed {
+    left: 300%;
+    bottom: 8%;
   }
 }
 
 /* phones landscape */
 @media only screen and (max-height: 575.98px) and (orientation: landscape) {
+  .container {
+    min-width: 0%;
+  }
+
   #about-billboards {
     max-height: 79%;
     bottom: -14%;
   }
 
+  #about-billboard-2-girl {
+    bottom: -1%;
+  }
+
   #projects-billboards {
     height: 65%;
   }
+
   #grass {
     bottom: 0%;
   }
@@ -641,7 +637,10 @@
   }
 
   .skater {
-    /* width: 18%; */
     height: 32%;
+  }
+
+  #projects-road-closed {
+    bottom: 7%;
   }
 }

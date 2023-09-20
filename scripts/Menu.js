@@ -4,19 +4,19 @@ class Menu {
       this.#showWhiteNoise();
       this.showAboutScene();
       document.querySelector(".switch-buttons").style.backgroundImage =
-        "url(../images/general/menu-about-me.png)";
+        "url(images/general/menu-about-me.png)";
     });
 
     getById("projects-btn").addEventListener("click", () => {
       this.#showWhiteNoise();
       this.showProjectsScene();
       document.querySelector(".switch-buttons").style.backgroundImage =
-        "url(../images/general/menu-projects.png)";
+        "url(images/general/menu-projects.png)";
     });
 
     getById("resume-btn").addEventListener("click", () => {
       document.querySelector(".switch-buttons").style.backgroundImage =
-        "url(../images/general/menu-resume.png)";
+        "url(images/general/menu-resume.png)";
     });
   }
 

@@ -64,6 +64,8 @@
   left: 40%;
 }
 
+
+
 #projects-road-closed {
   left: 430%;
 }
@@ -129,6 +131,7 @@
 .projects-billboards-content {
   position: absolute;
   height: 50%;
+  width: 27.4%;
   bottom: 42%;
   left: 0.9%;
   cursor: pointer;
