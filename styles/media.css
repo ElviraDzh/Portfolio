@@ -180,10 +180,6 @@
     display: block;
   }
 
-  .made-with-love {
-    display: block;
-  }
-
   .tv-set {
     background: none !important;
   }
@@ -250,7 +246,7 @@
   }
 
   .made-with-love {
-    display: block;
+    display: flex;
   }
 
   .tv-set {
@@ -332,10 +328,6 @@
   }
 
   .burger-menu.open .menu {
-    display: block;
-  }
-
-  .made-with-love {
     display: block;
   }
 
@@ -601,6 +593,33 @@
 @media only screen and (max-height: 575.98px) and (orientation: landscape) {
   .container {
     min-width: 0%;
+  }
+
+  .made-with-love {
+    font-size: 0.8rem;
+    height: 2rem;
+  }
+ 
+  .burger-menu {
+    top: 0.3rem;
+  }
+
+  .burger {
+    font-size: 1.3rem;
+  }
+
+  .menu {
+    top: 1.7rem;
+    padding: 0.1rem;
+    width: 8rem;
+    line-height: 0.8;
+  }
+
+  .menu li {
+    margin-bottom: 0.5rem;
+  }
+  .menu a {
+    font-size: 0.9rem;
   }
 
   #about-billboards {
