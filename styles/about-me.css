@@ -65,21 +65,21 @@
 
 #about-billboard-2-girl {
   left: 100%;
-  bottom: -13%;
+  bottom: -3%
 }
 
 #about-billboard-3-girl {
-  left: 217%;
+    left: 251%;
   bottom: -3%;
 }
 
 #about-billboard-4-balloon {
-  left: 310%;
+  left: 355%;
   bottom: -3%;
 }
 
 #about-billboard-5-butterfly {
-  left: 405%;
+  left: 455%;
   bottom: 0%;
 }
 
@@ -101,7 +101,7 @@
 .road-closed {
   position: absolute;
   height: 69%;
-  left: 560%;
+  left: 625%;
   bottom: 17%;
 }
 

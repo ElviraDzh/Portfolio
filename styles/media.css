@@ -41,6 +41,7 @@
   #resume-btn {
     top: 31.8%;
   }
+
 }
 
 @media (max-height: 830px) and (min-width: 1301px) {
@@ -152,6 +153,7 @@
     max-width: 23%;
     left: 31%;
   }
+
 }
 
 @media (max-height: 700px) and (min-width: 1301px) {
@@ -199,9 +201,6 @@
     bottom: 0%;
   }
 
-  #about-billboard-2-girl {
-    bottom: -1%;
-  }
 
   #modal-tv {
     display: none;
@@ -283,10 +282,6 @@
     bottom: -21%;
   }
 
-  #about-billboard-2-girl {
-    bottom: -1%;
-    height: 83%;
-  }
 
   .road-cones {
     bottom: 32%;
@@ -300,6 +295,7 @@
   .menu-style {
     display: none;
   }
+
 }
 
 @media (max-height: 725px) and (max-width: 1299px) {
@@ -308,14 +304,11 @@
     min-height: 100%;
   }
 
-  #about-billboard-2-girl {
-    bottom: 1%;
-    height: 83%;
-  }
 
   .road-cones {
     bottom: 33%;
   }
+
 }
 
 /* tablet portrait*/
@@ -543,20 +536,19 @@
   }
 
   #about-billboard-2-girl {
-    left: 55%;
-    bottom: -1%;
+    left: 48%;
   }
 
   #about-billboard-3-girl {
-    left: 140%;
+    left: 165%;
   }
 
   #about-billboard-4-balloon {
-    left: 213%;
+    left: 243%;
   }
 
   #about-billboard-5-butterfly {
-    left: 290%;
+    left: 323%;
   }
 
   .road-cones {
@@ -565,7 +557,7 @@
   }
 
   .road-closed {
-    left: 415%;
+    left: 464%;
     bottom: 31%;
   }
 
@@ -583,24 +575,26 @@
 
   #projects-billboard-2 {
     left: 90%;
-  }
+}
 
-  #projects-billboard-3 {
-    left: 144%;
-  }
+#projects-billboard-3 {
+  left: 144%;
+}
 
-  #projects-billboard-4 {
-    left: 201%;
-  }
+#projects-billboard-4 {
+  left: 201%;
+}
 
-  #projects-billboard-5 {
-    left: 255%;
-  }
+#projects-billboard-5 {
+  left: 255%;
+}
 
-  #projects-road-closed {
-    left: 300%;
-    bottom: 8%;
-  }
+#projects-road-closed {
+  left: 300%;
+  bottom: 8%;
+}
+
+
 }
 
 /* phones landscape */
@@ -612,10 +606,6 @@
   #about-billboards {
     max-height: 79%;
     bottom: -14%;
-  }
-
-  #about-billboard-2-girl {
-    bottom: -1%;
   }
 
   #projects-billboards {
@@ -642,5 +632,5 @@
 
   #projects-road-closed {
     bottom: 7%;
-  }
 }
+} 

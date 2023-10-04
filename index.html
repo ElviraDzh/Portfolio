@@ -1,268 +1,280 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="./styles/main.css" />
-    <link rel="stylesheet" href="./styles/about-me.css" />
-    <link rel="stylesheet" href="./styles/projects.css" />
-    <link rel="stylesheet" href="./styles/normalize.css" />
-    <link rel="stylesheet" href="./styles/media.css" />
-    <!-- fontawesome link -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-  </head>
 
-  <body>
-    <!-- modal box -->
-    <div id="overlay-modal">
-      <div class="modal" id="modal-tv">
-        <span class="close" id="close-modal-box">
-          <i class="fa-regular fa-circle-xmark"></i>
-        </span>
-        <button class="slide-arrow" id="slide-arrow-prev">&#8249;</button>
-        <button class="slide-arrow" id="slide-arrow-next">&#8250;</button>
-        <ul class="slides-container" id="slides-container"></ul>
-      </div>
-    </div>
-    <!-- modal box -->
-    <div class="container" id="container">
-      <!-- Burger Menu -->
-      <header>
-        <div class="made-with-love">
-          Made with<span class="heart"> &#10084; </span>by Elvira
-        </div>
-        <div class="burger-menu">
-          <i class="fas fa-bars burger"></i>
-          <nav class="menu">
-            <ul>
-              <li>
-                <a href="#" onClick="javascript:MENU.showAboutScene()"
-                  ><img
-                    src="images/burger-menu-icons/account.gif"
-                    width="24px"
-                    alt="about me icon"
-                  />About me</a
-                >
-              </li>
-              <li>
-                <a href="#" onClick="javascript:MENU.showProjectsScene()">
-                  <img
-                    src="images/burger-menu-icons/folder.gif"
-                    width="24px"
-                    alt="projects icon"
-                  />Projects</a
-                >
-              </li>
-              <li>
-                <a href="#"
-                  ><img
-                    src="images/burger-menu-icons/article.gif"
-                    width="24px"
-                    alt="cv icon"
-                  />
-                  Resume</a
-                >
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </header>
-      <!-- Burger Menu End -->
-      <div class="tv-set" id="tv-set">
-        <section id="about-scene" class="scene-container">
-          <div id="mountains" class="layer"></div>
-          <div id="city-panorama" class="layer"></div>
-          <div id="front-city" class="layer"></div>
-          <div id="about-billboards" class="layer">
-            <img
-              id="about-billboard-1-arrow"
-              class="img-set"
-              src="images/about-me/billboard-1/billboard1.gif"
-            />
-            <img
-              id="about-billboard-2-girl"
-              class="img-set"
-              src="images/about-me/billboard-2/billboard2Elvira.png"
-            />
-            <img
-              id="about-billboard-3-girl"
-              class="img-set"
-              src="images/about-me/billboard-3/billboard3.png"
-            />
-            <img
-              id="about-billboard-4-balloon"
-              class="img-set"
-              src="images/about-me/billboard-4/billboard4.png"
-            />
-            <img
-              id="about-billboard-5-butterfly"
-              class="img-set"
-              src="images/about-me/billboard-5/billboard5.png"
-            />
-          </div>
-          <div id="park" class="layer"></div>
-          <div id="about-road" class="road-elements layer">
-            <img
-              class="road-cones"
-              id="about-road-cones"
-              src="images/common/cones.png"
-            />
-            <img
-              class="road-closed"
-              id="about-road-closed"
-              src="images/common/road-closed.png"
-            />
-          </div>
-          <div id="grass" class="layer"></div>
-          <img id="about-skater" class="skater" src="images/skater/idle.gif" />
-        </section>
-        <!-- about-scene -->
-        <section id="projects-scene" class="scene-container">
-          <div id="projects-sky" class="layer"></div>
-          <div id="projects-mountains" class="layer"></div>
-          <div id="projects-trees-far" class="layer"></div>
-          <div id="projects-trees-middle" class="layer"></div>
-          <div id="projects-bushes" class="layer"></div>
-          <div id="projects-cable-lines" class="layer"></div>
-          <div id="projects-trees-near"></div>
-          <div id="projects-road" class="road-elements layer">
-            <img
-              class="road-cones"
-              id="projects-road-cones"
-              src="images/common/cones.png"
-            />
-            <img
-              class="road-closed"
-              id="projects-road-closed"
-              src="images/common/road-closed.png"
-            />
-          </div>
-          <div id="projects-street-lights" class="layer">
-            <div
-              id="projects-street-light-1"
-              class="layer projects-street-lights-styles"
-            ></div>
-            <div
-              id="projects-street-light-2"
-              class="layer projects-street-lights-styles"
-            ></div>
-            <div
-              id="projects-street-light-3"
-              class="layer projects-street-lights-styles"
-            ></div>
-            <div
-              id="projects-street-light-4"
-              class="layer projects-street-lights-styles"
-            ></div>
-            <div
-              id="projects-street-light-5"
-              class="layer projects-street-lights-styles"
-            ></div>
-          </div>
-          <div id="projects-grasses" class="layer"></div>
-          <div id="projects-sky-shadow" class="layer"></div>
-          <div id="projects-billboards" class="layer">
-            <div
-              id="projects-billboard-1"
-              class="projects-billboards-styles layer"
-            >
-              <img
-                src="./images/projects/billboards-content/proassess.png"
-                id="proassess"
-                class="projects-billboards-content"
-                alt="proassess"
-              />
-            </div>
-            <div
-              id="projects-billboard-2"
-              class="projects-billboards-styles layer"
-            >
-              <img
-                src="./images/projects/billboards-content/tetris.png"
-                id="tetris"
-                class="projects-billboards-content"
-                alt="tetris"
-                data-content="tetris"
-              />
-            </div>
-            <div
-              id="projects-billboard-3"
-              class="projects-billboards-styles layer"
-            >
-              <img
-                src="./images/projects/billboards-content/selectiq.png"
-                id="selectiq"
-                class="projects-billboards-content"
-                alt="selectiq"
-              />
-            </div>
-            <div
-              id="projects-billboard-4"
-              class="projects-billboards-styles layer"
-            >
-              <img
-                src="./images/projects/billboards-content/research.jpg"
-                id="research"
-                class="projects-billboards-content"
-                alt="research"
-              />
-            </div>
-            <div
-              id="projects-billboard-5"
-              class="projects-billboards-styles layer"
-            >
-              <img
-                src="./images/projects/billboards-content/gamefolio.png"
-                id="gamefolio"
-                class="projects-billboards-content"
-                alt="gamefolio"
-              />
-            </div>
-          </div>
-          <!-- project-billboards -->
-          <img
-            id="projects-skater"
-            class="skater"
-            src="images/skater/idle.gif"
-          />
-        </section>
-        <!-- projects-scene -->
-        <div id="white-noise"></div>
-        <div class="switch-buttons"></div>
-        <p id="about-me-btn" class="menu-style"></p>
-        <p id="projects-btn" class="menu-style"></p>
-        <p id="resume-btn" class="menu-style"></p>
-        <div id="overlay-billboard"></div>
-      </div>
-      <!-- tv-set -->
-      <div class="tv-stand" id="tv-stand">
-        <img src="images/general/clock.png" alt="clock" class="clock" />
-        <img src="images/general/radio.png" alt="radio" class="radio" />
-      </div>
-    </div>
-    <!-- container-->
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="./styles/main.css" />
+  <link rel="stylesheet" href="./styles/about-me.css" />
+  <link rel="stylesheet" href="./styles/projects.css" />
+  <link rel="stylesheet" href="./styles/resume.css">
+  <link rel="stylesheet" href="./styles/normalize.css" />
+  <link rel="stylesheet" href="./styles/media.css" />
+  <!-- fontawesome link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
 
-    <script src="./scripts/hammer.js"></script>
-    <script src="./scripts/globals.js"></script>
-    <script src="./scripts/Screen.js"></script>
-    <script src="./scripts/Skater.js"></script>
-    <script src="./scripts/KeyHandler.js"></script>
-    <script src="./scripts/TouchHandler.js"></script>
-    <script src="./scripts/Timer.js"></script>
-    <script src="./scripts/ProjectsScene.js"></script>
-    <script src="./scripts/AboutScene.js"></script>
-    <script src="./scripts/SceneWrapper.js"></script>
-    <script src="./scripts/Menu.js"></script>
-    <script src="./scripts/Modal.js"></script>
-    <script src="./scripts/main.js"></script>
-    <script src="./scripts/burgerMenu.js"></script>
-  </body>
+<body>
+  <!-- modal box -->
+  <div id="overlay-modal">
+    <div class="modal" id="modal-tv">
+      <span class="close" id="close-modal-box">
+        <i class="fa-regular fa-circle-xmark"></i>
+      </span>
+      <button class="slide-arrow" id="slide-arrow-prev">&#8249;</button>
+      <button class="slide-arrow" id="slide-arrow-next">&#8250;</button>
+      <ul class="slides-container" id="slides-container"></ul>
+    </div>
+  </div>
+  <!-- modal box -->
+  <div class="container" id="container">
+    <!-- Burger Menu -->
+    <header>
+      <div class="made-with-love">
+        Made with<span class="heart"> &#10084; </span>by Elvira
+      </div>
+      <div class="burger-menu">
+        <i class="fas fa-bars burger"></i>
+        <nav class="menu">
+          <ul>
+            <li>
+              <a href="#" onClick="javascript:MENU.showAboutScene()"><img src="images/burger-menu-icons/account.gif"
+                  width="24px" alt="about me icon" />About me</a>
+            </li>
+            <li>
+              <a href="#" onClick="javascript:MENU.showProjectsScene()">
+                <img src="images/burger-menu-icons/folder.gif" width="24px" alt="projects icon" />Projects</a>
+            </li>
+            <li>
+              <a href="#"><img src="images/burger-menu-icons/article.gif" width="24px" alt="cv icon" />
+                Resume</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- Burger Menu End -->
+    <div class="tv-set" id="tv-set">
+      <section id="about-scene" class="scene-container">
+        <div id="mountains" class="layer"></div>
+        <div id="city-panorama" class="layer"></div>
+        <div id="front-city" class="layer"></div>
+        <div id="about-billboards" class="layer">
+          <img id="about-billboard-1-arrow" class="img-set" src="images/about-me/billboard-1/billboard1.gif" />
+          <img id="about-billboard-2-girl" class="img-set" src="images/about-me/billboard-2/billboard2Elvira.png" />
+          <img id="about-billboard-3-girl" class="img-set" src="images/about-me/billboard-3/billboard3.png" />
+          <img id="about-billboard-4-balloon" class="img-set" src="images/about-me/billboard-4/billboard4.png" />
+          <img id="about-billboard-5-butterfly" class="img-set" src="images/about-me/billboard-5/billboard5.png" />
+        </div>
+        <div id="park" class="layer"></div>
+        <div id="about-road" class="road-elements layer">
+          <img class="road-cones" id="about-road-cones" src="images/common/cones.png" />
+          <img class="road-closed" id="about-road-closed" src="images/common/road-closed.png" />
+        </div>
+        <div id="grass" class="layer"></div>
+        <img id="about-skater" class="skater" src="images/skater/idle.gif" />
+      </section>
+      <!-- about-scene -->
+      <section id="projects-scene" class="scene-container">
+        <div id="projects-sky" class="layer"></div>
+        <div id="projects-mountains" class="layer"></div>
+        <div id="projects-trees-far" class="layer"></div>
+        <div id="projects-trees-middle" class="layer"></div>
+        <div id="projects-bushes" class="layer"></div>
+        <div id="projects-cable-lines" class="layer"></div>
+        <div id="projects-trees-near"></div>
+        <div id="projects-road" class="road-elements layer">
+          <img class="road-cones" id="projects-road-cones" src="images/common/cones.png" />
+          <img class="road-closed" id="projects-road-closed" src="images/common/road-closed.png" />
+        </div>
+        <div id="projects-street-lights" class="layer">
+          <div id="projects-street-light-1" class="layer projects-street-lights-styles"></div>
+          <div id="projects-street-light-2" class="layer projects-street-lights-styles"></div>
+          <div id="projects-street-light-3" class="layer projects-street-lights-styles"></div>
+          <div id="projects-street-light-4" class="layer projects-street-lights-styles"></div>
+          <div id="projects-street-light-5" class="layer projects-street-lights-styles"></div>
+        </div>
+        <div id="projects-grasses" class="layer"></div>
+        <div id="projects-sky-shadow" class="layer"></div>
+        <div id="projects-billboards" class="layer">
+          <div id="projects-billboard-1" class="projects-billboards-styles layer">
+            <img src="./images/projects/billboards-content/proassess.png" id="proassess"
+              class="projects-billboards-content" alt="proassess" />
+          </div>
+          <div id="projects-billboard-2" class="projects-billboards-styles layer">
+            <img src="./images/projects/billboards-content/tetris.png" id="tetris" class="projects-billboards-content"
+              alt="tetris" data-content="tetris" />
+          </div>
+          <div id="projects-billboard-3" class="projects-billboards-styles layer">
+            <img src="./images/projects/billboards-content/selectiq.png" id="selectiq"
+              class="projects-billboards-content" alt="selectiq" />
+          </div>
+          <div id="projects-billboard-4" class="projects-billboards-styles layer">
+            <img src="./images/projects/billboards-content/research.jpg" id="research"
+              class="projects-billboards-content" alt="research" />
+          </div>
+          <div id="projects-billboard-5" class="projects-billboards-styles layer">
+            <img src="./images/projects/billboards-content/gamefolioAisal.png" id="gamefolio"
+              class="projects-billboards-content" alt="gamefolio" />
+          </div>
+        </div>
+        <!-- project-billboards -->
+        <img id="projects-skater" class="skater" src="images/skater/idle.gif" />
+      </section>
+      <!-- resume -->
+      <!-- class="scene-container" -->
+      <section id="resume-scene" class="scene-container">
+        <div class="resume-header">
+          <h2>Front End Developer</h1>
+        </div>
+        <div class="back-of-avatar">
+          <h4>Dzhumalieva Elvira</h4>
+          <img src="images/resume/avatar.png" alt="avatar">
+        </div>
+        <!-- sdelala -->
+        <div class="middle">
+          <aside class="aside item2">
+            <div class="contacts">
+              <figure class="location">
+                <img src="images/resume/ie.svg" alt="location icon">
+                <figcaption class="country">Dublin, Ireland</figcaption>
+              </figure>
+
+              <figure class="github">
+                <img src="images/resume/github.svg" alt="github icon">
+                <figcaption><a href="https://github.com/ElviraDzh">github.com/ElviraDzh</a></figcaption>
+              </figure>
+
+              <figure class="linkedin">
+                <img src="images/resume/linkedin.svg" alt="linkedin icon">
+                <figcaption><a href="https://linkedin.com/in/elvira-ie">linkedin.com/in/elvira-ie
+                  </a></figcaption>
+              </figure>
+
+              <figure class="envelop">
+                <img src="images/resume/envelop.svg" alt="envelop icon">
+                <figcaption><a href="mailto:me@elvira.ie">me@elvira.ie
+                  </a></figcaption>
+              </figure>
+
+              <figure class="github">
+                <img src="images/resume/web.svg" alt="web icon">
+                <figcaption><a href="https://elvira.ie">https://elvira.ie
+                  </a></figcaption>
+              </figure>
+            </div>
+          </aside>
+          <div class="main-content item3">
+            <img class="modal-trigger" src="images/resume/skills.png" alt="skills">
+            <br>
+            <img class="modal-trigger" src="images/resume/experiences.png" alt="experience">
+            <br>
+            <img class="modal-trigger" src="images/resume/education.png" alt="education">
+          </div>
+        </div>
+        <div id="resume-modal" class="resume-modal">
+          <span class="close-btn" style="color: red;">&times;</span>
+          <p>hello</p>
+        </div>
+
+        <footer class="item4 footer">
+          <span>DOWNLOAD FULL RESUME</span>
+          <a href="../gamefolio/images/resume/contact.png" download="pdf"><img src="images/resume/pdf.png"
+              alt="pdf"></a>
+        </footer>
+
+        <!--         <div class="resume-container">
+          <div class="top item1">
+            <img src="images/resume/avatar.png" alt="avatar">
+            <h1>Front End Developer</h1>
+          </div>
+          <div class="middle">
+            <aside class="aside item2">
+              <div class="contacts">
+                <figure class="location">
+                  <img src="images/resume/tr-flag.svg" alt="location icon">
+                  <figcaption class="country">Chicago, USA</figcaption>
+                </figure>
+
+                <figure class="github">
+                  <img src="images/resume/github.svg" alt="github icon">
+                  <figcaption><a href="https://github.com/GuliaIsaeva">github.com/GuliaIsaeva</a></figcaption>
+                </figure>
+
+                <figure class="linkedin">
+                  <img src="images/resume/linkedin.svg" alt="linkedin icon">
+                  <figcaption><a href="https://linkedin.com/in/gulia-isaeva">linkedin.com/in/gulia-isaeva
+                    </a></figcaption>
+                </figure>
+
+                <figure class="envelop">
+                  <img src="images/resume/envelop.svg" alt="envelop icon">
+                  <figcaption><a href="mailto:gulya.isaeva.pls@gmail.com">gulya.isaeva.pls@gmail.com
+                    </a></figcaption>
+                </figure>
+
+                <figure class="github">
+                  <img src="images/resume/web.svg" alt="web icon">
+                  <figcaption><a href="https://guliacode.com">https://guliacode.com
+                    </a></figcaption>
+                </figure>
+              </div>
+            </aside>
+            <div class="main-content item3">
+              <img class="modal-trigger" src="images/resume/skills.png" alt="skills">
+              <br>
+              <img class="modal-trigger" src="images/resume/experiences.png" alt="experience">
+              <br>
+              <img class="modal-trigger" src="images/resume/education.png" alt="education">
+            </div>
+          </div>
+          <div id="resume-modal" class="resume-modal">
+            <span class="close-btn" style="color: red;">&times;</span>
+            <p>hello</p>
+          </div>
+
+          <footer class="item4 footer">
+            <span>DOWNLOAD FULL RESUME</span>
+            <a href="../gamefolio/images/resume/contact.png" download="pdf"><img src="images/resume/pdf.png"
+                alt="pdf"></a>
+          </footer>
+        </div> -->
+      </section>
+      <!-- projects-scene -->
+      <div id="white-noise"></div>
+      <div class="switch-buttons"></div>
+      <p id="about-me-btn" class="menu-style"></p>
+      <p id="projects-btn" class="menu-style"></p>
+      <p id="resume-btn" class="menu-style"></p>
+      <div id="overlay-billboard"></div>
+    </div>
+    <!-- tv-set -->
+    <div class="tv-stand" id="tv-stand">
+      <img src="images/general/clock.png" alt="clock" class="clock" />
+      <img src="images/general/radio.png" alt="radio" class="radio" />
+    </div>
+  </div>
+  <!-- container-->
+
+  <script src="./scripts/hammer.js"></script>
+  <script src="./scripts/globals.js"></script>
+  <script src="./scripts/Screen.js"></script>
+  <script src="./scripts/Skater.js"></script>
+  <script src="./scripts/KeyHandler.js"></script>
+  <script src="./scripts/TouchHandler.js"></script>
+  <script src="./scripts/Timer.js"></script>
+  <script src="./scripts/ProjectsScene.js"></script>
+  <script src="./scripts/AboutScene.js"></script>
+  <script src="./scripts/ResumeScene.js"></script>
+  <script src="./scripts/SceneWrapper.js"></script>
+  <script src="./scripts/Menu.js"></script>
+  <script src="./scripts/Modal.js"></script>
+  <script src="./scripts/main.js"></script>
+  <script src="./scripts/burgerMenu.js"></script>
+</body>
+
 </html>
