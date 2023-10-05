@@ -2,19 +2,19 @@ class ProjectsScene {
   #sceneSection = getById("projects-scene");
   #stops = [
     {
-      image: getById("tetris"),
+      image: getById("projects-billboard-1"),
     },
     {
-      image: getById("proassess"),
+      image: getById("projects-billboard-2"),
     },
     {
-      image: getById("selectiq"),
+      image: getById("projects-billboard-3"),
     },
     {
-      image: getById("research"),
+      image: getById("projects-billboard-4"),
     },
     {
-      image: getById("gamefolio"),
+      image: getById("projects-billboard-5"),
     },
   ];
   #currentStop = null;
