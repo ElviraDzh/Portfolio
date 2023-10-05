@@ -3,6 +3,8 @@ class TouchHandler {
     const container = getById("container");
     const hammerContainer = new Hammer(container);
     const hammerBillboard = new Hammer(overlayBillboard);
+    const parentOfBillboards = getById("projects-billboards");
+    const hammerParentBillboards = new Hammer(parentOfBillboards);
 
     hammerContainer.get("swipe").set({ direction: Hammer.DIRECTION_ALL });
 
@@ -25,5 +27,11 @@ class TouchHandler {
     hammerBillboard.on("tap", function () {
       showModalBox();
     });
+
+    hammerParentBillboards.on("tap", (e)=>{
+      if(e.target.classList.contains("projects-billboards-styles")){
+       showModalBox();
+      }
+   })
   }
 }

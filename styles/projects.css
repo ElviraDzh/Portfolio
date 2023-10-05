@@ -85,6 +85,7 @@
 }
 
 #projects-billboards {
+  position: absolute;
   height: 51%;
   bottom: 9.5%;
 }
@@ -92,13 +93,6 @@
 #projects-street-lights {
   height: 77%;
   bottom: -10.5%;
-}
-
-.projects-billboards-styles {
-  height: 100%;
-  background: url(../images/projects/billboard.png) no-repeat;
-  background-size: contain;
-  top: 0%;
 }
 
 .projects-street-lights-styles {
@@ -126,11 +120,11 @@
   cursor: pointer;
 }
 
-.projects-billboards-content {
+.projects-billboards-styles {
   position: absolute;
-  height: 50%;
-  width: 27.4%;
-  bottom: 42%;
+  height: 100%;
+  background-size: contain;
+  top:0;
   left: 0.9%;
   cursor: pointer;
 }
@@ -138,6 +132,7 @@
 #projects-billboard-2 {
   left: 150%;
 }
+
 #projects-street-light-2 {
   left: 103%;
 }

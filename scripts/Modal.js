@@ -10,11 +10,17 @@ const billboardImages = document.querySelectorAll(
 );
 const tv = getById("tv-set");
 const tvStand = getById("tv-stand");
-
 const modalBoxContents = [
   {
-    name: "selectiq",
+    name: "projects-billboard-3",
     html: `<li class="slide">
+    <img
+      src="/images/projects/modal/modal-content/selectiq/00.png"
+      alt="selectiq"
+      class="img-content"
+    />
+  </li>
+  <li class="slide">
     <img
       src="/images/projects/modal/modal-content/selectiq/01.png"
       alt="selectiq"
@@ -65,8 +71,15 @@ const modalBoxContents = [
 </li>`,
   },
   {
-    name: "proassess",
+    name: "projects-billboard-1",
     html: ` <li class="slide">
+    <img
+      src="/images/projects/modal/modal-content/proassess/00.png"
+      alt="proassess"
+      class="img-content"
+    />
+  </li>
+  <li class="slide">
     <img
       src="/images/projects/modal/modal-content/proassess/01.png"
       alt="proassess"
@@ -138,8 +151,16 @@ const modalBoxContents = [
   </li>`,
   },
   {
-    name: "research",
-    html: ` <li class="slide">
+    name: "projects-billboard-4",
+    html: ` 
+    <li class="slide">
+    <img
+      src="/images/projects/modal/modal-content/research/00.png"
+      alt="research"
+      class="img-content"
+    />
+  </li>
+  <li class="slide">
     <img
       src="/images/projects/modal/modal-content/research/01.jpg"
       alt="research"
@@ -148,14 +169,7 @@ const modalBoxContents = [
   </li>
   <li class="slide">
     <img
-      src="/images/projects/modal/modal-content/research/02.jpg"
-      alt="research"
-      class="img-content"
-    />
-  </li>
-  <li class="slide">
-    <img
-      src="/images/projects/modal/modal-content/research/03.jpg"
+      src="/images/projects/modal/modal-content/research/03.png"
       alt="research"
       class="img-content"
     />
@@ -183,15 +197,22 @@ const modalBoxContents = [
   </li>
   <li class="slide">
     <img
-      src="/images/projects/modal/modal-content/research/07.jpg"
+      src="/images/projects/modal/modal-content/research/07.jpeg"
       alt="research"
       class="img-content"
     />
   </li>`,
   },
   {
-    name: "tetris",
+    name: "projects-billboard-2",
     html: `<li class="slide">
+    <img
+      src="/images/projects/modal/modal-content/tetris/00.png"
+      alt="tetris"
+      class="img-content"
+    />
+  </li>
+  <li class="slide">
     <img
       src="/images/projects/modal/modal-content/tetris/aboutTetris.png"
       alt="tetris"
@@ -213,10 +234,21 @@ const modalBoxContents = [
     />
   </li>`,
   },
+  {
+    name: "projects-billboard-5",
+    html: `<li class="slide">
+    <img
+      src="/images/projects/modal/modal-content/gamefolio/00.png"
+      alt="tetris"
+      class="img-content"
+    />
+  `
+  },
 ];
 
 function showModalBox() {
   const billboardId = PROJECTS_SCENE.getStopId();
+
   if (billboardId === null) return;
   for (let i = 0; i < modalBoxContents.length; i++) {
     if (billboardId === modalBoxContents[i].name) {
@@ -245,14 +277,7 @@ nextButton.addEventListener("click", () => {
 });
 
 prevButton.addEventListener("click", () => {
-  console.log("click");
   const slide = document.querySelector(".slide");
   const slideWidth = slide.clientWidth;
   slidesContainer.scrollLeft -= slideWidth;
-});
-
-billboardImages.forEach((img) => {
-  img.addEventListener("click", () => {
-    showModalBox();
-  });
 });
