@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Elvira's Portfolio</title>
-  <link rel="icon" type="image/x-icon" href="/images/resume/avatar.png">
+  <link rel="icon" type="image/x-icon" href="/images/general/favicon.png">
   <link rel="stylesheet" href="./styles/main.css" />
   <link rel="stylesheet" href="./styles/about-me.css" />
   <link rel="stylesheet" href="./styles/projects.css" />
-  <link rel="stylesheet" href="./styles/resume.css">
+  <link rel="stylesheet" href="./styles/resume.css" />
   <link rel="stylesheet" href="./styles/normalize.css" />
   <link rel="stylesheet" href="./styles/media.css" />
   <!-- fontawesome link -->
@@ -23,12 +23,12 @@
   <!-- modal box -->
   <div id="overlay-modal">
     <div class="modal" id="modal-tv">
+      <ul class="slides-container" id="slides-container"></ul>
       <span class="close" id="close-modal-box">
         <i class="fa-regular fa-circle-xmark"></i>
       </span>
       <button class="slide-arrow" id="slide-arrow-prev">&#8249;</button>
       <button class="slide-arrow" id="slide-arrow-next">&#8250;</button>
-      <ul class="slides-container" id="slides-container"></ul>
     </div>
   </div>
   <!-- modal box -->
@@ -51,7 +51,8 @@
                 <img src="images/burger-menu-icons/folder.gif" width="24px" alt="projects icon" />Projects</a>
             </li>
             <li>
-              <a href="#"  onClick="javascript:MENU.showResumeScene()"><img src="images/burger-menu-icons/article.gif" width="24px" alt="cv icon" />
+              <a href="#" onClick="javascript:MENU.showResumeScene()"><img src="images/burger-menu-icons/article.gif"
+                  width="24px" alt="cv icon" />
                 Resume</a>
             </li>
           </ul>
@@ -102,167 +103,110 @@
         <div id="projects-grasses" class="layer"></div>
         <div id="projects-sky-shadow" class="layer"></div>
         <div id="projects-billboards" class="layer">
-          <img
-            src="./images/projects/billboards-content/proassess.png"
-            id="projects-billboard-1"
-            class="projects-billboards-styles"
-            alt="proassess"
-          />
-          <img
-            src="./images/projects/billboards-content/tetris.png"
-            id="projects-billboard-2"
-            class="projects-billboards-styles projects-billboards-content"
-            alt="tetris"
-            data-content="tetris"
-          />
-          <img
-            src="./images/projects/billboards-content/selectiq.png"
-            id="projects-billboard-3"
-            class="projects-billboards-styles projects-billboards-content"
-            alt="selectiq"
-          />
-          <img
-            src="./images/projects/billboards-content/research.png"
-            id="projects-billboard-4"
-            class="projects-billboards-styles projects-billboards-content"
-            alt="research"
-          />
-          <img
-            src="./images/projects/billboards-content/gamefolio.png"
-            id="projects-billboard-5"
-            class="projects-billboards-styles"
-            alt="gamefolio"
-          />
-    </div>
+          <img src="./images/projects/billboards-content/proassess.png" id="projects-billboard-1"
+            class="projects-billboards-styles" alt="proassess" />
+          <img src="./images/projects/billboards-content/tetris.png" id="projects-billboard-2"
+            class="projects-billboards-styles projects-billboards-content" alt="tetris" data-content="tetris" />
+          <img src="./images/projects/billboards-content/selectiq.png" id="projects-billboard-3"
+            class="projects-billboards-styles projects-billboards-content" alt="selectiq" />
+          <img src="./images/projects/billboards-content/research.png" id="projects-billboard-4"
+            class="projects-billboards-styles projects-billboards-content" alt="research" />
+          <img src="./images/projects/billboards-content/gamefolio.png" id="projects-billboard-5"
+            class="projects-billboards-styles" alt="gamefolio" />
+        </div>
         <!-- project-billboards -->
         <img id="projects-skater" class="skater" src="images/skater/idle.gif" />
       </section>
+      <!-- projects-scene end -->
       <!-- resume -->
       <!-- class="scene-container" -->
       <section id="resume-scene" class="scene-container">
         <div class="resume-header">
-          <h2>Front End Developer</h1>
+          <img src="images/resume/avatar_Elvira.png" alt="avatar">
         </div>
-        <div class="back-of-avatar">
-          <h4>Dzhumalieva Elvira</h4>
-          <img src="images/resume/avatar.png" alt="avatar">
-        </div>
-        <!-- sdelala -->
         <div class="middle">
-          <aside class="aside item2">
-            <div class="contacts">
-              <figure class="location">
-                <img src="images/resume/ie.svg" alt="location icon">
-                <figcaption class="country">Dublin, Ireland</figcaption>
-              </figure>
-
-              <figure class="github">
-                <img src="images/resume/github.svg" alt="github icon">
-                <figcaption><a href="https://github.com/ElviraDzh">github.com/ElviraDzh</a></figcaption>
-              </figure>
-
-              <figure class="linkedin">
-                <img src="images/resume/linkedin.svg" alt="linkedin icon">
-                <figcaption><a href="https://linkedin.com/in/elvira-ie">linkedin.com/in/elvira-ie
-                  </a></figcaption>
-              </figure>
-
-              <figure class="envelop">
-                <img src="images/resume/envelop.svg" alt="envelop icon">
-                <figcaption><a href="mailto:me@elvira.ie">me@elvira.ie
-                  </a></figcaption>
-              </figure>
-
-              <figure class="github">
-                <img src="images/resume/web.svg" alt="web icon">
-                <figcaption><a href="https://elvira.ie">https://elvira.ie
-                  </a></figcaption>
-              </figure>
-            </div>
-          </aside>
-          <div class="main-content item3">
-            <img class="modal-trigger" src="images/resume/skills.png" alt="skills">
-            <br>
-            <img class="modal-trigger" src="images/resume/experiences.png" alt="experience">
-            <br>
-            <img class="modal-trigger" src="images/resume/education.png" alt="education">
-          </div>
-        </div>
-        <div id="resume-modal" class="resume-modal">
-          <span class="close-btn" style="color: red;">&times;</span>
-          <p>hello</p>
-        </div>
-
-        <footer class="item4 footer">
-          <span>DOWNLOAD FULL RESUME</span>
-          <a href="../gamefolio/images/resume/contact.png" download="pdf"><img src="images/resume/pdf.png"
-              alt="pdf"></a>
-        </footer>
-
-        <!--         <div class="resume-container">
-          <div class="top item1">
-            <img src="images/resume/avatar.png" alt="avatar">
-            <h1>Front End Developer</h1>
-          </div>
-          <div class="middle">
-            <aside class="aside item2">
+          <div class="middle_first middle_style">
+            <aside class="aside">
               <div class="contacts">
                 <figure class="location">
-                  <img src="images/resume/tr-flag.svg" alt="location icon">
-                  <figcaption class="country">Chicago, USA</figcaption>
+                  <img src="./images/resume/ireland.png" alt="location">
+                  <figcaption class="country">Dublin, Ireland</figcaption>
                 </figure>
-
                 <figure class="github">
                   <img src="images/resume/github.svg" alt="github icon">
-                  <figcaption><a href="https://github.com/GuliaIsaeva">github.com/GuliaIsaeva</a></figcaption>
+                  <figcaption><a href="https://github.com/ElviraDzh">github.com/ElviraDzh</a></figcaption>
                 </figure>
 
                 <figure class="linkedin">
                   <img src="images/resume/linkedin.svg" alt="linkedin icon">
-                  <figcaption><a href="https://linkedin.com/in/gulia-isaeva">linkedin.com/in/gulia-isaeva
+                  <figcaption><a href="https://linkedin.com/in/gulia-isaeva">linkedin.com/in/elvira-ie
                     </a></figcaption>
                 </figure>
 
                 <figure class="envelop">
                   <img src="images/resume/envelop.svg" alt="envelop icon">
-                  <figcaption><a href="mailto:gulya.isaeva.pls@gmail.com">gulya.isaeva.pls@gmail.com
+                  <figcaption><a href="mailto:me@elvira.ie">me@elvira.ie
                     </a></figcaption>
                 </figure>
-
                 <figure class="github">
                   <img src="images/resume/web.svg" alt="web icon">
-                  <figcaption><a href="https://guliacode.com">https://guliacode.com
+                  <figcaption><a href="https://elvira.ie">https://elvira.ie
                     </a></figcaption>
                 </figure>
               </div>
             </aside>
-            <div class="main-content item3">
-              <img class="modal-trigger" src="images/resume/skills.png" alt="skills">
-              <br>
-              <img class="modal-trigger" src="images/resume/experiences.png" alt="experience">
-              <br>
-              <img class="modal-trigger" src="images/resume/education.png" alt="education">
+            <div class="main_content-info resume-skills">
+              <h3 class="resume-subtitle">Skills</h3>
+              <ul class="resume-skills-content">
+                <li>React.js</li>
+                <li>JavaScript</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Typescript</li>
+                <li>SASS</li>
+                <li>Bootsrtap</li>
+                <li>jQuery</li>
+                <li>Git</li>
+                <li>Github</li>
+                <li>Restful</li>
+                <li>Postman</li>
+                <li>Tailwind</li>
+                <li>Scrum</li>
+                <li>Jira</li>
+                <li>Photoshop</li>
+              </ul>
             </div>
           </div>
-          <div id="resume-modal" class="resume-modal">
-            <span class="close-btn" style="color: red;">&times;</span>
-            <p>hello</p>
+          <div class="middle_second middle_style">
+            <div class="main_content-info resume-education">
+              <h3 class="resume-subtitle">Education</h3>
+              <ul class="resume-experience-content">
+                <li>
+                  04/2021 - 01/2022, Front End Development Bootcamp (Kyrgyzstan, remote).</li>
+              </ul>
+            </div>
+            <div class="main_content-info resume-experience">
+              <h3 class="resume-subtitle">Experience</h3>
+              <ul class="resume-experience-content">
+                <li>02/2022 - Present, Front End Developer, Gulchynar Ltd (Kyrgyzstan, remote)</li>
+              </ul>
+            </div>
           </div>
-
-          <footer class="item4 footer">
-            <span>DOWNLOAD FULL RESUME</span>
-            <a href="../gamefolio/images/resume/contact.png" download="pdf"><img src="images/resume/pdf.png"
-                alt="pdf"></a>
-          </footer>
-        </div> -->
+        </div>
+        <footer class="footer">
+          <a href="images/resume/elvira-resume.pdf" download id="overlay-resume-2">
+            <p>DOWNLOAD FULL RESUME</p>
+            <img src="images/resume/pdf.png" alt="pdf">
+          </a>
+        </footer>
       </section>
-      <!-- projects-scene -->
       <div id="white-noise"></div>
       <div class="switch-buttons"></div>
       <p id="about-me-btn" class="menu-style"></p>
       <p id="projects-btn" class="menu-style"></p>
       <p id="resume-btn" class="menu-style"></p>
       <div id="overlay-billboard"></div>
+      <a href="images/resume/elvira-resume.pdf" download id="overlay-resume"></a>
     </div>
     <!-- tv-set -->
     <div class="tv-stand" id="tv-stand">

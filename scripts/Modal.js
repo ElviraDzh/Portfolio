@@ -242,7 +242,7 @@ const modalBoxContents = [
       alt="tetris"
       class="img-content"
     />
-  `
+  `,
   },
 ];
 

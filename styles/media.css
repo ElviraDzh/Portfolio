@@ -1,17 +1,12 @@
-@media (min-height: 940px) and (min-width: 1024px) {
+@media (min-height: 980px) and (min-width: 1024px) {
   body {
     overflow: hidden;
-  }
-
-  .container {
-    overflow: visible;
   }
 
   .tv-stand {
     display: block;
   }
 }
-/* bylo (min-height: 980px)*/
 
 /* desktop  */
 @media (max-height: 880px) and (min-width: 1400px) {
@@ -78,6 +73,10 @@
 @media (max-height: 815px) and (min-width: 1301px) {
   .tv-set {
     background-size: 83% 106%;
+  }
+
+  #overlay-resume {
+    left: 35%;
   }
 
   .scene-container {
@@ -153,7 +152,6 @@
     max-width: 23%;
     left: 31%;
   }
-
 }
 
 @media (max-height: 700px) and (min-width: 1301px) {
@@ -180,6 +178,10 @@
     display: block;
   }
 
+  .made-with-love {
+    display: block;
+  }
+
   .tv-set {
     background: none !important;
   }
@@ -196,7 +198,6 @@
   #grass {
     bottom: 0%;
   }
-
 
   #modal-tv {
     display: none;
@@ -220,6 +221,19 @@
   .menu-style {
     display: none;
   }
+
+  #resume-scene {
+    z-index: 0; 
+  }
+
+  /* .resume-header img {
+    margin: 50px auto 0px;
+  } */
+
+  .middle {
+    height: 100%;
+  }
+
 }
 
 /* mobile responsive */
@@ -227,10 +241,11 @@
 @media (max-height: 1200px) and (max-width: 1300px) {
   body {
     overflow: hidden;
-  }
-
+  } 
+  
   .container {
     max-height: 100%;
+    min-width: 0;
   }
 
   .burger-menu {
@@ -265,19 +280,42 @@
     left: 0%;
   }
 
+  #city-panorama {
+    width: 1400px;
+  }
+
   #front-city {
     max-height: 33%;
+    width: 1400px;
+  }
+
+  #park,
+  #projects-mountains,
+  #projects-trees-far,
+  #projects-trees-middle,
+  #projects-bushes,
+  #projects-cable-lines,
+  #projects-trees-near,
+  #projects-grasses,
+  #projects-street-lights {
+    width: 1400px;
+  }
+
+
+  #projects-road-cones,
+  .road-cones {
+   left: 10%;
   }
 
   #grass {
     bottom: 0%;
+    width: 1400px;
   }
 
   #about-billboards {
     max-height: 72%;
     bottom: -21%;
   }
-
 
   .road-cones {
     bottom: 32%;
@@ -292,6 +330,27 @@
     display: none;
   }
 
+  #resume-scene {
+    z-index: 0;
+  }
+
+  .middle {
+    height: auto;
+    margin-top: 20px;
+  }
+
+  #overlay-resume {
+    display: none !important;
+  }
+
+  #overlay-resume-2 {
+    display: flex;
+    bottom: 0%;
+  }
+
+  .resume-header img {
+    margin: 50px auto 0px;
+  }
 }
 
 @media (max-height: 725px) and (max-width: 1299px) {
@@ -300,11 +359,9 @@
     min-height: 100%;
   }
 
-
   .road-cones {
     bottom: 33%;
   }
-
 }
 
 /* tablet portrait*/
@@ -331,9 +388,14 @@
     display: block;
   }
 
+  .made-with-love {
+    display: flex;
+  }
+
   .tv-set {
     background: none !important;
   }
+  
   #projects-scene {
     z-index: 0 !important;
   }
@@ -342,6 +404,7 @@
     height: 100%;
     max-height: 100%;
     max-width: 100%;
+    margin: 0 auto;
     top: 0%;
     left: 0%;
   }
@@ -369,6 +432,47 @@
   .switch-buttons,
   .menu-style {
     display: none;
+  }
+
+  #projects-mountains {
+    max-height: 20%;
+  }
+
+  #projects-trees-near {
+    max-height: 30%;
+  }
+
+  #projects-bushes {
+    max-height: 19%;
+    bottom: 0%;
+  }
+
+  #projects-trees-middle {
+    bottom: 12%;
+  }
+
+  #projects-trees-far {
+    bottom: 15%;
+  }
+
+  #projects-mountains {
+    bottom: 7%;
+  }
+
+  #projects-street-lights {
+    bottom: -20.5%;
+  }
+  .middle {
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+    justify-content: space-around;
+  }
+  
+  .resume-skills,
+  .resume-experience,
+  .resume-education {
+    width: 40%;
   }
 }
 /* menu */
@@ -468,9 +572,21 @@
 }
 /* menu end*/
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1200px) and (max-device-height: 1180px) and (orientation: portrait) {
-  #about-billboard-1-arrow {
-    left: 33%;
+@media only screen and (min-width: 480px) and (max-width: 1200px) and (max-height: 1180px) and (orientation: portrait) {
+  #about-billboard-2-girl {
+    left: 135%;
+  }
+
+  #about-billboard-3-girl {
+    left: 370%;
+  }
+
+  #about-billboard-4-balloon {
+    left: 540%;
+  }
+
+  #about-billboard-5-butterfly {
+    left: 715%;
   }
 
   .road-cones {
@@ -479,9 +595,8 @@
     left: 11%;
   }
 
-  #projects-road-cones {
-    bottom: 0%;
-    left: 14%;
+  .road-closed {
+    left:1000%;
   }
 
   #projects-trees-near {
@@ -492,20 +607,76 @@
     bottom: 0%;
   }
 
-  .skater {
-    left: 33%;
+  #projects-street-light-1 {
+    left: 13%;
   }
+
+  #projects-street-light-2 {
+    left: 90%;
+  } 
+
+  #projects-street-light-3 {
+    left: 155%;
+  }
+
+  #projects-street-light-4 {
+    left: 225%;
+  }
+
+  #projects-street-light-5 {
+    left: 305%;
+  }
+
+  #projects-billboard-1 {
+    left: 100%;
+  }
+
+  #projects-billboard-2 {
+    left: 230%;
+}
+
+  #projects-billboard-3 {
+   left: 355%;
+  }
+
+  #projects-billboard-4 {
+   left: 495%;
+  }
+
+  #projects-billboard-5 {
+   left: 626%;
+  }
+
+  #projects-road-cones {
+   bottom: 0%;
+   left: 14%;
+  }
+
+  #projects-road-closed {
+    left: 700%;
+    bottom: 2%;
+  }
+
+  .middle {
+    margin-top: 65px;
+}
+
 }
 
 @media (max-height: 725px) and (max-width: 750px) {
   .container {
-    min-width: 1300px;
     min-height: 0%;
+  }
+
+  .resume-skills, 
+  .resume-experience, 
+  .resume-education {
+    width: 70%;
   }
 }
 
 /* tablet landscape */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1200px) and (max-device-height: 820px) and (orientation: landscape) {
+@media only screen and (min-width: 768px) and (max-width: 1200px) and (max-height: 820px) and (orientation: landscape) {
   #projects-road-cones {
     bottom: 0%;
     left: 16%;
@@ -513,48 +684,39 @@
 }
 
 /* phones portrait */
-@media only screen and (max-device-width: 480px) and (max-device-height: 915px) and (orientation: portrait) {
-  .container {
+@media only screen and (max-width: 480px) and (max-height: 950px) and (orientation: portrait) {
+  .container { 
     max-height: 938px;
-    min-width: 1300px;
-  }
-
-  #projects-billboards {
-    height: 59%;
-  }
-
-  #about-billboard-1-arrow {
-    left: 16%;
-  }
-
+  } 
+  
   #about-billboard-2-girl {
-    left: 48%;
+    left: 190%;
   }
-
+  
   #about-billboard-3-girl {
-    left: 165%;
+    left: 600%;
   }
-
+  
   #about-billboard-4-balloon {
-    left: 243%;
+    left: 880%;
   }
-
+  
   #about-billboard-5-butterfly {
-    left: 323%;
+    left: 1140%;
   }
-
+  
   .road-cones {
     left: 6%;
     bottom: 31%;
   }
-
+  
   .road-closed {
-    left: 464%;
+    left: 1650%;
     bottom: 31%;
   }
-
-  .skater {
-    left: 16%;
+  
+  #projects-billboards {
+    height: 59%;
   }
 
   #projects-road-cones {
@@ -562,39 +724,93 @@
   }
 
   #projects-billboard-1 {
-    left: 39%;
+    left: 85%;
   }
 
   #projects-billboard-2 {
-    left: 90%;
-}
+    left: 300%;
+  }
 
-#projects-billboard-3 {
-  left: 144%;
-}
+  #projects-billboard-3 {
+    left: 520%;
+  }
 
-#projects-billboard-4 {
-  left: 201%;
-}
+  #projects-billboard-4 {
+    left: 750%;
+  }
 
-#projects-billboard-5 {
-  left: 255%;
-}
+  #projects-billboard-5 {
+    left: 950%;
+  }
 
-#projects-road-closed {
-  left: 300%;
-  bottom: 8%;
-}
+  #projects-road-closed {
+    left: 800%;
+    bottom: 8%;
+  }
 
+  #projects-street-light-1 {
+    left: -1%;
+  }
 
+  #projects-street-light-2 {
+    left: 57%;
+  }
+
+  #projects-street-light-3 {
+    left: 110%;
+  }
+
+  #projects-street-light-4 {
+    left: 184%;
+  }
+
+  #projects-street-light-5 {
+    left: 240%;
+  }
+
+  #projects-road-closed {
+    left: 1150%;
+  }
+
+  #resume-scene .middle {
+    display: block;
+  }
+
+  .resume-header img {
+    margin: 42px auto 0px;
+  }
+
+  .middle {
+    margin-top: 75px;
+  }
+
+  .resume-skills,
+  .aside {
+    transform: rotate(5deg);
+  }
+
+  #resume-scene .middle,
+  #resume-scene {
+    display: block;
+  }
+
+  .resume-skills, 
+  .resume-experience, 
+  .resume-education {
+    width: 80%;
+  }
+
+  .aside {
+    padding: 2rem 3.5rem 2rem 4.5rem;
+  }
+
+  .footer {
+    position: static;
+  }
 }
 
 /* phones landscape */
 @media only screen and (max-height: 575.98px) and (orientation: landscape) {
-  .container {
-    min-width: 0%;
-  }
-
   .made-with-love {
     font-size: 0.8rem;
     height: 2rem;
@@ -618,6 +834,7 @@
   .menu li {
     margin-bottom: 0.5rem;
   }
+
   .menu a {
     font-size: 0.9rem;
   }
@@ -651,5 +868,21 @@
 
   #projects-road-closed {
     bottom: 7%;
-}
+  }
+  
+  .resume-header img {
+    margin: 30px auto 0px;
+  }
+  .middle {
+    margin-top: 130px;
+    gap: 0 2.5rem;
+  }
+
+  #resume-scene {
+    display: block;
+  }
+
+  .footer {
+    position: static;
+  }
 } 

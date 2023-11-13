@@ -19,6 +19,7 @@ class Menu {
       this.showResumeScene();
       document.querySelector(".switch-buttons").style.backgroundImage =
         "url(images/general/menu-resume.png)";
+      document.getElementById("overlay-resume").style.display = "block";
     });
   }
 
