@@ -179,7 +179,7 @@
   }
 
   .made-with-love {
-    display: block;
+    display: flex;
   }
 
   .tv-set {
@@ -225,10 +225,6 @@
   #resume-scene {
     z-index: 0; 
   }
-
-  /* .resume-header img {
-    margin: 50px auto 0px;
-  } */
 
   .middle {
     height: 100%;
@@ -317,12 +313,36 @@
     bottom: -21%;
   }
 
+  /* #projects-street-lights {
+    bottom: -11.5%;
+} */
+
+  #projects-street-light-1 {
+    left: 61%;
+  } 
+
+  #projects-street-light-2 {
+  left: 133%;
+  }
+
+  #projects-street-light-3 {
+    left: 201%;
+  }
+
+  #projects-street-light-5 {
+    left: 270%;
+  }
+
+  #projects-street-light-4 {
+    left: 335%;
+  }  
+
   .road-cones {
     bottom: 32%;
   }
 
   .road-closed {
-    bottom: 39%;
+    bottom: 12%;
   }
 
   .switch-buttons,
@@ -346,10 +366,6 @@
   #overlay-resume-2 {
     display: flex;
     bottom: 0%;
-  }
-
-  .resume-header img {
-    margin: 50px auto 0px;
   }
 }
 
@@ -460,7 +476,7 @@
   }
 
   #projects-street-lights {
-    bottom: -20.5%;
+    bottom: -21.5%;
   }
   .middle {
     max-width: 1200px;
@@ -607,28 +623,36 @@
     bottom: 0%;
   }
 
+  #projects-billboards {
+    bottom: 8.5%;
+  }
+
   #projects-street-light-1 {
-    left: 13%;
+    left: 40%;
   }
 
   #projects-street-light-2 {
-    left: 90%;
+    left: 116%;
   } 
 
   #projects-street-light-3 {
-    left: 155%;
+    left: 202%;
   }
 
   #projects-street-light-4 {
-    left: 225%;
+    left: 295%;
   }
 
   #projects-street-light-5 {
-    left: 305%;
+    left: 395%;
+  }
+
+  #projects-billboard-0 {
+    left: 15%;
   }
 
   #projects-billboard-1 {
-    left: 100%;
+    left: 113%;
   }
 
   #projects-billboard-2 {
@@ -688,7 +712,7 @@
   .container { 
     max-height: 938px;
   } 
-  
+
   #about-billboard-2-girl {
     left: 190%;
   }
@@ -711,7 +735,7 @@
   }
   
   .road-closed {
-    left: 1650%;
+    left: 1750%;
     bottom: 31%;
   }
   
@@ -723,24 +747,28 @@
     left: 5%;
   }
 
+  #projects-billboard-0 {
+    left: 4%;
+  }
+
   #projects-billboard-1 {
-    left: 85%;
+    left: 185%;
   }
 
   #projects-billboard-2 {
-    left: 300%;
+    left: 400%;
   }
 
   #projects-billboard-3 {
-    left: 520%;
+    left: 620%;
   }
 
   #projects-billboard-4 {
-    left: 750%;
+    left: 850%;
   }
 
   #projects-billboard-5 {
-    left: 950%;
+    left: 1050%;
   }
 
   #projects-road-closed {
@@ -748,40 +776,40 @@
     bottom: 8%;
   }
 
+  #projects-street-lights {
+    bottom: -10.5%;
+}
+
   #projects-street-light-1 {
-    left: -1%;
+    left: 25%;
   }
 
   #projects-street-light-2 {
-    left: 57%;
+    left: 85%;
   }
 
   #projects-street-light-3 {
-    left: 110%;
+    left: 153%;
   }
 
   #projects-street-light-4 {
-    left: 184%;
+    left: 223%;
   }
 
   #projects-street-light-5 {
-    left: 240%;
+    left: 289%;
   }
 
   #projects-road-closed {
-    left: 1150%;
+    left: 1185%;
   }
 
   #resume-scene .middle {
     display: block;
   }
 
-  .resume-header img {
-    margin: 42px auto 0px;
-  }
-
   .middle {
-    margin-top: 75px;
+    margin-top: 52px;
   }
 
   .resume-skills,
@@ -869,12 +897,9 @@
   #projects-road-closed {
     bottom: 7%;
   }
-  
-  .resume-header img {
-    margin: 30px auto 0px;
-  }
+
   .middle {
-    margin-top: 130px;
+    margin-top: 113px;
     gap: 0 2.5rem;
   }
 
