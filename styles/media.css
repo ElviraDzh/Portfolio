@@ -478,12 +478,15 @@
   #projects-street-lights {
     bottom: -21.5%;
   }
+
   .middle {
     max-width: 1200px;
     padding: 0 15px;
     margin: 0 auto;
     justify-content: space-around;
   }
+
+  
   
   .resume-skills,
   .resume-experience,
