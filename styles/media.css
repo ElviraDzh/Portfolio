@@ -313,10 +313,6 @@
     bottom: -21%;
   }
 
-  /* #projects-street-lights {
-    bottom: -11.5%;
-} */
-
   #projects-street-light-1 {
     left: 61%;
   } 
@@ -367,6 +363,11 @@
     display: flex;
     bottom: 0%;
   }
+
+  .resume-header  img {
+    margin: 35px auto 0 auto;
+  }
+
 }
 
 @media (max-height: 725px) and (max-width: 1299px) {
@@ -486,8 +487,6 @@
     justify-content: space-around;
   }
 
-  
-  
   .resume-skills,
   .resume-experience,
   .resume-education {
@@ -686,7 +685,7 @@
 
   .middle {
     margin-top: 65px;
-}
+  }
 
 }
 
